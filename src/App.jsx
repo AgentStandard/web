@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import './App.css'
 import PackageDetail from './PackageDetail'
 
@@ -6,7 +6,7 @@ function TermsOfService({ onBack }) {
   return (
     <div className="legal-page">
       <nav className="nav">
-        <div className="logo" onClick={onBack} style={{cursor:"pointer"}}>AgentStandard <span className="logo-dot">?</span></div>
+        <div className="logo" onClick={onBack} style={{cursor:"pointer"}}>AgentStandard <span className="logo-dot">✦</span></div>
         <button className="nav-link" onClick={onBack} style={{background:'none',border:'none',cursor:'pointer'}}>← Back</button>
       </nav>
       <div className="legal-content">
@@ -106,7 +106,7 @@ function PrivacyPolicy({ onBack }) {
   return (
     <div className="legal-page">
       <nav className="nav">
-        <div className="logo" onClick={onBack} style={{cursor:"pointer"}}>AgentStandard <span className="logo-dot">?</span></div>
+        <div className="logo" onClick={onBack} style={{cursor:"pointer"}}>AgentStandard <span className="logo-dot">✦</span></div>
         <button className="nav-link" onClick={onBack} style={{background:'none',border:'none',cursor:'pointer'}}>← Back</button>
       </nav>
       <div className="legal-content">
@@ -188,7 +188,7 @@ function Manifesto({ onBack }) {
   return (
     <div className="manifesto-page">
       <nav className="nav">
-        <div className="logo" onClick={onBack} style={{cursor:"pointer"}}>AgentStandard <span className="logo-dot">?</span></div>
+        <div className="logo" onClick={onBack} style={{cursor:"pointer"}}>AgentStandard <span className="logo-dot">✦</span></div>
         <button className="nav-link" onClick={onBack} style={{background:'none',border:'none',cursor:'pointer'}}>← Back</button>
       </nav>
       <div className="manifesto-content">
@@ -359,7 +359,7 @@ export default function App() {
       {/* Hero */}
       <header className="hero">
         <nav className="nav">
-          <div className="logo" onClick={() => setPage('home')} style={{cursor:"pointer"}}>AgentStandard <span className="logo-dot">?</span></div>
+          <div className="logo" onClick={() => setPage('home')} style={{cursor:"pointer"}}>AgentStandard <span className="logo-dot">✦</span></div>
           <div style={{display:'flex',gap:'20px',alignItems:'center'}}>
             <button className="nav-link" onClick={() => setPage('manifesto')} style={{background:'none',border:'none',cursor:'pointer'}}>Manifesto</button>
             <a href="https://github.com/AgentStandard/packages" target="_blank" rel="noreferrer" className="nav-link">Submit a Package</a>
@@ -372,7 +372,7 @@ export default function App() {
           </div>
           <div className="hero-text-col">
             <div className="hero-badge">✦ Free to install. No coding required.</div>
-            <h1>AI is getting smarter.<br />Your AI should be too.</h1>
+            <h1>AI is getting smarter,<br />yours should be too.</h1>
             <p className="hero-sub">
               Stop starting from zero. AgentStandard packages take you from a blank screen to a working AI agent that remembers you, learns from you, and gets better every day.
             </p>

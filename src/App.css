@@ -454,6 +454,74 @@ body {
 
 .footer-copy { font-size: 0.8rem; color: var(--grey-light); }
 
+/* ── Manifesto ── */
+.manifesto-page { max-width: 1100px; margin: 0 auto; padding: 0 24px 80px; }
+
+.manifesto-content {
+  max-width: 680px;
+  margin: 80px auto 0;
+}
+
+.manifesto-badge {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: rgba(201, 168, 76, 0.1);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 32px;
+}
+
+.manifesto-content h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+}
+
+.manifesto-sub {
+  font-size: 1.2rem;
+  color: var(--grey);
+  margin-bottom: 48px;
+}
+
+.manifesto-divider {
+  border: none;
+  border-top: 1px solid var(--grey-light);
+  margin: 48px 0;
+}
+
+.manifesto-content h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 48px 0 16px;
+}
+
+.manifesto-content p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.manifesto-close {
+  margin-top: 64px;
+  padding-top: 48px;
+  border-top: 1px solid var(--grey-light);
+}
+
+.latin {
+  font-size: 1.1rem;
+  color: var(--gold) !important;
+  margin: 24px 0 !important;
+}
+
 /* ── Responsive ── */
 @media (max-width: 640px) {
   .certification-section { padding: 40px 24px; }

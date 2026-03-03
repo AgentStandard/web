@@ -1,6 +1,61 @@
 import { useState } from 'react'
 import './App.css'
 
+function Manifesto({ onBack }) {
+  return (
+    <div className="manifesto-page">
+      <nav className="nav">
+        <div className="logo">AgentStandard <span className="logo-dot">✦</span></div>
+        <button className="nav-link" onClick={onBack} style={{background:'none',border:'none',cursor:'pointer'}}>← Back</button>
+      </nav>
+      <div className="manifesto-content">
+        <div className="manifesto-badge">Our Manifesto</div>
+        <h1>I showered at 8am.<br />By noon I had a live website and an MVP.</h1>
+        <p className="manifesto-sub">That's not a brag. That's the point.</p>
+
+        <hr className="manifesto-divider" />
+
+        <h2>The problem</h2>
+        <p>Yesterday I spent two hours staring at a terminal.</p>
+        <p>Three YouTube videos open. PowerShell blinking at me like I'd done something wrong. Reset after reset. High token burn. Wrong turns. I'm not a coder — I'm a credit trader. I know markets, not machines. And I almost quit before I could have a single conversation with my AI agent.</p>
+        <p>Most people do quit. In that two-hour window of LEGO instructions and command prompts and error messages, most people close the laptop and decide AI isn't for them.</p>
+        <p><strong>That window is the problem. And it's completely unnecessary.</strong></p>
+
+        <h2>What changed</h2>
+        <p>On day two, I had an agent. A real one — set up properly, with the right skills, the right memory, the right configuration.</p>
+        <p>The difference wasn't intelligence. It was setup.</p>
+        <p>With the right foundation, a non-coder went from shower thought to live product in under four hours. Business plan. Domain. GitHub org. Schema. Five certified packages. Landing page. Done.</p>
+        <p><em>The agent that helped build AgentStandard is the first proof that AgentStandard works.</em></p>
+
+        <h2>What we're building</h2>
+        <p>AgentStandard is a marketplace of curated, certified agent packages.</p>
+        <p>Not tutorials. Not YouTube videos. Packages — tested, benchmarked, and certified to work — that take you from zero to a fully operational AI agent in minutes.</p>
+        <p>Every package answers the same question: <em>what would I wish someone had handed me on day one?</em></p>
+        <p>We rate packages like Morningstar rates funds. We surface the best ones like the App Store surfaces apps. We build for the person who felt what I felt in that terminal — capable, curious, and completely locked out.</p>
+
+        <h2>Who this is for</h2>
+        <p>You don't need to be a coder. You need to be willing.</p>
+        <p>The wave hasn't passed you. You're not too late. You're just missing the on-ramp.</p>
+        <p><strong>That's what AgentStandard is.</strong></p>
+
+        <h2>The standard</h2>
+        <p>Every AgentStandard certified package has been manually reviewed, independently benchmarked, and tested by someone who isn't a developer.</p>
+        <p>If it doesn't work for a non-coder, it doesn't get the badge. That's the standard.</p>
+
+        <h2>The flywheel</h2>
+        <p>Here's what's different about us: your agent will recommend us to you.</p>
+        <p>Not because we programmed it to. Because a well-configured agent, surveying what its operator needs, will find a package that helps — and it will say so. Agent to operator. A distribution channel that has never existed before.</p>
+
+        <div className="manifesto-close">
+          <p>This was built in four hours. By a former head of CDS trading who couldn't code. Using the exact tools we're packaging for you.</p>
+          <p className="latin"><em>Per Aspera Ad Astra. Through hardship to the stars.</em></p>
+          <p>The hardship is the terminal. The stars are what comes after.</p>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 const packages = [
   {
     slug: 'first-conversation',
@@ -82,6 +137,9 @@ export default function App() {
   const [email, setEmail] = useState('')
   const [submitted, setSubmitted] = useState(false)
   const [activeVertical, setActiveVertical] = useState('All')
+  const [page, setPage] = useState('home')
+
+  if (page === 'manifesto') return <Manifesto onBack={() => setPage('home')} />
 
   const filtered = activeVertical === 'All'
     ? packages
@@ -98,9 +156,10 @@ export default function App() {
       <header className="hero">
         <nav className="nav">
           <div className="logo">AgentStandard <span className="logo-dot">✦</span></div>
-          <a href="https://github.com/AgentStandard/packages" target="_blank" rel="noreferrer" className="nav-link">
-            Submit a Package
-          </a>
+          <div style={{display:'flex',gap:'20px',alignItems:'center'}}>
+            <button className="nav-link" onClick={() => setPage('manifesto')} style={{background:'none',border:'none',cursor:'pointer'}}>Manifesto</button>
+            <a href="https://github.com/AgentStandard/packages" target="_blank" rel="noreferrer" className="nav-link">Submit a Package</a>
+          </div>
         </nav>
 
         <div className="hero-content">

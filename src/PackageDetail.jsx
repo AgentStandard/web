@@ -25,7 +25,7 @@ function getInstallStep(os) {
     cta2: null,
     estimated_minutes: 3,
     type: 'install',
-    tip: "When you open it, macOS might say it's from an unidentified developer. Go to System Settings → Privacy & Security → click Open Anyway.",
+    tip: "When you open it, macOS might say it's from an unidentified developer. Go to System Settings → Privacy & Security → click Open Anyway. On the gateway setup screen, choose \"This Mac\" — that keeps your agent running in the background.",
   }
   if (os === 'windows') return {
     order: 1,

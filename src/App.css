@@ -269,6 +269,19 @@ body {
   border-top: 1px solid var(--grey-light);
 }
 
+.free-pill {
+  font-size: 0.65rem;
+  font-weight: 700;
+  background: rgba(45, 138, 78, 0.15);
+  color: #2d8a4e;
+  border-radius: 100px;
+  padding: 2px 7px;
+  margin-left: 6px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
 .section-eyebrow {
   font-size: 0.75rem;
   font-weight: 700;

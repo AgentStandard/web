@@ -315,7 +315,7 @@ function PackageCard({ pkg }) {
         {pkg.tags.map(t => <span key={t} className="tag">{t}</span>)}
       </div>
       <button className="install-btn" onClick={() => pkg.slug === 'first-conversation' ? window.dispatchEvent(new CustomEvent('navigate', {detail: 'package-first-conversation'})) : null}>
-        {pkg.certified ? 'Install Package →' : 'Coming Soon'}
+        {pkg.certified ? <>Install Package → <span className="free-pill">Free</span></> : 'Coming Soon'}
       </button>
     </div>
   )
@@ -371,7 +371,7 @@ export default function App() {
             <img src="/hero-logo.png" alt="AgentStandard — Per Aspera Ad Astra" className="hero-logo-img" />
           </div>
           <div className="hero-text-col">
-            <div className="hero-badge">Setting the standard for agent packages</div>
+            <div className="hero-badge">✦ Free to install. No coding required.</div>
             <h1>AI is getting smarter.<br />Your AI should be too.</h1>
             <p className="hero-sub">
               Stop starting from zero. AgentStandard packages take you from a blank screen to a working AI agent that remembers you, learns from you, and gets better every day.
@@ -395,7 +395,7 @@ export default function App() {
             <h2>Your agent grows with you.</h2>
             <p>Every ChatGPT session starts from zero. You re-introduce yourself. You re-explain your context. You start over.</p>
             <p>A properly configured agent is different. It knows who you are. It remembers what you've built together. It gets sharper the longer you work with it.</p>
-            <p>That's not a feature. That's the whole point.</p>
+            <p>That's the difference between a tool and a partner.</p>
           </div>
           <div className="grows-compare">
             <div className="compare-col compare-before">
@@ -452,7 +452,7 @@ export default function App() {
               </ul>
             </div>
           </div>
-          <p className="questionnaire-note">These questions are included in every AgentStandard certified package. Answer them once. Your agent carries them forward.</p>
+          <p className="questionnaire-note">These questions are included in every AgentStandard certified package — free. Answer them once. Your agent carries them forward.</p>
         </div>
       </section>
 

@@ -6,7 +6,7 @@ function TermsOfService({ onBack }) {
   return (
     <div className="legal-page">
       <nav className="nav">
-        <div className="logo">AgentStandard <span className="logo-dot">✦</span></div>
+        <div className="logo" onClick={onBack} style={{cursor:"pointer"}}>AgentStandard <span className="logo-dot">?</span></div>
         <button className="nav-link" onClick={onBack} style={{background:'none',border:'none',cursor:'pointer'}}>← Back</button>
       </nav>
       <div className="legal-content">
@@ -106,7 +106,7 @@ function PrivacyPolicy({ onBack }) {
   return (
     <div className="legal-page">
       <nav className="nav">
-        <div className="logo">AgentStandard <span className="logo-dot">✦</span></div>
+        <div className="logo" onClick={onBack} style={{cursor:"pointer"}}>AgentStandard <span className="logo-dot">?</span></div>
         <button className="nav-link" onClick={onBack} style={{background:'none',border:'none',cursor:'pointer'}}>← Back</button>
       </nav>
       <div className="legal-content">
@@ -188,7 +188,7 @@ function Manifesto({ onBack }) {
   return (
     <div className="manifesto-page">
       <nav className="nav">
-        <div className="logo">AgentStandard <span className="logo-dot">✦</span></div>
+        <div className="logo" onClick={onBack} style={{cursor:"pointer"}}>AgentStandard <span className="logo-dot">?</span></div>
         <button className="nav-link" onClick={onBack} style={{background:'none',border:'none',cursor:'pointer'}}>← Back</button>
       </nav>
       <div className="manifesto-content">
@@ -359,7 +359,7 @@ export default function App() {
       {/* Hero */}
       <header className="hero">
         <nav className="nav">
-          <div className="logo">AgentStandard <span className="logo-dot">✦</span></div>
+          <div className="logo" onClick={() => setPage('home')} style={{cursor:"pointer"}}>AgentStandard <span className="logo-dot">?</span></div>
           <div style={{display:'flex',gap:'20px',alignItems:'center'}}>
             <button className="nav-link" onClick={() => setPage('manifesto')} style={{background:'none',border:'none',cursor:'pointer'}}>Manifesto</button>
             <a href="https://github.com/AgentStandard/packages" target="_blank" rel="noreferrer" className="nav-link">Submit a Package</a>

@@ -420,8 +420,8 @@ export default function App() {
       <section className="questionnaire-section">
         <div className="questionnaire-inner">
           <div className="section-eyebrow">Start right</div>
-          <h2>The two questions that change everything.</h2>
-          <p className="questionnaire-sub">The fastest way to get a great agent isn't a better model. It's telling your agent who you are — and deciding how you want it to show up. We call these the Operator Profile and the Agent Profile. They're what got AgentStandard off the ground in 48 hours.</p>
+          <h2>Agent, meet Operator.<br />Operator, meet Agent.</h2>
+          <p className="questionnaire-sub">The fastest path to a great agent isn't a better model. It's a proper introduction. These two profiles are what got AgentStandard off the ground in 48 hours.</p>
           <div className="q-cards">
             <div className="q-card">
               <div className="q-card-header">
@@ -452,7 +452,7 @@ export default function App() {
               </ul>
             </div>
           </div>
-          <p className="questionnaire-note">These questions are included in every AgentStandard certified package — free. Answer them once. Your agent carries them forward.</p>
+          <p className="questionnaire-note">These profiles are included in every AgentStandard certified package. Answer them once. Your agent carries them forward.</p>
         </div>
       </section>
 
@@ -509,9 +509,9 @@ export default function App() {
             Not community guesswork — an actual standard. Like Morningstar ratings, but for agents.
           </p>
           <div className="cert-stats">
-            <div className="cert-stat"><strong>97%</strong><span>avg task completion</span></div>
-            <div className="cert-stat"><strong>&lt;2s</strong><span>avg response time</span></div>
-            <div className="cert-stat"><strong>$0.04</strong><span>avg cost/session</span></div>
+            <div className="cert-stat"><strong>✓</strong><span>Manually reviewed</span></div>
+            <div className="cert-stat"><strong>✓</strong><span>Install-tested on Mac + Windows</span></div>
+            <div className="cert-stat"><strong>✓</strong><span>Open source — inspect everything</span></div>
           </div>
           <a href="https://github.com/AgentStandard/packages" target="_blank" rel="noreferrer" className="cert-link">
             Submit your package for certification →

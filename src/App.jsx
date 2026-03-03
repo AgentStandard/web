@@ -1,4 +1,4 @@
-﻿import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import PackageDetail from './PackageDetail'
 import CommunityPackagePage from './CommunityPackagePage'
@@ -8,8 +8,8 @@ function TermsOfService({ onBack }) {
   return (
     <div className="legal-page">
       <nav className="nav">
-        <div className="logo" onClick={onBack} style={{cursor:"pointer"}}>AgentStandard <span className="logo-dot">✦</span></div>
-        <button className="nav-link" onClick={onBack} style={{background:'none',border:'none',cursor:'pointer'}}>← Back</button>
+        <div className="logo" onClick={onBack} style={{cursor:"pointer"}}>AgentStandard <span className="logo-dot">?</span></div>
+        <button className="nav-link" onClick={onBack} style={{background:'none',border:'none',cursor:'pointer'}}>? Back</button>
       </nav>
       <div className="legal-content">
         <h1>Terms of Service</h1>
@@ -58,7 +58,7 @@ function TermsOfService({ onBack }) {
         <p>Always review the terms, privacy policies, and pricing of any third-party AI platform before use.</p>
 
         <h2>7. Certification</h2>
-        <p>The "AgentStandard Certified" designation (✦) indicates a Package passed our internal review process at the time of certification. Certification is:</p>
+        <p>The "AgentStandard Certified" designation (?) indicates a Package passed our internal review process at the time of certification. Certification is:</p>
         <ul>
           <li>Not a guarantee of fitness for any particular purpose</li>
           <li>Not a guarantee of continued functionality as third-party platforms evolve</li>
@@ -70,7 +70,7 @@ function TermsOfService({ onBack }) {
         <p>In compliance with the UK Digital Markets, Competition and Consumers Act 2024, we prohibit fake or incentivised reviews, install counts, or ratings. We take reasonable steps to verify the authenticity of community data on the Site. If you believe any content is false or misleading, contact us at <a href="mailto:hello@agentstandard.ai">hello@agentstandard.ai</a>.</p>
 
         <h2>9. Intellectual Property</h2>
-        <p>The AgentStandard name, logo, and ✦ certification mark are our proprietary marks. You may not use them to imply endorsement without our prior written consent. Package content hosted on our GitHub is subject to the individual licences specified in each repository. Nothing in these Terms transfers any IP rights to you beyond what is expressly stated.</p>
+        <p>The AgentStandard name, logo, and ? certification mark are our proprietary marks. You may not use them to imply endorsement without our prior written consent. Package content hosted on our GitHub is subject to the individual licences specified in each repository. Nothing in these Terms transfers any IP rights to you beyond what is expressly stated.</p>
 
         <h2>10. Copyright Takedown</h2>
         <p>If you believe content on the Site or our GitHub repositories infringes your copyright under the Copyright, Designs and Patents Act 1988, please send a written notice to <a href="mailto:hello@agentstandard.ai">hello@agentstandard.ai</a> including: (a) identification of the copyrighted work; (b) identification of the infringing material and its location; (c) your contact details; (d) a statement that you have a good-faith belief the use is not authorised; and (e) a statement that the information is accurate and you are the rights holder or authorised to act on their behalf. We will respond within a reasonable timeframe.</p>
@@ -79,7 +79,7 @@ function TermsOfService({ onBack }) {
         <p>THE SITE AND ALL PACKAGES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTY OF ANY KIND. TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, ACCURACY, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE SITE WILL BE UNINTERRUPTED, ERROR-FREE, OR FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS.</p>
 
         <h2>12. Limitation of Liability</h2>
-        <p>To the fullest extent permitted by applicable law, our total liability to you for any claims arising under these Terms shall not exceed £100. We shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, goodwill, or business opportunity, even if advised of the possibility of such damages.</p>
+        <p>To the fullest extent permitted by applicable law, our total liability to you for any claims arising under these Terms shall not exceed �100. We shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, goodwill, or business opportunity, even if advised of the possibility of such damages.</p>
         <p>Nothing in these Terms limits our liability for: (a) death or personal injury caused by our negligence; (b) fraud or fraudulent misrepresentation; or (c) any other liability that cannot be excluded or limited under applicable law.</p>
 
         <h2>13. Responsibility for Your Content</h2>
@@ -108,8 +108,8 @@ function PrivacyPolicy({ onBack }) {
   return (
     <div className="legal-page">
       <nav className="nav">
-        <div className="logo" onClick={onBack} style={{cursor:"pointer"}}>AgentStandard <span className="logo-dot">✦</span></div>
-        <button className="nav-link" onClick={onBack} style={{background:'none',border:'none',cursor:'pointer'}}>← Back</button>
+        <div className="logo" onClick={onBack} style={{cursor:"pointer"}}>AgentStandard <span className="logo-dot">?</span></div>
+        <button className="nav-link" onClick={onBack} style={{background:'none',border:'none',cursor:'pointer'}}>? Back</button>
       </nav>
       <div className="legal-content">
         <h1>Privacy Policy</h1>
@@ -192,8 +192,8 @@ function ContributorTerms({ onBack }) {
   return (
     <div className="legal-page">
       <nav className="nav">
-        <div className="logo" onClick={onBack} style={{cursor:"pointer"}}>AgentStandard <span className="logo-dot">✦</span></div>
-        <button className="nav-link" onClick={onBack} style={{background:'none',border:'none',cursor:'pointer'}}>← Back</button>
+        <div className="logo" onClick={onBack} style={{cursor:"pointer"}}>AgentStandard <span className="logo-dot">?</span></div>
+        <button className="nav-link" onClick={onBack} style={{background:'none',border:'none',cursor:'pointer'}}>? Back</button>
       </nav>
       <div className="legal-content">
         <h1>Contributor Terms</h1>
@@ -231,8 +231,8 @@ function Manifesto({ onBack }) {
   return (
     <div className="manifesto-page">
       <nav className="nav">
-        <div className="logo" onClick={onBack} style={{cursor:"pointer"}}>AgentStandard <span className="logo-dot">✦</span></div>
-        <button className="nav-link" onClick={onBack} style={{background:'none',border:'none',cursor:'pointer'}}>← Back</button>
+        <div className="logo" onClick={onBack} style={{cursor:"pointer"}}>AgentStandard <span className="logo-dot">?</span></div>
+        <button className="nav-link" onClick={onBack} style={{background:'none',border:'none',cursor:'pointer'}}>? Back</button>
       </nav>
       <div className="manifesto-content">
         <div className="manifesto-badge">Our Manifesto</div>
@@ -443,9 +443,10 @@ const packages = [
     userLevel: 'intermediate',
     keywords: ['shopify', 'ecommerce', 'inventory', 'customer service', 'operations', 'fulfilment'],
   },
-  // ── New packages ──────────────────────────────────────────────────────────
+  // -- New packages ----------------------------------------------------------
   {
     slug: 'gp-prep',
+    isNew: true,
     name: 'GP Prep',
     tagline: 'Walk into any appointment knowing exactly what to say.',
     vertical: 'Health',
@@ -474,6 +475,7 @@ const packages = [
   },
   {
     slug: 'wine-log',
+    isNew: true,
     name: 'Wine Log',
     tagline: "Remember every bottle. Build a palate that's genuinely yours.",
     vertical: 'Lifestyle',
@@ -502,6 +504,7 @@ const packages = [
   },
   {
     slug: 'relationship-graph',
+    isNew: true,
     name: 'Relationship Graph',
     tagline: 'Your people, remembered properly.',
     vertical: 'Social',
@@ -530,6 +533,7 @@ const packages = [
   },
   {
     slug: 'week-in-review',
+    isNew: true,
     name: 'Week in Review',
     tagline: 'Sunday digest. What you did, what slipped, what matters next week.',
     vertical: 'Productivity',
@@ -558,6 +562,7 @@ const packages = [
   },
   {
     slug: 'memory-architect',
+    isNew: true,
     name: 'Memory Architect',
     tagline: 'An agent that remembers who you are.',
     vertical: 'Productivity',
@@ -586,6 +591,7 @@ const packages = [
   },
   {
     slug: 'skill-tracker',
+    isNew: true,
     name: 'Skill Tracker',
     tagline: "Know what you're learning. Know what you're not.",
     vertical: 'Learning',
@@ -614,6 +620,7 @@ const packages = [
   },
   {
     slug: 'book-brain',
+    isNew: true,
     name: 'Book Brain',
     tagline: 'Read it and remember it. For real this time.',
     vertical: 'Learning',
@@ -642,6 +649,7 @@ const packages = [
   },
   {
     slug: 'network-pulse',
+    isNew: true,
     name: 'Network Pulse',
     tagline: 'Know who to reach out to before the moment passes.',
     vertical: 'Social',
@@ -670,6 +678,7 @@ const packages = [
   },
   {
     slug: 'gift-curator',
+    isNew: true,
     name: 'Gift Curator',
     tagline: 'Thoughtful gifts. Every time.',
     vertical: 'Social',
@@ -680,7 +689,7 @@ const packages = [
     certified: false,
     telegram: true,
     tags: ['gifts', 'social', 'occasions', 'shopping'],
-    description: 'Learns the preferences of people in your life over time. When an occasion comes up, suggests gifts that genuinely fit — with links.',
+    description: 'Learns the preferences of people in your life over time. When an occasion comes up, suggests gifts that genuinely fit � with links.',
     whatItDoes: [
       'Learns what people in your life care about from what you mention in conversation',
       'Tracks upcoming occasions so you are never caught off guard',
@@ -698,6 +707,7 @@ const packages = [
   },
   {
     slug: 'taste-map',
+    isNew: true,
     name: 'Taste Map',
     tagline: 'Your taste in everything. Mapped and growing.',
     vertical: 'Lifestyle',
@@ -726,6 +736,7 @@ const packages = [
   },
   {
     slug: 'read-it-later',
+    isNew: true,
     name: 'Read It Later',
     tagline: 'Save it. Read it. Let it stick.',
     vertical: 'Learning',
@@ -754,6 +765,7 @@ const packages = [
   },
   {
     slug: 'home-stack',
+    isNew: true,
     name: 'Home Stack',
     tagline: 'Your home, tracked and remembered.',
     vertical: 'Lifestyle',
@@ -782,6 +794,7 @@ const packages = [
   },
   {
     slug: 'supplement-stack',
+    isNew: true,
     name: 'Supplement Stack',
     tagline: "What you're taking. When to take it. What to watch.",
     vertical: 'Health',
@@ -810,6 +823,7 @@ const packages = [
   },
   {
     slug: 'salary-scout',
+    isNew: true,
     name: 'Salary Scout',
     tagline: "Know your market value. Know when you're underpaid.",
     vertical: 'Career',
@@ -857,14 +871,15 @@ function PackageCard({ pkg }) {
     <div className="package-card package-card-clickable" onClick={handleCardClick}>
       <div className="card-header">
         <span className={`vertical-badge vertical-${pkg.vertical.toLowerCase()}`}>{pkg.vertical}</span>
-        {pkg.certified && <span className="certified-badge">✦ Certified</span>}
-        {pkg.telegram && <span className="telegram-pill">💬 Telegram</span>}
+        {pkg.certified && <span className="certified-badge">? Certified</span>}
+        {pkg.isNew && <span className="new-pill">New</span>}
+        {pkg.telegram && <span className="telegram-pill">?? Telegram</span>}
       </div>
       <h3>{pkg.name}</h3>
       <p className="tagline">{pkg.tagline}</p>
       <div className="card-stats">
-        <span>⏱ {pkg.setupTime} min setup</span>
-        {pkg.rating && <span>⭐ {pkg.rating}</span>}
+        <span>? {pkg.setupTime} min setup</span>
+        {pkg.rating && <span>? {pkg.rating}</span>}
         <span className={`tier-badge tier-${pkg.tier.toLowerCase()}`}>{pkg.tier}</span>
       </div>
       <div className="card-tags">
@@ -880,13 +895,13 @@ function PackageCard({ pkg }) {
           }
         }}
       >
-        {pkg.certified ? <>Install Package → <span className="free-pill">Free</span></> : 'View Package →'}
+        {pkg.certified ? <>Install Package ? <span className="free-pill">Free</span></> : 'View Package ?'}
       </button>
       <div className="card-footer">
         <UpvoteButton slug={pkg.slug} />
         {pkg.discussionUrl && (
           <a href={pkg.discussionUrl} target="_blank" rel="noreferrer" className="discussion-link">
-            💬 Discussion
+            ?? Discussion
           </a>
         )}
       </div>
@@ -946,7 +961,7 @@ export default function App() {
       {/* Hero */}
       <header className="hero">
         <nav className="nav">
-          <div className="logo" onClick={() => setPage('home')} style={{cursor:"pointer"}}>AgentStandard <span className="logo-dot">✦</span></div>
+          <div className="logo" onClick={() => setPage('home')} style={{cursor:"pointer"}}>AgentStandard <span className="logo-dot">?</span></div>
           <div style={{display:'flex',gap:'20px',alignItems:'center'}}>
             <button className="nav-link" onClick={() => setPage('manifesto')} style={{background:'none',border:'none',cursor:'pointer'}}>Manifesto</button>
             <a href="https://github.com/AgentStandard/packages" target="_blank" rel="noreferrer" className="nav-link">Submit a Package</a>
@@ -958,7 +973,7 @@ export default function App() {
             <img src="/hero-logo.png" alt="AgentStandard - Per Aspera Ad Astra" className="hero-logo-img" />
           </div>
           <div className="hero-text-col">
-            <div className="hero-badge">✦ Ready in 60 seconds. No download.</div>
+            <div className="hero-badge">? Ready in 60 seconds. No download.</div>
             <h1>Your agent.<br />Knows your name.</h1>
             <p className="hero-sub">
               Not a chatbot you prompt. An agent you build a relationship with. Remembers what matters, follows your rules, reaches out when it's useful. Start in Telegram - talking in under a minute.
@@ -1012,7 +1027,7 @@ export default function App() {
           <div className="q-cards">
             <div className="q-card">
               <div className="q-card-header">
-                <span className="q-icon">👤</span>
+                <span className="q-icon">??</span>
                 <strong>Operator Profile</strong>
                 <span className="q-tag">Who you are</span>
               </div>
@@ -1026,7 +1041,7 @@ export default function App() {
             </div>
             <div className="q-card">
               <div className="q-card-header">
-                <span className="q-icon">🤖</span>
+                <span className="q-icon">??</span>
                 <strong>Agent Profile</strong>
                 <span className="q-tag">How it shows up</span>
               </div>
@@ -1089,19 +1104,19 @@ export default function App() {
       {/* Certification */}
       <section className="certification-section">
         <div className="cert-content">
-          <div className="cert-badge-large">✦</div>
+          <div className="cert-badge-large">?</div>
           <h2>AgentStandard Certified</h2>
           <p>
             Every certified package has been manually reviewed, benchmarked, and tested.
             Not community guesswork - an actual standard. Like Morningstar ratings, but for agents.
           </p>
           <div className="cert-stats">
-            <div className="cert-stat"><strong>✓</strong><span>Manually reviewed</span></div>
-            <div className="cert-stat"><strong>✓</strong><span>Install-tested on Mac + Windows</span></div>
-            <div className="cert-stat"><strong>✓</strong><span>Open source - inspect everything</span></div>
+            <div className="cert-stat"><strong>?</strong><span>Manually reviewed</span></div>
+            <div className="cert-stat"><strong>?</strong><span>Install-tested on Mac + Windows</span></div>
+            <div className="cert-stat"><strong>?</strong><span>Open source - inspect everything</span></div>
           </div>
           <a href="https://github.com/AgentStandard/packages" target="_blank" rel="noreferrer" className="cert-link">
-            Submit your package for certification →
+            Submit your package for certification ?
           </a>
         </div>
       </section>
@@ -1111,7 +1126,7 @@ export default function App() {
         <h2>Stay ahead of the standard.</h2>
         <p>New packages, certification updates, and platform news - direct to your inbox.</p>
         {submitted ? (
-          <div className="submitted-msg">✦ You're on the list. We'll be in touch.</div>
+          <div className="submitted-msg">? You're on the list. We'll be in touch.</div>
         ) : (
           <>
           <form className="email-form" onSubmit={handleSubmit}>
@@ -1131,7 +1146,7 @@ export default function App() {
 
       {/* Footer */}
       <footer className="footer">
-        <div className="footer-logo">AgentStandard ✦</div>
+        <div className="footer-logo">AgentStandard ?</div>
         <div className="footer-links">
           <a href="https://github.com/AgentStandard/packages" target="_blank" rel="noreferrer">GitHub</a>
           <a href="mailto:hello@agentstandard.ai">hello@agentstandard.ai</a>
@@ -1139,7 +1154,7 @@ export default function App() {
           <button className="footer-link-btn" onClick={() => setPage('privacy')}>Privacy Policy</button>
           <button className="footer-link-btn" onClick={() => setPage('contributor-terms')}>Contributor Terms</button>
         </div>
-        <div className="footer-copy">Setting the standard for agent packages. · England & Wales</div>
+        <div className="footer-copy">Setting the standard for agent packages. � England & Wales</div>
       </footer>
     </div>
   )

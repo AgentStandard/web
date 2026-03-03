@@ -410,6 +410,20 @@ body {
   border-radius: 4px;
 }
 
+.new-pill {
+  font-size: 0.65rem;
+  font-weight: 700;
+  background: rgba(180, 100, 0, 0.10);
+  color: #a05800;
+  border-radius: 100px;
+  padding: 2px 8px;
+  margin-left: 4px;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
 .telegram-pill {
   font-size: 0.65rem;
   font-weight: 700;

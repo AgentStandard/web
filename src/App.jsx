@@ -850,6 +850,64 @@ const packages = [
     userLevel: 'beginner',
     keywords: ['salary', 'career', 'compensation', 'jobs', 'market-value', 'negotiation'],
   },
+  {
+    slug: 'job-hunt-agent',
+    name: 'Job Hunt Agent',
+    tagline: 'Your job search, organised and moving.',
+    vertical: 'Career',
+    tier: 'Free',
+    setupTime: 3,
+    rating: null,
+    installs: 0,
+    certified: false,
+    telegram: true,
+    isNew: true,
+    tags: ['jobs', 'career', 'interviews', 'job-search', 'applications'],
+    description: 'Tracks every application, prep conversation, and interview. Surfaces what to do next. Keeps the momentum going when job hunting gets demoralising.',
+    whatItDoes: [
+      'Tracks every role you are pursuing with status, contacts, and next steps',
+      'Surfaces follow-ups going cold and applications that need attention',
+      'Helps you prep for specific interviews — company research, likely questions, your best stories',
+      'Stays honest when things are slow without catastrophising',
+    ],
+    whoItsFor: 'Anyone in an active job search who needs a system that actually keeps up.',
+    skills: [
+      { name: 'Application Tracker', description: 'Tracks every role with status, contacts, and next steps' },
+      { name: 'Interview Prep', description: 'Prepares you for specific companies and roles' },
+      { name: 'Follow-up Radar', description: 'Surfaces applications going cold and overdue follow-ups' },
+    ],
+    userLevel: 'beginner',
+    keywords: ['jobs', 'career', 'interviews', 'job-search', 'applications'],
+  },
+  {
+    slug: 'freelancer-guard',
+    name: 'Freelancer Guard',
+    tagline: 'Read it before you sign it.',
+    vertical: 'Career',
+    tier: 'Free',
+    setupTime: 2,
+    rating: null,
+    installs: 0,
+    certified: false,
+    telegram: true,
+    isNew: true,
+    tags: ['freelance', 'contracts', 'legal', 'career', 'consulting'],
+    description: 'Reads client contracts, scopes of work, and proposals. Flags the clauses that will cause problems — late payment, scope creep, IP traps, liability gaps. Plain English, no legal jargon.',
+    whatItDoes: [
+      'Flags risky contract clauses specifically — not generic advice, specific problems',
+      'Checks for unlimited revisions, vague deliverables, IP traps, and payment term gaps',
+      'Suggests better contract language and negotiation positions',
+      'Helps when scope creep is already happening — what to say, how to handle it',
+    ],
+    whoItsFor: 'Any freelancer, consultant, or contractor who has ever been burned by a bad contract.',
+    skills: [
+      { name: 'Contract Analyser', description: 'Reads contracts and flags risky clauses in plain English' },
+      { name: 'Scope Guard', description: 'Identifies scope creep risks and vague deliverable definitions' },
+      { name: 'Negotiation Coach', description: 'Suggests better contract language and negotiation positions' },
+    ],
+    userLevel: 'beginner',
+    keywords: ['freelance', 'contracts', 'legal', 'career', 'consulting', 'scope-creep'],
+  },
 ]
 
 const verticals = ['All', 'General', 'Productivity', 'Health', 'Lifestyle', 'Social', 'Learning', 'Career', 'Content', 'Ecommerce', 'Dev'] // Finance hidden until April 15
@@ -979,7 +1037,7 @@ export default function App() {
               Not a chatbot you prompt. An agent you build a relationship with. Remembers what matters, follows your rules, reaches out when it's useful. Start in Telegram - talking in under a minute.
             </p>
             <div className="hero-stats">
-              <div className="stat"><strong>19</strong> packages</div>
+              <div className="stat"><strong>21</strong> packages</div>
               <div className="stat-divider" />
               <div className="stat"><strong>9</strong> verticals</div>
               <div className="stat-divider" />

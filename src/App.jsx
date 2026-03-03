@@ -366,22 +366,95 @@ export default function App() {
           </div>
         </nav>
 
-        <div className="hero-content">
-          <div className="hero-badge">Setting the standard for agent packages</div>
-          <h1>Your AI agent,<br />ready in minutes.</h1>
-          <p className="hero-sub">
-            Stop staring at the terminal. AgentStandard packages take you from zero
-            to a fully working AI agent — no coding required.
-          </p>
-          <div className="hero-stats">
-            <div className="stat"><strong>1</strong> certified package</div>
-            <div className="stat-divider" />
-            <div className="stat"><strong>5</strong> verticals</div>
-            <div className="stat-divider" />
-            <div className="stat"><strong>Any</strong> platform</div>
+        <div className="hero-split">
+          <div className="hero-image-col">
+            <img src="/hero-logo.png" alt="AgentStandard — Per Aspera Ad Astra" className="hero-logo-img" />
+          </div>
+          <div className="hero-text-col">
+            <div className="hero-badge">Setting the standard for agent packages</div>
+            <h1>AI is getting smarter.<br />Your AI should be too.</h1>
+            <p className="hero-sub">
+              Stop starting from zero. AgentStandard packages take you from a blank screen to a working AI agent that remembers you, learns from you, and gets better every day.
+            </p>
+            <div className="hero-stats">
+              <div className="stat"><strong>1</strong> certified package</div>
+              <div className="stat-divider" />
+              <div className="stat"><strong>5</strong> verticals</div>
+              <div className="stat-divider" />
+              <div className="stat"><strong>Any</strong> platform</div>
+            </div>
           </div>
         </div>
       </header>
+
+      {/* Grows with you */}
+      <section className="grows-section">
+        <div className="grows-inner">
+          <div className="grows-text">
+            <div className="section-eyebrow">The difference that matters</div>
+            <h2>Your agent grows with you.</h2>
+            <p>Every ChatGPT session starts from zero. You re-introduce yourself. You re-explain your context. You start over.</p>
+            <p>A properly configured agent is different. It knows who you are. It remembers what you've built together. It gets sharper the longer you work with it.</p>
+            <p>That's not a feature. That's the whole point.</p>
+          </div>
+          <div className="grows-compare">
+            <div className="compare-col compare-before">
+              <div className="compare-label">Without AgentStandard</div>
+              <div className="compare-item red">Sessions that start from scratch</div>
+              <div className="compare-item red">No memory between conversations</div>
+              <div className="compare-item red">You do the setup every time</div>
+              <div className="compare-item red">A tool, not a partner</div>
+            </div>
+            <div className="compare-col compare-after">
+              <div className="compare-label">With AgentStandard</div>
+              <div className="compare-item green">Picks up where you left off</div>
+              <div className="compare-item green">Remembers your context and goals</div>
+              <div className="compare-item green">Set up once, runs indefinitely</div>
+              <div className="compare-item green">A partner, not a prompt box</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Know your agent */}
+      <section className="questionnaire-section">
+        <div className="questionnaire-inner">
+          <div className="section-eyebrow">Start right</div>
+          <h2>The two questions that change everything.</h2>
+          <p className="questionnaire-sub">The fastest way to get a great agent isn't a better model. It's telling your agent who you are — and deciding how you want it to show up. We call these the Operator Profile and the Agent Profile. They're what got AgentStandard off the ground in 48 hours.</p>
+          <div className="q-cards">
+            <div className="q-card">
+              <div className="q-card-header">
+                <span className="q-icon">👤</span>
+                <strong>Operator Profile</strong>
+                <span className="q-tag">Who you are</span>
+              </div>
+              <ul className="q-list">
+                <li>What do you do professionally?</li>
+                <li>What's your biggest time drain right now?</li>
+                <li>What would you want your agent to do first every morning?</li>
+                <li>How do you like to communicate? (direct / detailed / casual)</li>
+                <li>What topics should your agent know inside out?</li>
+              </ul>
+            </div>
+            <div className="q-card">
+              <div className="q-card-header">
+                <span className="q-icon">🤖</span>
+                <strong>Agent Profile</strong>
+                <span className="q-tag">How it shows up</span>
+              </div>
+              <ul className="q-list">
+                <li>What should your agent call you?</li>
+                <li>What tone feels right? (warm / direct / professional)</li>
+                <li>How proactive should it be?</li>
+                <li>What's off limits?</li>
+                <li>What does success look like in 90 days?</li>
+              </ul>
+            </div>
+          </div>
+          <p className="questionnaire-note">These questions are included in every AgentStandard certified package. Answer them once. Your agent carries them forward.</p>
+        </div>
+      </section>
 
       {/* Packages */}
       <section className="packages-section">

@@ -269,14 +269,45 @@ body {
   border-top: 1px solid var(--grey-light);
 }
 
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--grey-light);
+}
+
+.upvote-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--off-white);
+  border: 1px solid var(--grey-light);
+  border-radius: 6px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: var(--grey);
+  transition: all 0.15s;
+}
+.upvote-btn:hover:not(:disabled) {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+.upvote-btn.upvote-voted {
+  background: #fdf8ee;
+  border-color: var(--gold);
+  color: var(--gold);
+  cursor: default;
+}
+.upvote-arrow { font-size: 0.7rem; }
+.upvote-count { font-weight: 700; }
+
 .discussion-link {
-  display: block;
-  text-align: center;
   font-size: 0.8rem;
   color: var(--grey);
   text-decoration: none;
-  margin-top: 8px;
-  padding: 4px 0;
   transition: color 0.2s;
 }
 .discussion-link:hover { color: var(--gold); }

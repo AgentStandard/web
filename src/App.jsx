@@ -1,6 +1,41 @@
-﻿import { useState } from 'react'
+﻿import { useState, useEffect } from 'react'
 import './App.css'
 import PackageDetail from './PackageDetail'
+import { getVoteCount, hasVoted, castVote } from './supabase'
+
+function UpvoteButton({ slug }) {
+  const [count, setCount] = useState(null)
+  const [voted, setVoted] = useState(false)
+  const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+    getVoteCount(slug).then(setCount)
+    hasVoted(slug).then(setVoted)
+  }, [slug])
+
+  const handleVote = async () => {
+    if (voted || loading) return
+    setLoading(true)
+    const ok = await castVote(slug)
+    if (ok) {
+      setVoted(true)
+      setCount(c => (c || 0) + 1)
+    }
+    setLoading(false)
+  }
+
+  return (
+    <button
+      className={`upvote-btn ${voted ? 'upvote-voted' : ''}`}
+      onClick={handleVote}
+      disabled={voted || loading}
+      title={voted ? 'You voted for this' : 'Upvote this package'}
+    >
+      <span className="upvote-arrow">▲</span>
+      <span className="upvote-count">{count === null ? '—' : count}</span>
+    </button>
+  )
+}
 
 function TermsOfService({ onBack }) {
   return (
@@ -323,11 +358,14 @@ function PackageCard({ pkg }) {
       <button className="install-btn" onClick={() => pkg.slug === 'first-conversation' ? window.dispatchEvent(new CustomEvent('navigate', {detail: 'package-first-conversation'})) : null}>
         {pkg.certified ? <>Install Package → <span className="free-pill">Free</span></> : 'Coming Soon'}
       </button>
-      {pkg.discussionUrl && (
-        <a href={pkg.discussionUrl} target="_blank" rel="noreferrer" className="discussion-link">
-          💬 Community discussion
-        </a>
-      )}
+      <div className="card-footer">
+        <UpvoteButton slug={pkg.slug} />
+        {pkg.discussionUrl && (
+          <a href={pkg.discussionUrl} target="_blank" rel="noreferrer" className="discussion-link">
+            💬 Discussion
+          </a>
+        )}
+      </div>
     </div>
   )
 }

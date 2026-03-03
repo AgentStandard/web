@@ -60,6 +60,7 @@ body {
 /* ── Hero ── */
 .hero {
   padding-bottom: 80px;
+  background: linear-gradient(90deg, #faf8f4 50%, #f2ede5 50%);
 }
 
 /* Split hero layout */
@@ -107,6 +108,7 @@ body {
   /* Hero */
   .hero {
     padding-bottom: 48px;
+    background: #faf8f4;
   }
   .hero-split {
     grid-template-columns: 1fr;

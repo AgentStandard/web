@@ -2,6 +2,135 @@ import { useState } from 'react'
 import './App.css'
 import PackageDetail from './PackageDetail'
 
+function TermsOfService({ onBack }) {
+  return (
+    <div className="legal-page">
+      <nav className="nav">
+        <div className="logo">AgentStandard <span className="logo-dot">✦</span></div>
+        <button className="nav-link" onClick={onBack} style={{background:'none',border:'none',cursor:'pointer'}}>← Back</button>
+      </nav>
+      <div className="legal-content">
+        <h1>Terms of Service</h1>
+        <p className="legal-date">Last updated: 3 March 2026</p>
+
+        <p>Welcome to AgentStandard. By accessing or using agentstandard.ai (the "Site"), you agree to these Terms of Service ("Terms"). Please read them carefully.</p>
+
+        <h2>1. Who We Are</h2>
+        <p>AgentStandard is operated by Jackson Graham ("we", "us", "our"). You can contact us at <a href="mailto:hello@agentstandard.ai">hello@agentstandard.ai</a>.</p>
+
+        <h2>2. What We Provide</h2>
+        <p>AgentStandard provides a curated marketplace of AI agent configuration packages ("Packages"). Packages are made available for download and use under the terms stated in each Package's individual licence. We do not provide AI services directly — Packages work with third-party AI platforms (such as OpenClaw, Anthropic Claude, OpenAI, and others) that you operate independently.</p>
+
+        <h2>3. Your Use of the Site</h2>
+        <p>You may use the Site for lawful purposes only. You agree not to:</p>
+        <ul>
+          <li>Misrepresent the source or certification status of any Package</li>
+          <li>Attempt to circumvent, disable, or interfere with the Site</li>
+          <li>Use the Site to distribute harmful, illegal, or deceptive content</li>
+          <li>Claim AgentStandard certification for a Package that has not been certified by us</li>
+        </ul>
+
+        <h2>4. Packages and Third-Party Platforms</h2>
+        <p>Packages available on AgentStandard are configurations for third-party AI platforms. We are not responsible for:</p>
+        <ul>
+          <li>The performance, availability, or cost of any third-party AI platform</li>
+          <li>API costs you incur when using a Package with a third-party platform</li>
+          <li>Changes to third-party platforms that affect Package functionality</li>
+        </ul>
+        <p>Always review the terms and pricing of any third-party AI platform before use.</p>
+
+        <h2>5. Certification</h2>
+        <p>The "AgentStandard Certified" designation (✦) indicates a Package has passed our internal review process at the time of certification. Certification is not a guarantee of fitness for any particular purpose. Certified status may be revoked if a Package no longer meets our standards.</p>
+
+        <h2>6. Intellectual Property</h2>
+        <p>The AgentStandard name, logo, and "✦" certification mark are our proprietary marks. Package content hosted on our GitHub is subject to the individual licences specified in each repository. You may not use our marks to imply endorsement without our written consent.</p>
+
+        <h2>7. Disclaimers</h2>
+        <p>THE SITE AND ALL PACKAGES ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND. TO THE FULLEST EXTENT PERMITTED BY LAW, WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.</p>
+
+        <h2>8. Limitation of Liability</h2>
+        <p>To the fullest extent permitted by applicable law, we shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, arising from your use of the Site or any Package.</p>
+
+        <h2>9. Changes to These Terms</h2>
+        <p>We may update these Terms from time to time. We'll update the "Last updated" date at the top. Continued use of the Site after changes constitutes acceptance of the revised Terms.</p>
+
+        <h2>10. Governing Law</h2>
+        <p>These Terms are governed by the laws of England and Wales. Any disputes shall be subject to the exclusive jurisdiction of the courts of England and Wales.</p>
+
+        <h2>11. Contact</h2>
+        <p>Questions about these Terms? Email us at <a href="mailto:hello@agentstandard.ai">hello@agentstandard.ai</a>.</p>
+      </div>
+    </div>
+  )
+}
+
+function PrivacyPolicy({ onBack }) {
+  return (
+    <div className="legal-page">
+      <nav className="nav">
+        <div className="logo">AgentStandard <span className="logo-dot">✦</span></div>
+        <button className="nav-link" onClick={onBack} style={{background:'none',border:'none',cursor:'pointer'}}>← Back</button>
+      </nav>
+      <div className="legal-content">
+        <h1>Privacy Policy</h1>
+        <p className="legal-date">Last updated: 3 March 2026</p>
+
+        <p>This Privacy Policy explains how AgentStandard ("we", "us", "our") collects, uses, and protects your personal data when you use agentstandard.ai (the "Site"). We are committed to protecting your privacy and complying with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018.</p>
+
+        <h2>1. Data Controller</h2>
+        <p>The data controller is Jackson Graham, operating as AgentStandard. Contact: <a href="mailto:hello@agentstandard.ai">hello@agentstandard.ai</a>.</p>
+
+        <h2>2. What Data We Collect</h2>
+        <p>We collect only what we need:</p>
+        <ul>
+          <li><strong>Email address</strong> — when you submit our "Notify me" form, your email address is collected so we can send you product updates, new package announcements, and relevant news.</li>
+        </ul>
+        <p>We do not currently use cookies, tracking pixels, analytics scripts, or any other passive data collection. We do not collect names, payment details, or browsing behaviour.</p>
+
+        <h2>3. How We Use Your Data</h2>
+        <p>Your email address is used solely to:</p>
+        <ul>
+          <li>Send you updates about AgentStandard (new packages, certification news, product announcements)</li>
+          <li>Respond to any enquiries you send us</li>
+        </ul>
+        <p>We will never sell, rent, or share your email address with third parties for marketing purposes.</p>
+
+        <h2>4. Legal Basis for Processing</h2>
+        <p>We process your email address on the basis of your <strong>consent</strong> — given when you submit the form. You may withdraw consent at any time by emailing <a href="mailto:hello@agentstandard.ai">hello@agentstandard.ai</a>.</p>
+
+        <h2>5. Third-Party Data Processors</h2>
+        <p>We use Formspree (formspree.io) to process form submissions. Your email address is transmitted to and stored by Formspree on our behalf. Formspree is GDPR-compliant. You can review Formspree's privacy policy at <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noreferrer">formspree.io/legal/privacy-policy</a>.</p>
+
+        <h2>6. Data Retention</h2>
+        <p>We retain your email address until you request deletion or withdraw consent. You can request removal at any time by emailing <a href="mailto:hello@agentstandard.ai">hello@agentstandard.ai</a> and we will delete your data within 30 days.</p>
+
+        <h2>7. Your Rights</h2>
+        <p>Under UK GDPR, you have the right to:</p>
+        <ul>
+          <li><strong>Access</strong> — request a copy of the personal data we hold about you</li>
+          <li><strong>Rectification</strong> — request correction of inaccurate data</li>
+          <li><strong>Erasure</strong> — request deletion of your data ("right to be forgotten")</li>
+          <li><strong>Restriction</strong> — request that we limit how we use your data</li>
+          <li><strong>Portability</strong> — request your data in a portable format</li>
+          <li><strong>Object</strong> — object to our processing of your data</li>
+          <li><strong>Withdraw consent</strong> — at any time, without affecting prior processing</li>
+        </ul>
+        <p>To exercise any of these rights, email <a href="mailto:hello@agentstandard.ai">hello@agentstandard.ai</a>. We will respond within 30 days.</p>
+        <p>You also have the right to lodge a complaint with the Information Commissioner's Office (ICO) at <a href="https://ico.org.uk" target="_blank" rel="noreferrer">ico.org.uk</a>.</p>
+
+        <h2>8. Security</h2>
+        <p>We take reasonable technical and organisational measures to protect your personal data. However, no internet transmission is completely secure. Please contact us immediately at <a href="mailto:hello@agentstandard.ai">hello@agentstandard.ai</a> if you believe your data has been compromised.</p>
+
+        <h2>9. Changes to This Policy</h2>
+        <p>We may update this policy as the Site evolves (for example, when we add analytics or payment processing). We'll update the "Last updated" date and, where changes are material, notify subscribers by email.</p>
+
+        <h2>10. Contact</h2>
+        <p>Data protection questions or requests: <a href="mailto:hello@agentstandard.ai">hello@agentstandard.ai</a>.</p>
+      </div>
+    </div>
+  )
+}
+
 function Manifesto({ onBack }) {
   return (
     <div className="manifesto-page">
@@ -147,6 +276,8 @@ export default function App() {
   }, [])
 
   if (page === 'manifesto') return <Manifesto onBack={() => setPage('home')} />
+  if (page === 'terms') return <TermsOfService onBack={() => setPage('home')} />
+  if (page === 'privacy') return <PrivacyPolicy onBack={() => setPage('home')} />
   if (page === 'package-first-conversation') return <PackageDetail onBack={() => setPage('home')} />
 
   const filtered = activeVertical === 'All'
@@ -283,8 +414,10 @@ export default function App() {
         <div className="footer-links">
           <a href="https://github.com/AgentStandard/packages" target="_blank" rel="noreferrer">GitHub</a>
           <a href="mailto:hello@agentstandard.ai">hello@agentstandard.ai</a>
+          <button className="footer-link-btn" onClick={() => setPage('terms')}>Terms of Service</button>
+          <button className="footer-link-btn" onClick={() => setPage('privacy')}>Privacy Policy</button>
         </div>
-        <div className="footer-copy">Setting the standard for agent packages.</div>
+        <div className="footer-copy">Setting the standard for agent packages. · England & Wales</div>
       </footer>
     </div>
   )

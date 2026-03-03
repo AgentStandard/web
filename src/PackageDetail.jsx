@@ -120,6 +120,7 @@ export default function PackageDetail({ onBack }) {
   const [currentStep, setCurrentStep] = useState(0)
   const [completed, setCompleted] = useState(false)
   const [copied, setCopied] = useState(false)
+  const [path, setPath] = useState(null) // null = path selector, 'telegram' = telegram, 'install' = local install
 
   const pkg = { ...firstConversation, steps }
   const step = steps[currentStep]
@@ -141,6 +142,79 @@ export default function PackageDetail({ onBack }) {
 
   const tweetText = encodeURIComponent(`Just set up my AI agent in 20 minutes with @AgentStandardAI 🤖\n\nNo coding. No YouTube tutorials. Just a package that worked.\n\nagentstandard.ai/packages/first-conversation`)
   const tweetUrl = `https://twitter.com/intent/tweet?text=${tweetText}`
+
+  // Path selector — shown before install or telegram flow
+  if (!path) {
+    return (
+      <div className="detail-page">
+        <nav className="nav">
+          <div className="logo">AgentStandard <span className="logo-dot">✦</span></div>
+          <button className="nav-link" onClick={onBack} style={{background:'none',border:'none',cursor:'pointer'}}>← Back</button>
+        </nav>
+        <div className="path-selector">
+          <span className="certified-badge">✦ AgentStandard Certified</span>
+          <h1>First Conversation Setup</h1>
+          <p className="path-selector-sub">How do you want to get started?</p>
+
+          <div className="path-cards">
+            <div className="path-card path-card--telegram" onClick={() => setPath('telegram')}>
+              <div className="path-card-icon">💬</div>
+              <div className="path-card-label">Start in Telegram</div>
+              <div className="path-card-badge">Recommended</div>
+              <div className="path-card-who">
+                <strong>For everyone.</strong> No download, no setup, no terminal. Your agent is ready in under 60 seconds — just open Telegram and say hello. First 10 messages are on us.
+              </div>
+              <div className="path-card-time">⏱ 60 seconds</div>
+              <button className="path-card-cta path-card-cta--telegram">Start in Telegram →</button>
+            </div>
+
+            <div className="path-card path-card--install" onClick={() => setPath('install')}>
+              <div className="path-card-icon">💻</div>
+              <div className="path-card-label">Install on your computer</div>
+              <div className="path-card-who">
+                <strong>For power users.</strong> Runs locally on your machine with full control. Install any package, customise everything, keep your data on your own hardware.
+              </div>
+              <div className="path-card-time">⏱ ~20 minutes</div>
+              <button className="path-card-cta path-card-cta--install">Install locally →</button>
+            </div>
+          </div>
+
+          <p className="path-selector-note">
+            Powered by <a href="https://openclaw.ai" target="_blank" rel="noreferrer">OpenClaw</a>, a free open-source AI agent platform. The Telegram path runs on our servers — your conversations stay private.
+          </p>
+        </div>
+      </div>
+    )
+  }
+
+  // Telegram path
+  if (path === 'telegram') {
+    return (
+      <div className="detail-page">
+        <nav className="nav">
+          <div className="logo">AgentStandard <span className="logo-dot">✦</span></div>
+          <button className="nav-link" onClick={() => setPath(null)} style={{background:'none',border:'none',cursor:'pointer'}}>← Back</button>
+        </nav>
+        <div className="telegram-path">
+          <div className="telegram-path-icon">💬</div>
+          <h1>You're one tap away.</h1>
+          <p className="telegram-path-sub">Your agent is ready and waiting. Open Telegram and say hello — your first 10 messages are on us, no account or API key needed.</p>
+          <a
+            href="https://t.me/AgentStandardBot"
+            target="_blank"
+            rel="noreferrer"
+            className="telegram-cta-btn"
+          >
+            Open in Telegram →
+          </a>
+          <p className="telegram-path-note">After your free messages, we'll show you how to connect your own free API key to keep going.</p>
+          <div className="telegram-whatsapp-coming">
+            <span>📱 WhatsApp coming soon</span>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   if (completed) {
     return (

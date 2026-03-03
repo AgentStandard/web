@@ -480,3 +480,183 @@
   color: #666;
   margin-top: 0.5rem;
 }
+
+/* Path Selector */
+.path-selector {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.path-selector h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 1rem 0 0.5rem;
+}
+
+.path-selector-sub {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2.5rem;
+}
+
+.path-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 600px) {
+  .path-cards { grid-template-columns: 1fr; }
+}
+
+.path-card {
+  border: 2px solid #e8e4dc;
+  border-radius: 14px;
+  padding: 1.75rem 1.5rem;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  background: #fff;
+  position: relative;
+}
+
+.path-card:hover {
+  border-color: #c8a96e;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.path-card--telegram {
+  border-color: #c8a96e;
+  background: #fffdf7;
+}
+
+.path-card-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.path-card-label {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  color: #1a1a1a;
+}
+
+.path-card-badge {
+  display: inline-block;
+  background: #c8a96e;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.path-card-who {
+  font-size: 0.88rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.path-card-time {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.path-card-cta {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.path-card-cta--telegram {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.path-card-cta--install {
+  background: #f0ece4;
+  color: #333;
+}
+
+.path-card-cta:hover { opacity: 0.85; }
+
+.path-selector-note {
+  font-size: 0.78rem;
+  color: #999;
+  line-height: 1.6;
+}
+
+.path-selector-note a {
+  color: #c8a96e;
+  text-decoration: none;
+}
+
+/* Telegram Path */
+.telegram-path {
+  max-width: 500px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.telegram-path-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.telegram-path h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.telegram-path-sub {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.telegram-cta-btn {
+  display: inline-block;
+  background: #1a1a1a;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: opacity 0.15s;
+  margin-bottom: 1.25rem;
+}
+
+.telegram-cta-btn:hover { opacity: 0.85; }
+
+.telegram-path-note {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 1.5rem;
+}
+
+.telegram-whatsapp-coming {
+  font-size: 0.8rem;
+  color: #aaa;
+  padding: 0.5rem 1rem;
+  background: #f5f5f5;
+  border-radius: 20px;
+  display: inline-block;
+}

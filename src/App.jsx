@@ -339,8 +339,16 @@ const packages = [
 const verticals = ['All', 'General', 'Finance', 'Content', 'Ecommerce', 'Dev', 'SEO']
 
 function PackageCard({ pkg }) {
+  const handleCardClick = (e) => {
+    // Don't trigger if clicking upvote button or discussion link
+    if (e.target.closest('.upvote-btn') || e.target.closest('.discussion-link')) return
+    if (pkg.slug === 'first-conversation') {
+      window.dispatchEvent(new CustomEvent('navigate', { detail: 'package-first-conversation' }))
+    }
+  }
+
   return (
-    <div className="package-card">
+    <div className={`package-card ${pkg.slug === 'first-conversation' ? 'package-card-clickable' : ''}`} onClick={handleCardClick}>
       <div className="card-header">
         <span className={`vertical-badge vertical-${pkg.vertical.toLowerCase()}`}>{pkg.vertical}</span>
         {pkg.certified && <span className="certified-badge">✦ Certified</span>}

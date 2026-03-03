@@ -430,3 +430,20 @@
   margin-top: 1rem;
   line-height: 1.5;
 }
+
+.step-troubleshoot {
+  display: block;
+  margin-top: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: #fff8f0;
+  border-left: 3px solid #e8a87c;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.step-troubleshoot-label {
+  font-weight: 600;
+  color: #c0703a;
+}

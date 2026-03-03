@@ -25,7 +25,8 @@ function getInstallStep(os) {
     cta2: null,
     estimated_minutes: 3,
     type: 'install',
-    tip: "When you open it, macOS might say it's from an unidentified developer. Go to System Settings → Privacy & Security → click Open Anyway. On the gateway setup screen, choose \"This Mac\" — that keeps your agent running in the background.",
+    tip: "On the gateway setup screen, choose \"This Mac\" — that keeps your agent running in the background.",
+    troubleshoot: "See \"Gateway did not become ready\"? Quit OpenClaw, reopen it, and click Retry. If that doesn't work: open Terminal and run: openclaw gateway start — then click Retry in the wizard. Still stuck? macOS may have blocked it — go to System Settings → Privacy & Security → click Allow.",
   }
   if (os === 'windows') return {
     order: 1,
@@ -251,6 +252,13 @@ export default function PackageDetail({ onBack }) {
 
           {step.tip && (
             <div className="step-tip">💡 {step.tip}</div>
+          )}
+
+          {step.troubleshoot && (
+            <div className="step-troubleshoot">
+              <span className="step-troubleshoot-label">🔧 Having trouble?</span>
+              <span> {step.troubleshoot}</span>
+            </div>
           )}
 
           <div className="step-actions">

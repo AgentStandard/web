@@ -851,6 +851,35 @@ const packages = [
     keywords: ['salary', 'career', 'compensation', 'jobs', 'market-value', 'negotiation'],
   },
   {
+    slug: 'bid-auditor',
+    name: 'Bid Auditor',
+    tagline: 'Find where the money went.',
+    vertical: 'Real Estate',
+    tier: 'Free',
+    setupTime: 3,
+    rating: null,
+    installs: 0,
+    certified: false,
+    telegram: true,
+    isNew: true,
+    tags: ['construction', 'real-estate', 'bidding', 'contractors', 'renovation'],
+    description: 'Feed it your bid package, plans, and specs. It cross-references what the contractor quoted against what is actually in scope — and flags every line where the numbers do not match the drawings. What takes a pre-con manager two weeks, done in 15 minutes.',
+    whatItDoes: [
+      'Flags inflated line items with specific numbers, not vague warnings',
+      'Catches padding patterns — vague allowances, stacked fees, duplicate scope, unit prices above market',
+      'Compares multiple contractor bids side by side',
+      'Prepares RFI and clarification requests for scope review meetings',
+    ],
+    whoItsFor: 'Property owners, developers, and project managers who are tired of contractors stuffing their budgets.',
+    skills: [
+      { name: 'Bid Line Analysis', description: 'Cross-references quoted amounts against scope in plans and specs' },
+      { name: 'Red Flag Detection', description: 'Identifies padding patterns — allowances, stacked fees, duplicate scope' },
+      { name: 'Bid Comparison', description: 'Compares multiple contractor bids side by side' },
+    ],
+    userLevel: 'intermediate',
+    keywords: ['construction', 'real-estate', 'bidding', 'contractors', 'renovation', 'property', 'development'],
+  },
+  {
     slug: 'pantry-chef',
     name: 'Pantry Chef',
     tagline: "What's in the fridge? Let's cook.",
@@ -1066,7 +1095,7 @@ export default function App() {
               Not a chatbot you prompt. An agent you build a relationship with. Remembers what matters, follows your rules, reaches out when it's useful. Start in Telegram - talking in under a minute.
             </p>
             <div className="hero-stats">
-              <div className="stat"><strong>22</strong> packages</div>
+              <div className="stat"><strong>23</strong> packages</div>
               <div className="stat-divider" />
               <div className="stat"><strong>9</strong> verticals</div>
               <div className="stat-divider" />

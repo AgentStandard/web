@@ -80,8 +80,8 @@ function TermsOfService({ onBack }) {
         <p>To the fullest extent permitted by applicable law, our total liability to you for any claims arising under these Terms shall not exceed £100. We shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, goodwill, or business opportunity, even if advised of the possibility of such damages.</p>
         <p>Nothing in these Terms limits our liability for: (a) death or personal injury caused by our negligence; (b) fraud or fraudulent misrepresentation; or (c) any other liability that cannot be excluded or limited under applicable law.</p>
 
-        <h2>13. Indemnification</h2>
-        <p>You agree to indemnify and hold harmless AgentStandard and Jackson Graham from and against any claims, damages, losses, and expenses (including reasonable legal fees) arising from: (a) your use of the Site; (b) your violation of these Terms; or (c) any content you submit to the Site.</p>
+        <h2>13. Responsibility for Your Content</h2>
+        <p>You are solely responsible for any content you submit to AgentStandard, including Packages submitted for certification. We review submissions in good faith against our published certification standard, but we are not liable for any harm, loss, or legal claim arising from content you submit. If a third party brings a claim against us arising from your submitted content, we reserve the right to seek a contribution from you to the extent permitted by applicable law.</p>
 
         <h2>14. Changes to These Terms</h2>
         <p>We may update these Terms from time to time. We will update the "Last updated" date at the top and, for material changes, notify subscribers by email where possible. Continued use of the Site after changes constitutes your acceptance of the revised Terms.</p>
@@ -145,7 +145,9 @@ function PrivacyPolicy({ onBack }) {
         <ul>
           <li><strong>Formspree, Inc.</strong> (USA) — processes form submissions containing your email address. Formspree participates in the EU-U.S. Data Privacy Framework and uses Standard Contractual Clauses (SCCs) for UK-to-US transfers. Privacy policy: <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noreferrer">formspree.io/legal/privacy-policy</a></li>
           <li><strong>Vercel, Inc.</strong> (USA) — hosts the Site and processes server log data. Vercel participates in the EU-U.S. Data Privacy Framework and uses SCCs for international transfers. Privacy policy: <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noreferrer">vercel.com/legal/privacy-policy</a></li>
+          <li><strong>GitHub, Inc.</strong> (USA, owned by Microsoft) — hosts our public package repositories. Package submission data (GitHub usernames, PR content) is processed by GitHub under their own terms. Privacy policy: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noreferrer">github.com/privacy</a></li>
         </ul>
+        <p className="legal-note">Note: We are in the process of confirming UK Addendum documentation with Formspree and Vercel. In the interim, transfers rely on Standard Contractual Clauses (SCCs) as approved by the ICO. We will update this section once UK Addendum status is confirmed.</p>
 
         <h2>6. International Data Transfers</h2>
         <p>Both Formspree and Vercel are US-based companies. Transfers of your personal data to the USA are made under Standard Contractual Clauses (SCCs) approved by the UK Information Commissioner's Office, providing equivalent protection to UK GDPR. You may request a copy of the relevant transfer safeguards by contacting us.</p>
@@ -526,6 +528,7 @@ export default function App() {
         {submitted ? (
           <div className="submitted-msg">✦ You're on the list. We'll be in touch.</div>
         ) : (
+          <>
           <form className="email-form" onSubmit={handleSubmit}>
             <input
               type="email"
@@ -536,6 +539,8 @@ export default function App() {
             />
             <button type="submit">Notify me</button>
           </form>
+          <p className="consent-note">By submitting your email you agree to receive product updates from AgentStandard. No spam. Unsubscribe anytime. See our <a href="#" onClick={(e)=>{e.preventDefault();setPage('privacy')}} className="inline-link">Privacy Policy</a>.</p>
+          </>
         )}
       </section>
 

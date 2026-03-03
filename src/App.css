@@ -269,6 +269,36 @@ body {
   border-top: 1px solid var(--grey-light);
 }
 
+.consent-note {
+  font-size: 0.75rem;
+  color: var(--grey);
+  margin-top: 12px;
+  max-width: 480px;
+  line-height: 1.5;
+}
+
+.inline-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--gold);
+  cursor: pointer;
+  font-size: inherit;
+  text-decoration: underline;
+  font-family: inherit;
+}
+
+.legal-note {
+  font-size: 0.8rem;
+  color: var(--grey);
+  font-style: italic;
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: var(--off-white);
+  border-left: 3px solid var(--grey-light);
+  border-radius: 4px;
+}
+
 .free-pill {
   font-size: 0.65rem;
   font-weight: 700;

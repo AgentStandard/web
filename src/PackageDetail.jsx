@@ -200,7 +200,7 @@ export default function PackageDetail({ onBack }) {
           <h1>You're one tap away.</h1>
           <p className="telegram-path-sub">Your agent is ready and waiting. Open Telegram and say hello — your first 10 messages are on us, no account or API key needed.</p>
           <a
-            href="https://t.me/AgentStandardBot"
+            href="https://t.me/AgentStandardAI_bot"
             target="_blank"
             rel="noreferrer"
             className="telegram-cta-btn"

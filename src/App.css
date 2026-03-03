@@ -2,22 +2,23 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --black: #0a0a0a;
+  --black: #111111;
   --white: #ffffff;
-  --off-white: #f5f5f3;
+  --off-white: #f7f5f0;
+  --warm-bg: #faf8f4;
   --gold: #c9a84c;
   --gold-light: #e8d5a3;
   --grey: #6b6b6b;
-  --grey-light: #e8e8e6;
+  --grey-light: #e4e0d8;
   --card-bg: #ffffff;
-  --radius: 12px;
-  --radius-sm: 8px;
+  --radius: 16px;
+  --radius-sm: 10px;
   font-size: 16px;
 }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif;
-  background: var(--off-white);
+  background: var(--warm-bg);
   color: var(--black);
   line-height: 1.6;
 }
@@ -149,19 +150,20 @@ body {
 
 /* ── Package Card ── */
 .package-card {
-  background: white;
+  background: #fffefb;
   border-radius: var(--radius);
-  padding: 24px;
+  padding: 28px;
   border: 1px solid var(--grey-light);
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition: box-shadow 0.25s, transform 0.25s;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
 .package-card:hover {
-  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
-  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+  transform: translateY(-3px);
 }
 
 .card-header {
@@ -266,6 +268,7 @@ body {
 .how-it-works {
   padding: 80px 0;
   border-top: 1px solid var(--grey-light);
+  background: transparent;
 }
 
 .how-it-works h2 {
@@ -284,7 +287,7 @@ body {
 .step-num {
   font-size: 2.5rem;
   font-weight: 800;
-  color: var(--grey-light);
+  color: #ddd8ce;
   letter-spacing: -0.04em;
   line-height: 1;
   margin-bottom: 16px;
@@ -369,6 +372,7 @@ body {
   padding: 80px 0;
   border-top: 1px solid var(--grey-light);
   text-align: center;
+  background: transparent;
 }
 
 .waitlist-section h2 {
@@ -400,6 +404,7 @@ body {
   width: 280px;
   outline: none;
   transition: border-color 0.2s;
+  background: #fffefb;
 }
 
 .email-form input:focus { border-color: var(--black); }

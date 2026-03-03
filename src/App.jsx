@@ -145,8 +145,15 @@ export default function App() {
     ? packages
     : packages.filter(p => p.vertical === activeVertical)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
+    try {
+      await fetch('https://formspree.io/f/xreawdry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ email })
+      })
+    } catch (_) {}
     setSubmitted(true)
   }
 

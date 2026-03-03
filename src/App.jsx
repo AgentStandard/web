@@ -280,6 +280,7 @@ const packages = [
   },
   {
     slug: 'finance-analyst',
+    hidden: true, // hidden until April 15 — garden leave caution
     name: 'Finance Analyst Stack',
     tagline: 'Live market data, earnings research, and daily briefings — no terminal required.',
     vertical: 'Finance',
@@ -404,7 +405,7 @@ const packages = [
   },
 ]
 
-const verticals = ['All', 'General', 'Finance', 'Content', 'Ecommerce', 'Dev', 'SEO']
+const verticals = ['All', 'General', 'Content', 'Ecommerce', 'Dev', 'SEO'] // Finance hidden until April 15
 
 function PackageCard({ pkg }) {
   const isCommunity = !pkg.certified
@@ -488,9 +489,10 @@ export default function App() {
     return <CommunityPackagePage pkg={selectedPkg} onBack={() => setPage('home')} />
   }
 
-  const filtered = activeVertical === 'All'
+  const filtered = (activeVertical === 'All'
     ? packages
     : packages.filter(p => p.vertical === activeVertical)
+  ).filter(p => !p.hidden)
 
   const handleSubmit = async (e) => {
     e.preventDefault()

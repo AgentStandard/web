@@ -208,7 +208,7 @@ export default function PackageDetail({ onBack }) {
           <div className="pkg-meta">
             <span>⏱ 20 min total</span>
             <span>🤖 No coding required</span>
-            <span>💰 ${pkg.benchmarks.estimated_cost_per_session_usd}/session</span>
+            <span>🆓 Free to install</span>
           </div>
           <div className="cli-callout">
             <span className="cli-label">Developer? Run:</span>

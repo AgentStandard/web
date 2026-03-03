@@ -124,13 +124,18 @@ body {
     max-width: 260px;
   }
   .hero h1 {
-    font-size: 2.4rem;
+    font-size: 2rem;
+    word-break: break-word;
   }
   .hero-sub {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    padding: 0 4px;
   }
   .hero-badge {
-    font-size: 0.75rem;
+    font-size: 0.72rem;
+    white-space: normal;
+    text-align: center;
+    max-width: 100%;
   }
   .hero-stats {
     flex-direction: column;

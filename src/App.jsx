@@ -563,7 +563,7 @@ export default function App() {
             <img src="/hero-logo.png" alt="AgentStandard — Per Aspera Ad Astra" className="hero-logo-img" />
           </div>
           <div className="hero-text-col">
-            <div className="hero-badge">✦ No download. No setup. Ready in 60 seconds.</div>
+            <div className="hero-badge">✦ Ready in 60 seconds. No download.</div>
             <h1>Your agent.<br />Knows your name.</h1>
             <p className="hero-sub">
               Not a chatbot you prompt. An agent you build a relationship with. Remembers what matters, follows your rules, reaches out when it's useful. Start in Telegram — talking in under a minute.

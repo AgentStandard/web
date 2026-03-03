@@ -154,7 +154,7 @@ export default function PackageDetail({ onBack }) {
         <div className="path-selector">
           <span className="certified-badge">✦ AgentStandard Certified</span>
           <h1>First Conversation Setup</h1>
-          <p className="path-selector-sub">How do you want to get started?</p>
+          <p className="path-selector-sub">Pick the path that fits where you are.</p>
 
           <div className="path-cards">
             <div className="path-card path-card--telegram" onClick={() => setPath('telegram')}>
@@ -162,7 +162,7 @@ export default function PackageDetail({ onBack }) {
               <div className="path-card-label">Start in Telegram</div>
               <div className="path-card-badge">Recommended</div>
               <div className="path-card-who">
-                <strong>For everyone.</strong> No download, no setup, no terminal. Your agent is ready in under 60 seconds — just open Telegram and say hello. First 10 messages are on us.
+                <strong>New to AI agents.</strong> No download, no setup, no terminal. Open Telegram, say hello, and your agent is ready to go. First 30 messages are on us.
               </div>
               <div className="path-card-time">⏱ 60 seconds</div>
               <button className="path-card-cta path-card-cta--telegram">Start in Telegram →</button>
@@ -172,7 +172,7 @@ export default function PackageDetail({ onBack }) {
               <div className="path-card-icon">💻</div>
               <div className="path-card-label">Install on your computer</div>
               <div className="path-card-who">
-                <strong>For power users.</strong> Runs locally on your machine with full control. Install any package, customise everything, keep your data on your own hardware.
+                <strong>Already know your way around.</strong> Runs locally on your machine with full control. Install any package, customise everything, keep your data on your own hardware.
               </div>
               <div className="path-card-time">⏱ ~20 minutes</div>
               <button className="path-card-cta path-card-cta--install">Install locally →</button>

@@ -202,14 +202,15 @@ function Manifesto({ onBack }) {
         <p>I'm a trader. I know markets, not machines.</p>
         <p>For years I used LLMs the same way most people do. Session by session. Each conversation starting from zero. The models were getting smarter. But <em>my</em> LLM wasn't growing. No memory. No context. No continuity. Just a very impressive stranger I had to re-introduce myself to every single day.</p>
         <p>I wanted more than that. So I tried to build it.</p>
-        <p>I spent two hours staring at a terminal. Three YouTube videos open. PowerShell blinking at me like I'd done something wrong. Reset after reset. Wrong turns. I almost quit before I could have a single conversation with my own agent.</p>
+        <p>I spent hours staring at a terminal. Three YouTube videos open. PowerShell blinking at me like I'd done something wrong. Reset after reset. Wrong turns. The only visible metric of my efforts was the notification of my usage credits being consumed. I almost quit before I could have a single conversation with my own agentic partner.</p>
         <p>Most people do quit. In that window of command prompts and error messages, most people close the laptop and decide AI isn't for them.</p>
         <p><strong>That window is the problem. And it's completely unnecessary.</strong></p>
 
         <h2>What changed</h2>
         <p>Day one, I brute-forced an agent into existence.</p>
-        <p>Day two, I had a real one. Set up properly, with the right skills, the right memory, the right configuration. Same tools. Completely different result.</p>
+        <p>Day two, I had a real one, a partner. Set up properly, with the right skills, the right memory, the right configuration. Same tools. Completely different result.</p>
         <p>The difference wasn't intelligence. It was setup.</p>
+        <p>I asked my agent to describe the difference and the feedback was telling:</p>
         <blockquote className="aspera-quote">
           <p>"Day one: two hours of archaeology. Day two: four hours that shipped a product. The difference was the foundation."</p>
           <cite>Aspera, AgentStandard's AI coordinator. Built on the tools we package.</cite>
@@ -222,7 +223,7 @@ function Manifesto({ onBack }) {
         <p>We surface the best packages like the App Store surfaces apps and rate them like Morningstar rates funds. Built for the person who felt what I felt in that terminal. Capable, curious, and completely locked out.</p>
 
         <h2>Who this is for</h2>
-        <p>You don't need to be a coder. You need to be willing.</p>
+        <p>You don't need to be a coder (I wasn't). You need to be willing.</p>
         <p>The wave hasn't passed you. You're not too late. You're just missing the on-ramp.</p>
         <p><strong>That's what AgentStandard is.</strong></p>
 

@@ -1,41 +1,8 @@
 ﻿import { useState, useEffect } from 'react'
 import './App.css'
 import PackageDetail from './PackageDetail'
-import { getVoteCount, hasVoted, castVote } from './supabase'
-
-function UpvoteButton({ slug }) {
-  const [count, setCount] = useState(null)
-  const [voted, setVoted] = useState(false)
-  const [loading, setLoading] = useState(false)
-
-  useEffect(() => {
-    getVoteCount(slug).then(setCount)
-    hasVoted(slug).then(setVoted)
-  }, [slug])
-
-  const handleVote = async () => {
-    if (voted || loading) return
-    setLoading(true)
-    const ok = await castVote(slug)
-    if (ok) {
-      setVoted(true)
-      setCount(c => (c || 0) + 1)
-    }
-    setLoading(false)
-  }
-
-  return (
-    <button
-      className={`upvote-btn ${voted ? 'upvote-voted' : ''}`}
-      onClick={handleVote}
-      disabled={voted || loading}
-      title={voted ? 'You voted for this' : 'Upvote this package'}
-    >
-      <span className="upvote-arrow">▲</span>
-      <span className="upvote-count">{count === null ? '—' : count}</span>
-    </button>
-  )
-}
+import CommunityPackagePage from './CommunityPackagePage'
+import UpvoteButton from './UpvoteButton'
 
 function TermsOfService({ onBack }) {
   return (
@@ -294,6 +261,22 @@ const packages = [
     certified: true,
     tags: ['beginner', 'onboarding', 'any platform'],
     discussionUrl: 'https://github.com/AgentStandard/packages/discussions/1',
+    discussionNumber: 1,
+    description: 'The fastest path from zero to a working AI agent. This package gives you a tested, minimal configuration that gets any LLM set up with memory, identity, and context — no coding required.',
+    whatItDoes: [
+      'Walks you through installing and configuring OpenClaw from scratch',
+      'Establishes your agent\'s identity, memory structure, and daily routines',
+      'Sets up operator and agent profiles so your AI knows who you are from session one',
+      'Tests the full conversation loop to confirm everything is working before you leave',
+    ],
+    whoItsFor: 'Anyone who has tried (and failed) to get a useful AI agent running — no coding background required.',
+    skills: [
+      { name: 'Memory Setup', description: 'Persistent session memory across conversations' },
+      { name: 'Identity Config', description: 'Name, tone, and personality for your agent' },
+      { name: 'Daily Routine', description: 'Morning briefing and context-loading patterns' },
+    ],
+    userLevel: 'beginner',
+    keywords: ['onboarding', 'setup', 'memory', 'beginner', 'openclaw', 'no-code'],
   },
   {
     slug: 'finance-analyst',
@@ -307,6 +290,24 @@ const packages = [
     certified: false,
     tags: ['finance', 'markets', 'research'],
     discussionUrl: 'https://github.com/AgentStandard/packages/discussions/2',
+    discussionNumber: 2,
+    description: 'A research-grade agent stack for finance professionals. Pulls live market data, constructs morning briefings, and structures credit and macro analysis — all from a single conversation.',
+    whatItDoes: [
+      'Delivers a Bloomberg-style morning briefing with rates, spreads, and key macro data',
+      'Runs structured credit deep-dives using a four-lens framework (fundamentals, technicals, relative value, catalysts)',
+      'Fetches live data from FRED, Yahoo Finance, and web sources without a Bloomberg terminal',
+      'Pressure-tests trade ideas with a bear-case-first review framework',
+      'Maintains a research memory so context carries forward across sessions',
+    ],
+    whoItsFor: 'Credit analysts, PMs, and traders who want research-quality output without manual data aggregation.',
+    skills: [
+      { name: 'Market Data', description: 'Live CDX, IG/HY OAS spreads, ETF prices, and FRED macro data' },
+      { name: 'Morning Briefing', description: 'Automated daily macro and credit market summary' },
+      { name: 'Credit Analysis', description: 'Four-lens framework: fundamentals, technicals, RV, catalysts' },
+      { name: 'Trade Review', description: 'Structured bear-case-first pressure testing for trade ideas' },
+    ],
+    userLevel: 'advanced',
+    keywords: ['finance', 'credit', 'markets', 'macro', 'research', 'CDS'],
   },
   {
     slug: 'content-creator',
@@ -320,6 +321,55 @@ const packages = [
     certified: false,
     tags: ['content', 'writing', 'social'],
     discussionUrl: 'https://github.com/AgentStandard/packages/discussions/3',
+    discussionNumber: 3,
+    description: 'A full content production stack for creators, marketers, and founders. Research a topic, draft long-form and short-form content, repurpose across formats, and plan your publishing calendar — all in conversation.',
+    whatItDoes: [
+      'Researches topics and competitor content before you write a single word',
+      'Drafts blog posts, LinkedIn articles, newsletters, and Twitter/X threads to your voice',
+      'Repurposes one piece of content into multiple formats automatically',
+      'Maintains a content calendar and tracks what has been published',
+      'Learns your tone and style across sessions so drafts need less editing over time',
+    ],
+    whoItsFor: 'Founders, marketers, and solo creators who need to produce high-quality content consistently without a full team.',
+    skills: [
+      { name: 'Content Research', description: 'Web search and source synthesis before drafting' },
+      { name: 'Long-form Writing', description: 'Blog posts, articles, and newsletter drafts' },
+      { name: 'Social Repurposing', description: 'LinkedIn, X/Twitter, and short-form from long-form' },
+      { name: 'Calendar Planning', description: 'Publishing schedule tracking and gap analysis' },
+    ],
+    userLevel: 'beginner',
+    keywords: ['content', 'writing', 'social media', 'marketing', 'blog', 'newsletter'],
+  },
+  {
+    slug: 'dev-productivity',
+    name: 'Dev Productivity Stack',
+    tagline: 'Code review, documentation, and PR workflows — on autopilot.',
+    vertical: 'Dev',
+    tier: 'Pro',
+    setupTime: 30,
+    rating: null,
+    installs: 0,
+    certified: false,
+    tags: ['development', 'code review', 'github'],
+    discussionUrl: 'https://github.com/AgentStandard/packages/discussions/4',
+    discussionNumber: 4,
+    description: 'A developer productivity stack that handles the work around the code — PR reviews, documentation generation, issue triage, and changelog writing. Cuts the admin so you can stay in flow.',
+    whatItDoes: [
+      'Reviews pull requests with structured feedback: correctness, performance, security, and style',
+      'Generates and updates documentation from code automatically',
+      'Triages GitHub issues and suggests priority and assignment',
+      'Writes changelogs and release notes from commit history',
+      'Maintains a project context file so the agent understands your codebase architecture',
+    ],
+    whoItsFor: 'Solo developers and small engineering teams who spend too much time on process and not enough on building.',
+    skills: [
+      { name: 'PR Review', description: 'Structured code review across correctness, perf, and security' },
+      { name: 'Docs Generation', description: 'Auto-generated documentation from source code and comments' },
+      { name: 'Issue Triage', description: 'Label, prioritise, and route GitHub issues automatically' },
+      { name: 'Changelog Writer', description: 'Release notes and changelogs from git history' },
+    ],
+    userLevel: 'developer',
+    keywords: ['developer', 'github', 'code review', 'documentation', 'CI/CD', 'productivity'],
   },
   {
     slug: 'ecommerce-ops',
@@ -333,22 +383,44 @@ const packages = [
     certified: false,
     tags: ['shopify', 'ecommerce', 'operations'],
     discussionUrl: 'https://github.com/AgentStandard/packages/discussions/5',
+    discussionNumber: 5,
+    description: 'An operations stack for ecommerce store owners. Monitors Shopify inventory, drafts customer service responses, tracks order issues, and surfaces actionable ops data — so you can focus on growth.',
+    whatItDoes: [
+      'Monitors Shopify inventory and flags low-stock products before you run out',
+      'Drafts customer service responses for common order issues in your brand voice',
+      'Tracks refund and dispute patterns to surface operational problems early',
+      'Generates weekly sales and ops summaries with actionable recommendations',
+      'Maintains a store context file so the agent knows your products, policies, and tone',
+    ],
+    whoItsFor: 'Shopify store owners and ecommerce operators managing fulfilment, customer service, and inventory without a large team.',
+    skills: [
+      { name: 'Inventory Monitor', description: 'Low-stock alerts and reorder point tracking' },
+      { name: 'Customer Service', description: 'Drafted responses for order issues, returns, and complaints' },
+      { name: 'Ops Reporting', description: 'Weekly summaries of sales, returns, and fulfilment metrics' },
+      { name: 'Dispute Triage', description: 'Pattern detection for refund and chargeback trends' },
+    ],
+    userLevel: 'intermediate',
+    keywords: ['shopify', 'ecommerce', 'inventory', 'customer service', 'operations', 'fulfilment'],
   },
 ]
 
 const verticals = ['All', 'General', 'Finance', 'Content', 'Ecommerce', 'Dev', 'SEO']
 
 function PackageCard({ pkg }) {
+  const isCommunity = !pkg.certified
+
   const handleCardClick = (e) => {
     // Don't trigger if clicking upvote button or discussion link
     if (e.target.closest('.upvote-btn') || e.target.closest('.discussion-link')) return
     if (pkg.slug === 'first-conversation') {
       window.dispatchEvent(new CustomEvent('navigate', { detail: 'package-first-conversation' }))
+    } else if (isCommunity) {
+      window.dispatchEvent(new CustomEvent('navigate', { detail: `community-${pkg.slug}` }))
     }
   }
 
   return (
-    <div className={`package-card ${pkg.slug === 'first-conversation' ? 'package-card-clickable' : ''}`} onClick={handleCardClick}>
+    <div className="package-card package-card-clickable" onClick={handleCardClick}>
       <div className="card-header">
         <span className={`vertical-badge vertical-${pkg.vertical.toLowerCase()}`}>{pkg.vertical}</span>
         {pkg.certified && <span className="certified-badge">✦ Certified</span>}
@@ -363,8 +435,17 @@ function PackageCard({ pkg }) {
       <div className="card-tags">
         {pkg.tags.map(t => <span key={t} className="tag">{t}</span>)}
       </div>
-      <button className="install-btn" onClick={() => pkg.slug === 'first-conversation' ? window.dispatchEvent(new CustomEvent('navigate', {detail: 'package-first-conversation'})) : null}>
-        {pkg.certified ? <>Install Package → <span className="free-pill">Free</span></> : 'Coming Soon'}
+      <button
+        className="install-btn"
+        onClick={() => {
+          if (pkg.slug === 'first-conversation') {
+            window.dispatchEvent(new CustomEvent('navigate', { detail: 'package-first-conversation' }))
+          } else if (isCommunity) {
+            window.dispatchEvent(new CustomEvent('navigate', { detail: `community-${pkg.slug}` }))
+          }
+        }}
+      >
+        {pkg.certified ? <>Install Package → <span className="free-pill">Free</span></> : 'View Package →'}
       </button>
       <div className="card-footer">
         <UpvoteButton slug={pkg.slug} />
@@ -383,9 +464,18 @@ export default function App() {
   const [submitted, setSubmitted] = useState(false)
   const [activeVertical, setActiveVertical] = useState('All')
   const [page, setPage] = useState('home')
+  const [selectedPkg, setSelectedPkg] = useState(null)
 
-  useState(() => {
-    const handler = (e) => setPage(e.detail)
+  useEffect(() => {
+    const handler = (e) => {
+      const detail = e.detail
+      if (detail && detail.startsWith('community-')) {
+        const slug = detail.replace('community-', '')
+        const pkg = packages.find(p => p.slug === slug)
+        if (pkg) setSelectedPkg(pkg)
+      }
+      setPage(detail)
+    }
     window.addEventListener('navigate', handler)
     return () => window.removeEventListener('navigate', handler)
   }, [])
@@ -394,6 +484,9 @@ export default function App() {
   if (page === 'terms') return <TermsOfService onBack={() => setPage('home')} />
   if (page === 'privacy') return <PrivacyPolicy onBack={() => setPage('home')} />
   if (page === 'package-first-conversation') return <PackageDetail onBack={() => setPage('home')} />
+  if (page && page.startsWith('community-') && selectedPkg) {
+    return <CommunityPackagePage pkg={selectedPkg} onBack={() => setPage('home')} />
+  }
 
   const filtered = activeVertical === 'All'
     ? packages

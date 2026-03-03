@@ -24,7 +24,7 @@ function TermsOfService({ onBack }) {
         <p>You must be at least 16 years old to use the Site. By using the Site, you represent and warrant that you are 16 years of age or older. If you are under 16, you may not use the Site or submit any personal data to us.</p>
 
         <h2>3. What We Provide</h2>
-        <p>AgentStandard provides a curated marketplace of AI agent configuration packages ("Packages"). Packages are made available for download and use under the terms stated in each Package's individual licence. We do not provide AI services directly — Packages are configurations for third-party AI platforms (such as OpenClaw, Anthropic Claude, OpenAI, Google Gemini, and others) that you operate independently under your own agreements with those providers.</p>
+        <p>AgentStandard provides a curated marketplace of AI agent configuration packages ("Packages"). Packages are made available for download and use under the terms stated in each Package's individual licence. We do not provide AI services directly - Packages are configurations for third-party AI platforms (such as OpenClaw, Anthropic Claude, OpenAI, Google Gemini, and others) that you operate independently under your own agreements with those providers.</p>
 
         <h2>4. Your Use of the Site</h2>
         <p>You may use the Site for lawful purposes only. You agree not to:</p>
@@ -127,13 +127,13 @@ function PrivacyPolicy({ onBack }) {
 
         <h2>3a. Data You Provide Directly</h2>
         <ul>
-          <li><strong>Email address</strong> — collected when you submit our "Notify me" form. Used to send product updates, new package announcements, and AgentStandard news. Legal basis: <strong>consent</strong> (Art. 6(1)(a) UK GDPR).</li>
-          <li><strong>Enquiry content</strong> — if you email us directly, we retain your email address and message content to respond to your enquiry. Legal basis: <strong>legitimate interests</strong> (Art. 6(1)(f)) — responding to your own request.</li>
+          <li><strong>Email address</strong> - collected when you submit our "Notify me" form. Used to send product updates, new package announcements, and AgentStandard news. Legal basis: <strong>consent</strong> (Art. 6(1)(a) UK GDPR).</li>
+          <li><strong>Enquiry content</strong> - if you email us directly, we retain your email address and message content to respond to your enquiry. Legal basis: <strong>legitimate interests</strong> (Art. 6(1)(f)) - responding to your own request.</li>
         </ul>
 
         <h2>3b. Data Collected Automatically</h2>
         <ul>
-          <li><strong>Server logs and technical data</strong> — our hosting provider, Vercel, Inc., automatically collects standard server log data when you visit the Site. This may include your IP address, browser type, operating system, referring URL, pages visited, and timestamps. We use this data solely for security, performance monitoring, and diagnosing technical issues. Legal basis: <strong>legitimate interests</strong> (Art. 6(1)(f)). This data is not used to identify you personally and is not combined with your email address.</li>
+          <li><strong>Server logs and technical data</strong> - our hosting provider, Vercel, Inc., automatically collects standard server log data when you visit the Site. This may include your IP address, browser type, operating system, referring URL, pages visited, and timestamps. We use this data solely for security, performance monitoring, and diagnosing technical issues. Legal basis: <strong>legitimate interests</strong> (Art. 6(1)(f)). This data is not used to identify you personally and is not combined with your email address.</li>
         </ul>
 
         <h2>3c. Cookies</h2>
@@ -145,9 +145,9 @@ function PrivacyPolicy({ onBack }) {
         <h2>5. Third-Party Data Processors</h2>
         <p>We use the following sub-processors who process personal data on our behalf under appropriate data processing agreements:</p>
         <ul>
-          <li><strong>Formspree, Inc.</strong> (USA) — processes form submissions containing your email address. Formspree participates in the EU-U.S. Data Privacy Framework and uses Standard Contractual Clauses (SCCs) for UK-to-US transfers. Privacy policy: <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noreferrer">formspree.io/legal/privacy-policy</a></li>
-          <li><strong>Vercel, Inc.</strong> (USA) — hosts the Site and processes server log data. Vercel participates in the EU-U.S. Data Privacy Framework and uses SCCs for international transfers. Privacy policy: <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noreferrer">vercel.com/legal/privacy-policy</a></li>
-          <li><strong>GitHub, Inc.</strong> (USA, owned by Microsoft) — hosts our public package repositories. Package submission data (GitHub usernames, PR content) is processed by GitHub under their own terms. Privacy policy: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noreferrer">github.com/privacy</a></li>
+          <li><strong>Formspree, Inc.</strong> (USA) - processes form submissions containing your email address. Formspree participates in the EU-U.S. Data Privacy Framework and uses Standard Contractual Clauses (SCCs) for UK-to-US transfers. Privacy policy: <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noreferrer">formspree.io/legal/privacy-policy</a></li>
+          <li><strong>Vercel, Inc.</strong> (USA) - hosts the Site and processes server log data. Vercel participates in the EU-U.S. Data Privacy Framework and uses SCCs for international transfers. Privacy policy: <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noreferrer">vercel.com/legal/privacy-policy</a></li>
+          <li><strong>GitHub, Inc.</strong> (USA, owned by Microsoft) - hosts our public package repositories. Package submission data (GitHub usernames, PR content) is processed by GitHub under their own terms. Privacy policy: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noreferrer">github.com/privacy</a></li>
         </ul>
         <p className="legal-note">Note: We are in the process of confirming UK Addendum documentation with Formspree and Vercel. In the interim, transfers rely on Standard Contractual Clauses (SCCs) as approved by the ICO. We will update this section once UK Addendum status is confirmed.</p>
 
@@ -155,19 +155,19 @@ function PrivacyPolicy({ onBack }) {
         <p>Both Formspree and Vercel are US-based companies. Transfers of your personal data to the USA are made under Standard Contractual Clauses (SCCs) approved by the UK Information Commissioner's Office, providing equivalent protection to UK GDPR. You may request a copy of the relevant transfer safeguards by contacting us.</p>
 
         <h2>7. Data Retention</h2>
-        <p>We retain your email address for as long as you remain subscribed or until you request deletion. Server log data is retained by Vercel per their own retention policy (typically 30–90 days). You may request deletion of your email address at any time — we will action this within 30 days.</p>
+        <p>We retain your email address for as long as you remain subscribed or until you request deletion. Server log data is retained by Vercel per their own retention policy (typically 30-90 days). You may request deletion of your email address at any time - we will action this within 30 days.</p>
 
         <h2>8. Your Rights</h2>
         <p>Under UK GDPR and the DUAA 2025, you have the following rights:</p>
         <ul>
-          <li><strong>Access</strong> — receive a copy of the personal data we hold about you</li>
-          <li><strong>Rectification</strong> — have inaccurate data corrected</li>
-          <li><strong>Erasure</strong> — request deletion of your data ("right to be forgotten")</li>
-          <li><strong>Restriction</strong> — request that we limit processing in certain circumstances</li>
-          <li><strong>Portability</strong> — receive your data in a machine-readable format</li>
-          <li><strong>Object</strong> — object to processing based on legitimate interests</li>
-          <li><strong>Withdraw consent</strong> — at any time, without affecting prior lawful processing</li>
-          <li><strong>Complaint procedure</strong> — if you raise a complaint with us, we will acknowledge it within 30 days (as required under DUAA 2025, effective June 2026) and provide a substantive response as soon as practicable</li>
+          <li><strong>Access</strong> - receive a copy of the personal data we hold about you</li>
+          <li><strong>Rectification</strong> - have inaccurate data corrected</li>
+          <li><strong>Erasure</strong> - request deletion of your data ("right to be forgotten")</li>
+          <li><strong>Restriction</strong> - request that we limit processing in certain circumstances</li>
+          <li><strong>Portability</strong> - receive your data in a machine-readable format</li>
+          <li><strong>Object</strong> - object to processing based on legitimate interests</li>
+          <li><strong>Withdraw consent</strong> - at any time, without affecting prior lawful processing</li>
+          <li><strong>Complaint procedure</strong> - if you raise a complaint with us, we will acknowledge it within 30 days (as required under DUAA 2025, effective June 2026) and provide a substantive response as soon as practicable</li>
         </ul>
         <p>To exercise any right, email <a href="mailto:hello@agentstandard.ai">hello@agentstandard.ai</a>. We respond within 30 days. We may ask you to verify your identity before processing your request.</p>
         <p>You have the right to lodge a complaint with the <strong>Information Commissioner's Office (ICO)</strong> at <a href="https://ico.org.uk" target="_blank" rel="noreferrer">ico.org.uk</a> or by calling 0303 123 1113.</p>
@@ -179,7 +179,7 @@ function PrivacyPolicy({ onBack }) {
         <p>We take reasonable technical and organisational measures to protect your personal data against unauthorised access, loss, or disclosure. However, no internet transmission is 100% secure. Please contact us immediately at <a href="mailto:hello@agentstandard.ai">hello@agentstandard.ai</a> if you believe your data may have been compromised.</p>
 
         <h2>11. Changes to This Policy</h2>
-        <p>We will update this policy as the Site evolves — for example, when we add payment processing, analytics, or user accounts. We will update the "Last updated" date and, for material changes, notify email subscribers in advance where possible.</p>
+        <p>We will update this policy as the Site evolves - for example, when we add payment processing, analytics, or user accounts. We will update the "Last updated" date and, for material changes, notify email subscribers in advance where possible.</p>
 
         <h2>12. Contact</h2>
         <p>All data protection queries, requests, and complaints: <a href="mailto:hello@agentstandard.ai">hello@agentstandard.ai</a>.</p>
@@ -207,7 +207,7 @@ function ContributorTerms({ onBack }) {
         <p>You grant AgentStandard a non-exclusive, royalty-free, worldwide licence to display, reproduce, and review your package on agentstandard.ai and associated repositories. We do not claim ownership. You keep all rights to your work.</p>
 
         <h2>3. You are responsible for it</h2>
-        <p>You are solely responsible for the behaviour of your package and any claims arising from its use — including harm to users, third-party IP infringement, and regulatory breaches. AgentStandard's review does not transfer that responsibility to us.</p>
+        <p>You are solely responsible for the behaviour of your package and any claims arising from its use - including harm to users, third-party IP infringement, and regulatory breaches. AgentStandard's review does not transfer that responsibility to us.</p>
 
         <h2>4. No hidden instructions</h2>
         <p>All agent instructions must be fully declared in the <code>system_prompt</code> field of the manifest. Packages with concealed or obfuscated instructions will be rejected and may be reported.</p>
@@ -216,7 +216,7 @@ function ContributorTerms({ onBack }) {
         <p>Your package must be licensed under MIT, Apache 2.0, CC0, or ISC. Proprietary or restrictive licences are not accepted.</p>
 
         <h2>6. We can remove it</h2>
-        <p>AgentStandard reserves the right to remove or de-list any package at any time — for safety, legal, or quality reasons. We will notify you where possible.</p>
+        <p>AgentStandard reserves the right to remove or de-list any package at any time - for safety, legal, or quality reasons. We will notify you where possible.</p>
 
         <h2>7. No fee</h2>
         <p>Submitting a package is free. Certification review is free for the first cohort of packages. Future certification fees, if introduced, will be announced in advance and will not apply retroactively.</p>
@@ -302,14 +302,14 @@ const packages = [
     tags: ['beginner', 'onboarding', 'any platform'],
     discussionUrl: 'https://github.com/AgentStandard/packages/discussions/1',
     discussionNumber: 1,
-    description: 'The fastest path from zero to a working AI agent. This package gives you a tested, minimal configuration that gets any LLM set up with memory, identity, and context — no coding required.',
+    description: 'The fastest path from zero to a working AI agent. This package gives you a tested, minimal configuration that gets any LLM set up with memory, identity, and context - no coding required.',
     whatItDoes: [
       'Walks you through installing and configuring OpenClaw from scratch',
       'Establishes your agent\'s identity, memory structure, and daily routines',
       'Sets up operator and agent profiles so your AI knows who you are from session one',
       'Tests the full conversation loop to confirm everything is working before you leave',
     ],
-    whoItsFor: 'Anyone who has tried (and failed) to get a useful AI agent running — no coding background required.',
+    whoItsFor: 'Anyone who has tried (and failed) to get a useful AI agent running - no coding background required.',
     skills: [
       { name: 'Memory Setup', description: 'Persistent session memory across conversations' },
       { name: 'Identity Config', description: 'Name, tone, and personality for your agent' },
@@ -320,9 +320,9 @@ const packages = [
   },
   {
     slug: 'finance-analyst',
-    hidden: true, // hidden until April 15 — garden leave caution
+    hidden: true, // hidden until April 15 - garden leave caution
     name: 'Finance Analyst Stack',
-    tagline: 'Live market data, earnings research, and daily briefings — no terminal required.',
+    tagline: 'Live market data, earnings research, and daily briefings - no terminal required.',
     vertical: 'Finance',
     tier: 'Pro',
     setupTime: 30,
@@ -332,13 +332,13 @@ const packages = [
     tags: ['equities', 'markets', 'investing'],
     discussionUrl: 'https://github.com/AgentStandard/packages/discussions/2',
     discussionNumber: 2,
-    description: 'A markets research agent for investors who want an edge without a Bloomberg terminal. Pulls live equity prices, macro data, and earnings news — and turns it into analysis you can actually act on.',
+    description: 'A markets research agent for investors who want an edge without a Bloomberg terminal. Pulls live equity prices, macro data, and earnings news - and turns it into analysis you can actually act on.',
     whatItDoes: [
       'Delivers a daily morning briefing: equity futures, key macro moves, sector performance, and what to watch',
       'Fetches live stock prices, ETF data, and earnings results from Yahoo Finance and FRED',
-      'Researches any company or sector on demand — fundamentals, recent news, analyst consensus',
+      'Researches any company or sector on demand - fundamentals, recent news, analyst consensus',
       'Tracks your watchlist and flags anything that moved overnight',
-      'Remembers your positions and preferences across sessions — no re-explaining yourself',
+      'Remembers your positions and preferences across sessions - no re-explaining yourself',
     ],
     whoItsFor: 'Individual investors, traders, and finance professionals who want research-quality market analysis without paying for a terminal.',
     skills: [
@@ -353,7 +353,7 @@ const packages = [
   {
     slug: 'content-creator',
     name: 'Content Creator Stack',
-    tagline: 'Write, research, schedule, and publish — from one conversation.',
+    tagline: 'Write, research, schedule, and publish - from one conversation.',
     vertical: 'Content',
     tier: 'Pro',
     setupTime: 25,
@@ -363,7 +363,7 @@ const packages = [
     tags: ['content', 'writing', 'social'],
     discussionUrl: 'https://github.com/AgentStandard/packages/discussions/3',
     discussionNumber: 3,
-    description: 'A full content production stack for creators, marketers, and founders. Research a topic, draft long-form and short-form content, repurpose across formats, and plan your publishing calendar — all in conversation.',
+    description: 'A full content production stack for creators, marketers, and founders. Research a topic, draft long-form and short-form content, repurpose across formats, and plan your publishing calendar - all in conversation.',
     whatItDoes: [
       'Researches topics and competitor content before you write a single word',
       'Drafts blog posts, LinkedIn articles, newsletters, and Twitter/X threads to your voice',
@@ -384,7 +384,7 @@ const packages = [
   {
     slug: 'dev-productivity',
     name: 'Dev Productivity Stack',
-    tagline: 'Code review, documentation, and PR workflows — on autopilot.',
+    tagline: 'Code review, documentation, and PR workflows - on autopilot.',
     vertical: 'Dev',
     tier: 'Pro',
     setupTime: 30,
@@ -394,7 +394,7 @@ const packages = [
     tags: ['development', 'code review', 'github'],
     discussionUrl: 'https://github.com/AgentStandard/packages/discussions/4',
     discussionNumber: 4,
-    description: 'A developer productivity stack that handles the work around the code — PR reviews, documentation generation, issue triage, and changelog writing. Cuts the admin so you can stay in flow.',
+    description: 'A developer productivity stack that handles the work around the code - PR reviews, documentation generation, issue triage, and changelog writing. Cuts the admin so you can stay in flow.',
     whatItDoes: [
       'Reviews pull requests with structured feedback: correctness, performance, security, and style',
       'Generates and updates documentation from code automatically',
@@ -425,7 +425,7 @@ const packages = [
     tags: ['shopify', 'ecommerce', 'operations'],
     discussionUrl: 'https://github.com/AgentStandard/packages/discussions/5',
     discussionNumber: 5,
-    description: 'An operations stack for ecommerce store owners. Monitors Shopify inventory, drafts customer service responses, tracks order issues, and surfaces actionable ops data — so you can focus on growth.',
+    description: 'An operations stack for ecommerce store owners. Monitors Shopify inventory, drafts customer service responses, tracks order issues, and surfaces actionable ops data - so you can focus on growth.',
     whatItDoes: [
       'Monitors Shopify inventory and flags low-stock products before you run out',
       'Drafts customer service responses for common order issues in your brand voice',
@@ -475,7 +475,7 @@ const packages = [
   {
     slug: 'wine-log',
     name: 'Wine Log',
-    tagline: "Remember every bottle. Build a palate that's actually yours.",
+    tagline: "Remember every bottle. Build a palate that's genuinely yours.",
     vertical: 'Lifestyle',
     tier: 'Free',
     setupTime: 2,
@@ -484,14 +484,14 @@ const packages = [
     certified: false,
     telegram: true,
     tags: ['wine', 'lifestyle', 'taste', 'food-and-drink'],
-    description: 'Log wines you have tried, rate them, track what you like and why. Over time your agent builds a real picture of your palate and makes recommendations that actually fit.',
+    description: 'Log wines you have tried, rate them, track what you like and why. Over time your agent builds a real picture of your palate and makes recommendations that fit how you drink.',
     whatItDoes: [
       'Logs each bottle with producer, vintage, region, and your tasting notes',
       'Builds a palate profile from your preferences over time',
-      'Recommends bottles based on what you have actually liked — not generic lists',
+      'Recommends bottles based on what you have enjoyed - not generic lists',
       'Remembers what disappointed you so you stop making the same mistakes',
     ],
-    whoItsFor: 'Anyone who wants to actually remember and learn from what they drink.',
+    whoItsFor: 'Anyone who wants to remember and build on what they drink.',
     skills: [
       { name: 'Wine Logger', description: 'Records bottles with producer, vintage, and tasting notes' },
       { name: 'Palate Profiler', description: 'Builds and refines your taste profile over time' },
@@ -512,9 +512,9 @@ const packages = [
     certified: false,
     telegram: true,
     tags: ['relationships', 'social', 'networking', 'contacts'],
-    description: 'Your agent learns the people in your life — who they are, what they do, when you last spoke, what matters to them. Surface the right person at the right time.',
+    description: 'Your agent learns the people in your life - who they are, what they do, when you last spoke, what matters to them. Surface the right person at the right time.',
     whatItDoes: [
-      'Learns context about the people you mention — relationships, background, what matters to them',
+      'Learns context about the people you mention - relationships, background, what matters to them',
       'Tracks when you last spoke with each person',
       'Surfaces relevant context before you reach out or meet',
       'Gently notices when someone important has gone quiet',
@@ -540,9 +540,9 @@ const packages = [
     certified: false,
     telegram: true,
     tags: ['productivity', 'reflection', 'goals', 'weekly-review'],
-    description: 'Every Sunday your agent reviews your week — what you accomplished, what did not happen, and what needs attention. Delivered proactively. No prompting required.',
+    description: 'Every Sunday your agent reviews your week - what you accomplished, what did not happen, and what needs attention. Delivered proactively. No prompting required.',
     whatItDoes: [
-      'Reaches out to you every Sunday with a digest — you do not have to ask',
+      'Reaches out to you every Sunday with a digest - you do not have to ask',
       'Tracks achievements, setbacks, and intentions you mention during the week',
       'Identifies what slipped and helps you decide whether it still matters',
       'Sets the agenda for the week ahead based on what you have told it',
@@ -559,7 +559,7 @@ const packages = [
   {
     slug: 'memory-architect',
     name: 'Memory Architect',
-    tagline: 'An agent that actually remembers you.',
+    tagline: 'An agent that remembers who you are.',
     vertical: 'Productivity',
     tier: 'Free',
     setupTime: 5,
@@ -568,7 +568,7 @@ const packages = [
     certified: false,
     telegram: true,
     tags: ['memory', 'productivity', 'identity', 'personal'],
-    description: 'Structures your agent\'s long-term memory — daily notes distilled into lasting context, key decisions captured, important context surfaced when relevant.',
+    description: 'Structures your agent\'s long-term memory - daily notes distilled into lasting context, key decisions captured, important context surfaced when relevant.',
     whatItDoes: [
       'Asks good questions and remembers the answers across every conversation',
       'Distils what it learns into a lasting profile that improves over time',
@@ -615,7 +615,7 @@ const packages = [
   {
     slug: 'book-brain',
     name: 'Book Brain',
-    tagline: 'Actually retain what you read.',
+    tagline: 'Read it and remember it. For real this time.',
     vertical: 'Learning',
     tier: 'Free',
     setupTime: 2,
@@ -624,10 +624,10 @@ const packages = [
     certified: false,
     telegram: true,
     tags: ['reading', 'books', 'learning', 'knowledge'],
-    description: 'Log books as you read them. Capture key ideas, quotes, and reactions. Your agent resurfaces relevant insights when they become useful — weeks or months later.',
+    description: 'Log books as you read them. Capture key ideas, quotes, and reactions. Your agent resurfaces relevant insights when they become useful - weeks or months later.',
     whatItDoes: [
       'Logs books with key ideas, quotes, and your reactions as you read',
-      'Builds your reading history and what actually stuck',
+      'Builds your reading history and what genuinely stayed with you',
       'Resurfaces relevant ideas naturally when they apply to something you are doing now',
       'Builds a picture of your reading taste and recommends what to read next',
     ],
@@ -680,14 +680,14 @@ const packages = [
     certified: false,
     telegram: true,
     tags: ['gifts', 'social', 'occasions', 'shopping'],
-    description: 'Learns the preferences of people in your life over time. When an occasion comes up, suggests gifts that actually fit — with links.',
+    description: 'Learns the preferences of people in your life over time. When an occasion comes up, suggests gifts that genuinely fit — with links.',
     whatItDoes: [
       'Learns what people in your life care about from what you mention in conversation',
       'Tracks upcoming occasions so you are never caught off guard',
-      'Suggests gifts that fit the person specifically — not generic recommendations',
+      'Suggests gifts that fit the person specifically - not generic recommendations',
       'Finds options with links and price ranges based on your budget',
     ],
-    whoItsFor: 'Anyone who puts thought into gifts but could use a brain that actually remembers the details.',
+    whoItsFor: 'Anyone who puts thought into gifts but could use a brain that holds all the details.',
     skills: [
       { name: 'Preference Tracker', description: 'Learns what people in your life like and care about' },
       { name: 'Occasion Calendar', description: 'Tracks upcoming birthdays, anniversaries, and events' },
@@ -711,7 +711,7 @@ const packages = [
     description: 'Builds a rich profile of your preferences across music, film, food, books, and culture. Recommendations that get better the more you use it.',
     whatItDoes: [
       'Builds your taste profile across music, film, food, books, and culture from conversation',
-      'Makes recommendations that are genuinely personal — not generic top-ten lists',
+      'Makes recommendations that are genuinely personal - not generic top-ten lists',
       'Remembers what you loved and what disappointed you',
       'Gets more specific and accurate the more you share',
     ],
@@ -727,7 +727,7 @@ const packages = [
   {
     slug: 'read-it-later',
     name: 'Read It Later',
-    tagline: 'Save it. Actually read it. Remember it.',
+    tagline: 'Save it. Read it. Let it stick.',
     vertical: 'Learning',
     tier: 'Free',
     setupTime: 2,
@@ -736,10 +736,10 @@ const packages = [
     certified: false,
     telegram: true,
     tags: ['reading', 'articles', 'links', 'learning', 'curation'],
-    description: 'Save links and articles into your agent. It summarises them, extracts key ideas, and resurfaces them when relevant — not just a list you never open.',
+    description: 'Save links and articles into your agent. It summarises them, extracts key ideas, and resurfaces them when relevant - not just a list you never open.',
     whatItDoes: [
       'Paste any link and get an instant summary with key ideas extracted',
-      'Builds a reading queue you actually use because the agent resurfaces things for you',
+      'Builds a reading queue that works - the agent resurfaces things at the right moment',
       'References saved articles when they become relevant to what you are discussing',
       'Builds a reading graph of what you save and what you engage with over time',
     ],
@@ -767,7 +767,7 @@ const packages = [
     description: 'Tracks appliances, warranties, maintenance schedules, and service contacts. Reminds you when something needs attention. Knows your home better than you do.',
     whatItDoes: [
       'Builds a registry of your appliances with purchase dates, models, and warranties',
-      'Schedules maintenance reminders — filters, services, annual checks',
+      'Schedules maintenance reminders - filters, services, annual checks',
       'Stores tradespeople, service providers, and emergency contacts',
       'References home context when you raise an issue so you are not starting from scratch',
     ],
@@ -795,7 +795,7 @@ const packages = [
     description: 'Tracks your supplement and medication routine. Flags potential interactions. Reminds you at the right time. Keeps a log so you can see what is working.',
     whatItDoes: [
       'Logs your supplement and medication stack with dosages and timing',
-      'Flags known interactions — and always recommends checking with a pharmacist',
+      'Flags known interactions - and always recommends checking with a pharmacist',
       'Reminds you to take things at the right times',
       'Tracks your routine over time so you can see what is and is not working',
     ],
@@ -824,7 +824,7 @@ const packages = [
     whatItDoes: [
       'Searches live comp benchmarks across Glassdoor, Levels.fyi, LinkedIn Salary, and more',
       'Compares your current compensation to market rates for your role and location',
-      'Tells you honestly where you sit — and says so directly if you are underpaid',
+      'Tells you honestly where you sit - and says so directly if you are underpaid',
       'Tracks how the market moves over time so you know when it is time to renegotiate',
     ],
     whoItsFor: 'Anyone who suspects they might be underpaid but has not done the research.',
@@ -955,13 +955,13 @@ export default function App() {
 
         <div className="hero-split">
           <div className="hero-image-col">
-            <img src="/hero-logo.png" alt="AgentStandard — Per Aspera Ad Astra" className="hero-logo-img" />
+            <img src="/hero-logo.png" alt="AgentStandard - Per Aspera Ad Astra" className="hero-logo-img" />
           </div>
           <div className="hero-text-col">
             <div className="hero-badge">✦ Ready in 60 seconds. No download.</div>
             <h1>Your agent.<br />Knows your name.</h1>
             <p className="hero-sub">
-              Not a chatbot you prompt. An agent you build a relationship with. Remembers what matters, follows your rules, reaches out when it's useful. Start in Telegram — talking in under a minute.
+              Not a chatbot you prompt. An agent you build a relationship with. Remembers what matters, follows your rules, reaches out when it's useful. Start in Telegram - talking in under a minute.
             </p>
             <div className="hero-stats">
               <div className="stat"><strong>1</strong> certified package</div>
@@ -1081,7 +1081,7 @@ export default function App() {
           <div className="step">
             <div className="step-num">03</div>
             <h3>Talk</h3>
-            <p>Your agent is ready. Start a conversation. It knows what it's doing — because the package set it up properly.</p>
+            <p>Your agent is ready. Start a conversation. It knows what it's doing - because the package set it up properly.</p>
           </div>
         </div>
       </section>
@@ -1093,12 +1093,12 @@ export default function App() {
           <h2>AgentStandard Certified</h2>
           <p>
             Every certified package has been manually reviewed, benchmarked, and tested.
-            Not community guesswork — an actual standard. Like Morningstar ratings, but for agents.
+            Not community guesswork - an actual standard. Like Morningstar ratings, but for agents.
           </p>
           <div className="cert-stats">
             <div className="cert-stat"><strong>✓</strong><span>Manually reviewed</span></div>
             <div className="cert-stat"><strong>✓</strong><span>Install-tested on Mac + Windows</span></div>
-            <div className="cert-stat"><strong>✓</strong><span>Open source — inspect everything</span></div>
+            <div className="cert-stat"><strong>✓</strong><span>Open source - inspect everything</span></div>
           </div>
           <a href="https://github.com/AgentStandard/packages" target="_blank" rel="noreferrer" className="cert-link">
             Submit your package for certification →
@@ -1109,7 +1109,7 @@ export default function App() {
       {/* Email capture */}
       <section className="waitlist-section">
         <h2>Stay ahead of the standard.</h2>
-        <p>New packages, certification updates, and platform news — direct to your inbox.</p>
+        <p>New packages, certification updates, and platform news - direct to your inbox.</p>
         {submitted ? (
           <div className="submitted-msg">✦ You're on the list. We'll be in touch.</div>
         ) : (

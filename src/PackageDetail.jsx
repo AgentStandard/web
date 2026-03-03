@@ -102,24 +102,33 @@ export default function PackageDetail({ onBack }) {
         <div className="completion-screen">
           <div className="confetti-emoji">🎉</div>
           <h1>You did it.</h1>
-          <p className="completion-sub">Your AI agent is live. You went from zero to your first conversation.</p>
+          <p className="completion-sub">
+            Your AI agent is live. You went from a blank screen<br />to your first conversation.
+          </p>
           <div className="completion-stats">
-            <div className="c-stat"><strong>20 min</strong><span>total setup</span></div>
+            <div className="c-stat"><strong>20</strong><span>minutes</span></div>
+            <div className="c-stat-div"/>
             <div className="c-stat"><strong>0</strong><span>lines of code</span></div>
+            <div className="c-stat-div"/>
             <div className="c-stat"><strong>∞</strong><span>conversations ahead</span></div>
           </div>
           <div className="share-section">
-            <p className="share-label">Tell someone. This is the part that spreads.</p>
+            <p className="share-eyebrow">Tell someone.</p>
+            <p className="share-label">This is the part that spreads. The person who felt what you felt yesterday is out there right now, staring at a terminal. Send them this.</p>
             <div className="share-buttons">
               <a href={tweetUrl} target="_blank" rel="noreferrer" className="share-btn share-x">
-                Share on X →
+                𝕏 Share on X
               </a>
-              <button className="share-btn share-copy" onClick={() => handleCopy('agentstandard.ai/packages/first-conversation')}>
-                {copied ? '✓ Copied' : 'Copy link'}
+              <button className="share-btn share-copy" onClick={() => handleCopy('https://agentstandard.ai')}>
+                {copied ? '✓ Copied' : '🔗 Copy link'}
               </button>
             </div>
           </div>
-          <button className="back-link" onClick={onBack}>← Browse more packages</button>
+          <div className="next-steps">
+            <p className="next-label">What's next?</p>
+            <p className="next-desc">Now that you're set up, explore what your agent can actually do. Browse more packages to add capabilities — finance, content, ecommerce, and more.</p>
+          </div>
+          <button className="back-link" onClick={onBack}>Browse more packages →</button>
         </div>
       </div>
     )
@@ -143,6 +152,11 @@ export default function PackageDetail({ onBack }) {
             <span>⏱ 20 min total</span>
             <span>🤖 No coding required</span>
             <span>💰 ${pkg.benchmarks.estimated_cost_per_session_usd}/session</span>
+          </div>
+          <div className="cli-callout">
+            <span className="cli-label">Developer? Run:</span>
+            <code>npx agentstandard install first-conversation</code>
+            <button className="cli-copy" onClick={() => handleCopy('npx agentstandard install first-conversation')}>{copied ? '✓' : 'Copy'}</button>
           </div>
           <div className="skills-included">
             <p className="skills-label">Includes:</p>

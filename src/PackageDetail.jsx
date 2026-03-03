@@ -1,36 +1,64 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './PackageDetail.css'
 
-const firstConversation = {
-  id: 'first-conversation',
-  name: 'First Conversation Setup',
-  tagline: 'From PowerShell to dialogue in 20 minutes.',
-  description: 'Everything you need to go from a blank terminal to a real conversation with your AI agent. No coding required.',
-  certified: true,
-  benchmarks: {
-    task_completion_rate: 0.97,
-    avg_response_ms: 1100,
-    estimated_cost_per_session_usd: 0.04,
-  },
-  skills: [
-    { name: 'weather', description: 'Current weather and forecasts for any location.' },
-    { name: 'web-search', description: 'Search the web from inside your conversation.' },
-  ],
-  steps: [
-    {
-      order: 1,
-      title: 'Download OpenClaw',
-      description: 'OpenClaw is the free app that runs your AI agent locally on your machine. Download and install it — takes about 3 minutes.',
-      url: 'https://openclawai.net/download',
-      cta: 'Download OpenClaw →',
-      estimated_minutes: 3,
-      type: 'install',
-      tip: 'Available for Windows, Mac, and Linux.',
-    },
+function detectOS() {
+  const ua = navigator.userAgent || ''
+  const platform = navigator.platform || ''
+  if (/Mac/i.test(platform) || /Mac OS/i.test(ua)) return 'mac'
+  if (/Win/i.test(platform) || /Windows/i.test(ua)) return 'windows'
+  return 'linux'
+}
+
+const OPENCLAW_VERSION = '2026.3.2'
+const OPENCLAW_DMG = `https://github.com/openclaw/openclaw/releases/download/v${OPENCLAW_VERSION}/OpenClaw-${OPENCLAW_VERSION}.dmg`
+const OPENCLAW_ZIP = `https://github.com/openclaw/openclaw/releases/download/v${OPENCLAW_VERSION}/OpenClaw-${OPENCLAW_VERSION}.zip`
+const NODEJS_INSTALLER = 'https://nodejs.org/en/download'
+
+function getInstallStep(os) {
+  if (os === 'mac') return {
+    order: 1,
+    title: 'Download OpenClaw',
+    description: "You're on a Mac — you're in luck. Download the installer, open it, and drag OpenClaw into your Applications folder. That's the whole step.",
+    url: OPENCLAW_DMG,
+    url2: null,
+    cta: 'Download OpenClaw for Mac →',
+    cta2: null,
+    estimated_minutes: 3,
+    type: 'install',
+    tip: "When you open it, macOS might say it's from an unidentified developer. Go to System Settings → Privacy & Security → click Open Anyway.",
+  }
+  if (os === 'windows') return {
+    order: 1,
+    title: 'Download OpenClaw',
+    description: "Two small steps: first download Node.js (the engine that runs OpenClaw), then install OpenClaw itself. Both are normal Windows installers — no terminal required for Node.js.",
+    url: NODEJS_INSTALLER,
+    url2: OPENCLAW_ZIP,
+    cta: '1. Download Node.js →',
+    cta2: '2. Download OpenClaw for Windows →',
+    estimated_minutes: 5,
+    type: 'install',
+    tip: 'Install Node.js first, then unzip and run OpenClaw. Accept all defaults.',
+  }
+  return {
+    order: 1,
+    title: 'Install OpenClaw',
+    description: 'Run this command in your terminal to install OpenClaw.',
+    command: 'npm install -g openclaw@latest',
+    url: null,
+    cta: null,
+    estimated_minutes: 3,
+    type: 'command',
+    tip: 'Requires Node.js 18 or higher.',
+  }
+}
+
+function buildSteps(os) {
+  return [
+    getInstallStep(os),
     {
       order: 2,
       title: 'Get your Claude API key',
-      description: 'You need a free API key from Anthropic to connect your agent to Claude. Sign up, create a key, and copy it — you\'ll use it in the next step.',
+      description: "You need a free API key from Anthropic to connect your agent to Claude. Sign up, create a key, and copy it — you'll use it in the next step.",
       url: 'https://console.anthropic.com/api-keys',
       cta: 'Get API key →',
       estimated_minutes: 5,
@@ -40,7 +68,7 @@ const firstConversation = {
     {
       order: 3,
       title: 'Add your API key to OpenClaw',
-      description: 'Open OpenClaw, go to Settings, and paste your API key. This connects your agent to Claude\'s intelligence.',
+      description: 'Open OpenClaw, go to Settings, and paste your API key. This connects your agent to Claude.',
       estimated_minutes: 2,
       type: 'config',
       tip: 'Settings → API Keys → paste and save.',
@@ -52,29 +80,55 @@ const firstConversation = {
       command: 'clawhub install weather web-search',
       estimated_minutes: 3,
       type: 'command',
-      tip: 'Just copy, paste, and hit enter. That\'s it.',
+      tip: "Just copy, paste, and hit enter. That's it.",
     },
     {
       order: 5,
       title: 'Start your first conversation',
-      description: 'Open a new chat in OpenClaw and type: "What\'s the weather like in London today?" — if it answers, you\'re done.',
+      description: "Open a new chat in OpenClaw and type: \"What's the weather like in London today?\" — if it answers, you're done.",
       estimated_minutes: 1,
       type: 'done',
-      tip: 'Welcome. You\'re an AI operator now.',
+      tip: "Welcome. You're an AI operator now.",
     },
+  ]
+}
+
+const firstConversation = {
+  id: 'first-conversation',
+  name: 'First Conversation Setup',
+  tagline: 'From PowerShell to dialogue in 20 minutes.',
+  description: 'Everything you need to go from a blank screen to a real conversation with your AI agent. No coding required.',
+  certified: true,
+  benchmarks: {
+    task_completion_rate: 0.97,
+    avg_response_ms: 1100,
+    estimated_cost_per_session_usd: 0.04,
+  },
+  skills: [
+    { name: 'weather', description: 'Current weather and forecasts for any location.' },
+    { name: 'web-search', description: 'Search the web from inside your conversation.' },
   ],
+  steps: [], // populated dynamically by OS
 }
 
 const stepIcons = { install: '⬇️', browse: '🔑', config: '⚙️', command: '💻', done: '🎉' }
 
 export default function PackageDetail({ onBack }) {
-  const pkg = firstConversation
+  const [os, setOs] = useState('mac')
+  const [steps, setSteps] = useState([])
   const [currentStep, setCurrentStep] = useState(0)
   const [completed, setCompleted] = useState(false)
   const [copied, setCopied] = useState(false)
 
-  const step = pkg.steps[currentStep]
-  const progress = ((currentStep) / pkg.steps.length) * 100
+  useEffect(() => {
+    const detected = detectOS()
+    setOs(detected)
+    setSteps(buildSteps(detected))
+  }, [])
+
+  const pkg = { ...firstConversation, steps }
+  const step = steps[currentStep]
+  const progress = steps.length ? ((currentStep) / steps.length) * 100 : 0
 
   const handleNext = () => {
     if (currentStep < pkg.steps.length - 1) {
@@ -145,6 +199,9 @@ export default function PackageDetail({ onBack }) {
         <div className="package-hero">
           <div className="pkg-header">
             <span className="certified-badge">✦ AgentStandard Certified</span>
+            <span className="os-badge">
+              {os === 'mac' ? '🍎 Mac detected' : os === 'windows' ? '🪟 Windows detected' : '🐧 Linux detected'}
+            </span>
           </div>
           <h1>{pkg.name}</h1>
           <p className="pkg-tagline">{pkg.tagline}</p>
@@ -197,6 +254,11 @@ export default function PackageDetail({ onBack }) {
             {step.url && (
               <a href={step.url} target="_blank" rel="noreferrer" className="step-link-btn">
                 {step.cta || 'Open →'}
+              </a>
+            )}
+            {step.url2 && (
+              <a href={step.url2} target="_blank" rel="noreferrer" className="step-link-btn step-link-secondary">
+                {step.cta2 || 'Download →'}
               </a>
             )}
             <button className="next-btn" onClick={handleNext}>

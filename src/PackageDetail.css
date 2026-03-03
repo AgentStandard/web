@@ -32,6 +32,25 @@
   flex-wrap: wrap;
 }
 
+.os-badge {
+  font-size: 0.75rem;
+  color: var(--grey);
+  background: var(--off-white, #f5f5f3);
+  border: 1px solid var(--grey-light, #e8e8e6);
+  border-radius: 100px;
+  padding: 3px 10px;
+}
+
+.step-link-secondary {
+  background: white !important;
+  color: var(--black) !important;
+  border: 1px solid var(--grey-light, #e8e8e6) !important;
+}
+
+.step-link-secondary:hover {
+  background: var(--off-white, #f5f5f3) !important;
+}
+
 .cli-callout {
   display: flex;
   align-items: center;

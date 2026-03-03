@@ -26,7 +26,7 @@ function getInstallStep(os) {
     estimated_minutes: 3,
     type: 'install',
     tip: "On the gateway setup screen, choose \"This Mac\" — that keeps your agent running in the background.",
-    troubleshoot: "See \"Gateway did not become ready\"? Quit OpenClaw, reopen it, and click Retry. If that doesn't work: open Terminal and run: openclaw gateway start — then click Retry in the wizard. Still stuck? macOS may have blocked it — go to System Settings → Privacy & Security → click Allow.",
+    troubleshoot: "See \"Gateway did not become ready\"? Quit OpenClaw fully (right-click dock icon → Quit), reopen it, and click Retry. Still stuck? macOS may have blocked it — go to System Settings → Privacy & Security, scroll down, and click \"Allow Anyway\" next to OpenClaw. Then reopen and try again.",
   }
   if (os === 'windows') return {
     order: 1,

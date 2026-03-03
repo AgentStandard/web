@@ -182,6 +182,12 @@ export default function PackageDetail({ onBack }) {
             <p className="next-label">What's next?</p>
             <p className="next-desc">Now that you're set up, explore what your agent can actually do. Browse more packages to add capabilities — finance, content, ecommerce, and more.</p>
           </div>
+          <div className="discussion-cta">
+            <p className="discussion-label">How did it go?</p>
+            <a href="https://github.com/AgentStandard/packages/discussions/1" target="_blank" rel="noreferrer" className="discussion-btn">
+              Join the discussion on GitHub →
+            </a>
+          </div>
           <button className="back-link" onClick={onBack}>Browse more packages →</button>
         </div>
       </div>

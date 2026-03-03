@@ -258,6 +258,7 @@ const packages = [
     installs: 0,
     certified: true,
     tags: ['beginner', 'onboarding', 'any platform'],
+    discussionUrl: 'https://github.com/AgentStandard/packages/discussions/1',
   },
   {
     slug: 'finance-analyst',
@@ -270,6 +271,7 @@ const packages = [
     installs: 0,
     certified: false,
     tags: ['finance', 'markets', 'research'],
+    discussionUrl: 'https://github.com/AgentStandard/packages/discussions/2',
   },
   {
     slug: 'content-creator',
@@ -282,6 +284,7 @@ const packages = [
     installs: 0,
     certified: false,
     tags: ['content', 'writing', 'social'],
+    discussionUrl: 'https://github.com/AgentStandard/packages/discussions/3',
   },
   {
     slug: 'ecommerce-ops',
@@ -294,6 +297,7 @@ const packages = [
     installs: 0,
     certified: false,
     tags: ['shopify', 'ecommerce', 'operations'],
+    discussionUrl: 'https://github.com/AgentStandard/packages/discussions/5',
   },
 ]
 
@@ -319,6 +323,11 @@ function PackageCard({ pkg }) {
       <button className="install-btn" onClick={() => pkg.slug === 'first-conversation' ? window.dispatchEvent(new CustomEvent('navigate', {detail: 'package-first-conversation'})) : null}>
         {pkg.certified ? <>Install Package → <span className="free-pill">Free</span></> : 'Coming Soon'}
       </button>
+      {pkg.discussionUrl && (
+        <a href={pkg.discussionUrl} target="_blank" rel="noreferrer" className="discussion-link">
+          💬 Community discussion
+        </a>
+      )}
     </div>
   )
 }

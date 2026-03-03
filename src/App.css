@@ -269,6 +269,18 @@ body {
   border-top: 1px solid var(--grey-light);
 }
 
+.discussion-link {
+  display: block;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--grey);
+  text-decoration: none;
+  margin-top: 8px;
+  padding: 4px 0;
+  transition: color 0.2s;
+}
+.discussion-link:hover { color: var(--gold); }
+
 .consent-note {
   font-size: 0.75rem;
   color: var(--grey);

@@ -21,7 +21,7 @@ const firstConversation = {
       order: 1,
       title: 'Download OpenClaw',
       description: 'OpenClaw is the free app that runs your AI agent locally on your machine. Download and install it — takes about 3 minutes.',
-      url: 'https://openclaw.ai/download',
+      url: 'https://openclawai.net/download',
       cta: 'Download OpenClaw →',
       estimated_minutes: 3,
       type: 'install',

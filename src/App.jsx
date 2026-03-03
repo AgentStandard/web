@@ -851,6 +851,35 @@ const packages = [
     keywords: ['salary', 'career', 'compensation', 'jobs', 'market-value', 'negotiation'],
   },
   {
+    slug: 'pantry-chef',
+    name: 'Pantry Chef',
+    tagline: "What's in the fridge? Let's cook.",
+    vertical: 'Food',
+    tier: 'Free',
+    setupTime: 2,
+    rating: null,
+    installs: 0,
+    certified: false,
+    telegram: true,
+    isNew: true,
+    tags: ['cooking', 'food', 'recipes', 'meal-planning', 'fridge'],
+    description: "Tell it what's in your fridge and it tells you what to make. Remembers what you liked, what you avoid, and how you actually cook. Gets better every time you use it.",
+    whatItDoes: [
+      "Suggests recipes from whatever is actually in your fridge — steps, quantities, timing",
+      'Prioritises ingredients close to going off so nothing gets wasted',
+      'Remembers dietary restrictions, dislikes, skill level, and what you have enjoyed',
+      'Plans a week of meals and generates the shopping list for the gaps',
+    ],
+    whoItsFor: 'Anyone who opens the fridge, stares at it for a minute, and closes it again.',
+    skills: [
+      { name: 'Ingredient-to-Recipe', description: 'Suggests recipes based on what you have' },
+      { name: 'Taste Memory', description: 'Remembers what you liked, avoided, and want to eat less of' },
+      { name: 'Meal Planner', description: 'Plans a week of meals and generates the shopping list for gaps' },
+    ],
+    userLevel: 'beginner',
+    keywords: ['cooking', 'food', 'recipes', 'meal-planning', 'fridge', 'pantry'],
+  },
+  {
     slug: 'job-hunt-agent',
     name: 'Job Hunt Agent',
     tagline: 'Your job search, organised and moving.',
@@ -1037,7 +1066,7 @@ export default function App() {
               Not a chatbot you prompt. An agent you build a relationship with. Remembers what matters, follows your rules, reaches out when it's useful. Start in Telegram - talking in under a minute.
             </p>
             <div className="hero-stats">
-              <div className="stat"><strong>21</strong> packages</div>
+              <div className="stat"><strong>22</strong> packages</div>
               <div className="stat-divider" />
               <div className="stat"><strong>9</strong> verticals</div>
               <div className="stat-divider" />

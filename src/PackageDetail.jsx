@@ -114,17 +114,11 @@ const firstConversation = {
 const stepIcons = { install: '⬇️', browse: '🔑', config: '⚙️', command: '💻', done: '🎉' }
 
 export default function PackageDetail({ onBack }) {
-  const [os, setOs] = useState('mac')
-  const [steps, setSteps] = useState([])
+  const [os] = useState(() => detectOS())
+  const [steps] = useState(() => buildSteps(detectOS()))
   const [currentStep, setCurrentStep] = useState(0)
   const [completed, setCompleted] = useState(false)
   const [copied, setCopied] = useState(false)
-
-  useEffect(() => {
-    const detected = detectOS()
-    setOs(detected)
-    setSteps(buildSteps(detected))
-  }, [])
 
   const pkg = { ...firstConversation, steps }
   const step = steps[currentStep]

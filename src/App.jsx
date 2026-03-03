@@ -503,7 +503,7 @@ const packages = [
   {
     slug: 'relationship-graph',
     name: 'Relationship Graph',
-    tagline: 'Never lose track of the people who matter.',
+    tagline: 'Your people, remembered properly.',
     vertical: 'Social',
     tier: 'Free',
     setupTime: 3,
@@ -643,7 +643,7 @@ const packages = [
   {
     slug: 'network-pulse',
     name: 'Network Pulse',
-    tagline: "Who haven't you spoken to that you should?",
+    tagline: 'Know who to reach out to before the moment passes.',
     vertical: 'Social',
     tier: 'Free',
     setupTime: 3,
@@ -671,7 +671,7 @@ const packages = [
   {
     slug: 'gift-curator',
     name: 'Gift Curator',
-    tagline: 'Never give a bad gift again.',
+    tagline: 'Thoughtful gifts. Every time.',
     vertical: 'Social',
     tier: 'Free',
     setupTime: 2,
@@ -755,7 +755,7 @@ const packages = [
   {
     slug: 'home-stack',
     name: 'Home Stack',
-    tagline: 'The home management brain you never had.',
+    tagline: 'Your home, tracked and remembered.',
     vertical: 'Lifestyle',
     tier: 'Free',
     setupTime: 5,

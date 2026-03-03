@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import PackageDetail from './PackageDetail'
 
 function Manifesto({ onBack }) {
   return (
@@ -126,7 +127,7 @@ function PackageCard({ pkg }) {
       <div className="card-tags">
         {pkg.tags.map(t => <span key={t} className="tag">{t}</span>)}
       </div>
-      <button className="install-btn">
+      <button className="install-btn" onClick={() => pkg.slug === 'first-conversation' ? window.dispatchEvent(new CustomEvent('navigate', {detail: 'package-first-conversation'})) : null}>
         {pkg.certified ? 'Install Package →' : 'Coming Soon'}
       </button>
     </div>
@@ -139,7 +140,14 @@ export default function App() {
   const [activeVertical, setActiveVertical] = useState('All')
   const [page, setPage] = useState('home')
 
+  useState(() => {
+    const handler = (e) => setPage(e.detail)
+    window.addEventListener('navigate', handler)
+    return () => window.removeEventListener('navigate', handler)
+  }, [])
+
   if (page === 'manifesto') return <Manifesto onBack={() => setPage('home')} />
+  if (page === 'package-first-conversation') return <PackageDetail onBack={() => setPage('home')} />
 
   const filtered = activeVertical === 'All'
     ? packages

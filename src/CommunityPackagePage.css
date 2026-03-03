@@ -195,6 +195,173 @@
   line-height: 1.5;
 }
 
+/* ── Get this package CTAs ── */
+
+.community-cta-telegram {
+  background: #f0faf4;
+  border: 1.5px solid #b6e5cb;
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin-bottom: 16px;
+}
+
+.community-cta-telegram-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.community-cta-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.community-cta-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--black);
+  margin-bottom: 2px;
+}
+
+.community-cta-sub {
+  font-size: 0.82rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+.community-cta-telegram-btn {
+  display: inline-block;
+  background: #1a7a45;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.88rem;
+  border-radius: 8px;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.community-cta-telegram-btn:hover {
+  background: #155e35;
+}
+
+.community-cta-openclaw {
+  background: var(--off-white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin-bottom: 16px;
+}
+
+.community-cta-openclaw-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.community-openclaw-steps {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.community-openclaw-step {
+  font-size: 0.85rem;
+  color: #333;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  line-height: 1.4;
+}
+
+.step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background: var(--gold);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.community-openclaw-step a,
+.community-openclaw-step code {
+  color: var(--black);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+}
+
+.community-openclaw-step code {
+  font-family: 'SF Mono', 'Fira Code', 'Courier New', monospace;
+  font-size: 0.82rem;
+  text-decoration: none;
+  background: rgba(0,0,0,0.06);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
+.community-cta-openclaw-btn {
+  display: inline-block;
+  border: 1.5px solid var(--black);
+  color: var(--black);
+  font-weight: 700;
+  font-size: 0.88rem;
+  border-radius: 8px;
+  padding: 9px 20px;
+  text-decoration: none;
+  transition: all 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.community-cta-openclaw-btn:hover {
+  background: var(--black);
+  color: #fff;
+}
+
+.community-openclaw-note {
+  font-size: 0.78rem;
+  color: #888;
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
+.community-inline-link {
+  color: var(--gold);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.community-inline-link:hover {
+  text-decoration: underline;
+}
+
+.community-cli-section {
+  margin-top: 4px;
+}
+
+.community-cli-label {
+  font-size: 0.75rem;
+  color: #999;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
+}
+
 /* Install command */
 .community-install-block {
   background: #1a1a1a;

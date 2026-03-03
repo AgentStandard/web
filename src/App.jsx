@@ -188,6 +188,45 @@ function PrivacyPolicy({ onBack }) {
   )
 }
 
+function ContributorTerms({ onBack }) {
+  return (
+    <div className="legal-page">
+      <nav className="nav">
+        <div className="logo" onClick={onBack} style={{cursor:"pointer"}}>AgentStandard <span className="logo-dot">✦</span></div>
+        <button className="nav-link" onClick={onBack} style={{background:'none',border:'none',cursor:'pointer'}}>← Back</button>
+      </nav>
+      <div className="legal-content">
+        <h1>Contributor Terms</h1>
+        <p className="legal-date">Effective: 3 March 2026</p>
+        <p>These terms apply when you submit a package to AgentStandard for listing or certification.</p>
+
+        <h2>1. You own it</h2>
+        <p>By submitting, you confirm you own or have the rights to the package and all its contents. You are not submitting anyone else's work without permission.</p>
+
+        <h2>2. You grant us a licence to list it</h2>
+        <p>You grant AgentStandard a non-exclusive, royalty-free, worldwide licence to display, reproduce, and review your package on agentstandard.ai and associated repositories. We do not claim ownership. You keep all rights to your work.</p>
+
+        <h2>3. You are responsible for it</h2>
+        <p>You are solely responsible for the behaviour of your package and any claims arising from its use — including harm to users, third-party IP infringement, and regulatory breaches. AgentStandard's review does not transfer that responsibility to us.</p>
+
+        <h2>4. No hidden instructions</h2>
+        <p>All agent instructions must be fully declared in the <code>system_prompt</code> field of the manifest. Packages with concealed or obfuscated instructions will be rejected and may be reported.</p>
+
+        <h2>5. Open source only</h2>
+        <p>Your package must be licensed under MIT, Apache 2.0, CC0, or ISC. Proprietary or restrictive licences are not accepted.</p>
+
+        <h2>6. We can remove it</h2>
+        <p>AgentStandard reserves the right to remove or de-list any package at any time — for safety, legal, or quality reasons. We will notify you where possible.</p>
+
+        <h2>7. No fee</h2>
+        <p>Submitting a package is free. Certification review is free for the first cohort of packages. Future certification fees, if introduced, will be announced in advance and will not apply retroactively.</p>
+
+        <p style={{marginTop:'2rem'}}>Questions: <a href="mailto:hello@agentstandard.ai">hello@agentstandard.ai</a></p>
+      </div>
+    </div>
+  )
+}
+
 function Manifesto({ onBack }) {
   return (
     <div className="manifesto-page">
@@ -484,6 +523,7 @@ export default function App() {
   if (page === 'manifesto') return <Manifesto onBack={() => setPage('home')} />
   if (page === 'terms') return <TermsOfService onBack={() => setPage('home')} />
   if (page === 'privacy') return <PrivacyPolicy onBack={() => setPage('home')} />
+  if (page === 'contributor-terms') return <ContributorTerms onBack={() => setPage('home')} />
   if (page === 'package-first-conversation') return <PackageDetail onBack={() => setPage('home')} />
   if (page && page.startsWith('community-') && selectedPkg) {
     return <CommunityPackagePage pkg={selectedPkg} onBack={() => setPage('home')} />
@@ -702,6 +742,7 @@ export default function App() {
           <a href="mailto:hello@agentstandard.ai">hello@agentstandard.ai</a>
           <button className="footer-link-btn" onClick={() => setPage('terms')}>Terms of Service</button>
           <button className="footer-link-btn" onClick={() => setPage('privacy')}>Privacy Policy</button>
+          <button className="footer-link-btn" onClick={() => setPage('contributor-terms')}>Contributor Terms</button>
         </div>
         <div className="footer-copy">Setting the standard for agent packages. · England & Wales</div>
       </footer>

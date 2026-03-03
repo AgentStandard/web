@@ -211,8 +211,16 @@ export default function PackageDetail({ onBack }) {
             <span>🤖 No coding required</span>
             <span>🆓 Free to install</span>
           </div>
+          <div className="one-click-install">
+            <div className="one-click-label">⚡ One-line install (Mac / Linux)</div>
+            <div className="one-click-row">
+              <code>curl -fsSL https://agentstandard.ai/install.sh | bash</code>
+              <button className="cli-copy" onClick={() => handleCopy('curl -fsSL https://agentstandard.ai/install.sh | bash')}>{copied ? '✓' : 'Copy'}</button>
+            </div>
+            <div className="one-click-sub">Paste this in Terminal. It installs everything automatically.</div>
+          </div>
           <div className="cli-callout">
-            <span className="cli-label">Developer? Run:</span>
+            <span className="cli-label">Or with npx:</span>
             <code>npx agentstandard install first-conversation</code>
             <button className="cli-copy" onClick={() => handleCopy('npx agentstandard install first-conversation')}>{copied ? '✓' : 'Copy'}</button>
           </div>

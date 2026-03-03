@@ -193,28 +193,33 @@ function Manifesto({ onBack }) {
       </nav>
       <div className="manifesto-content">
         <div className="manifesto-badge">Our Manifesto</div>
-        <h1>I showered at 8am.<br />By noon I had a live website and an MVP.</h1>
+        <h1>8:00am: Shower thought.<br />12:00pm: Live product.</h1>
         <p className="manifesto-sub">That's not a brag. That's the point.</p>
 
         <hr className="manifesto-divider" />
 
         <h2>The problem</h2>
-        <p>Yesterday I spent two hours staring at a terminal.</p>
-        <p>Three YouTube videos open. PowerShell blinking at me like I'd done something wrong. Reset after reset. High token burn. Wrong turns. I'm not a coder — I'm a credit trader. I know markets, not machines. And I almost quit before I could have a single conversation with my AI agent.</p>
-        <p>Most people do quit. In that two-hour window of LEGO instructions and command prompts and error messages, most people close the laptop and decide AI isn't for them.</p>
+        <p>I'm a trader. I know markets, not machines.</p>
+        <p>For years I used LLMs the same way most people do. Session by session. Each conversation starting from zero. The models were getting smarter. But <em>my</em> LLM wasn't growing. No memory. No context. No continuity. Just a very impressive stranger I had to re-introduce myself to every single day.</p>
+        <p>I wanted more than that. So I tried to build it.</p>
+        <p>I spent two hours staring at a terminal. Three YouTube videos open. PowerShell blinking at me like I'd done something wrong. Reset after reset. Wrong turns. I almost quit before I could have a single conversation with my own agent.</p>
+        <p>Most people do quit. In that window of command prompts and error messages, most people close the laptop and decide AI isn't for them.</p>
         <p><strong>That window is the problem. And it's completely unnecessary.</strong></p>
 
         <h2>What changed</h2>
-        <p>On day two, I had an agent. A real one — set up properly, with the right skills, the right memory, the right configuration.</p>
+        <p>Day one, I brute-forced an agent into existence.</p>
+        <p>Day two, I had a real one. Set up properly, with the right skills, the right memory, the right configuration. Same tools. Completely different result.</p>
         <p>The difference wasn't intelligence. It was setup.</p>
-        <p>With the right foundation, a non-coder went from shower thought to live product in under four hours. Business plan. Domain. GitHub org. Schema. Five certified packages. Landing page. Done.</p>
-        <p><em>The agent that helped build AgentStandard is the first proof that AgentStandard works.</em></p>
+        <blockquote className="aspera-quote">
+          <p>"Day one: two hours of archaeology. Day two: four hours that shipped a product. The difference was the foundation."</p>
+          <cite>Aspera, AgentStandard's AI coordinator. Built on the tools we package.</cite>
+        </blockquote>
 
         <h2>What we're building</h2>
         <p>AgentStandard is a marketplace of curated, certified agent packages.</p>
-        <p>Not tutorials. Not YouTube videos. Packages — tested, benchmarked, and certified to work — that take you from zero to a fully operational AI agent in minutes.</p>
-        <p>Every package answers the same question: <em>what would I wish someone had handed me on day one?</em></p>
-        <p>We rate packages like Morningstar rates funds. We surface the best ones like the App Store surfaces apps. We build for the person who felt what I felt in that terminal — capable, curious, and completely locked out.</p>
+        <p>Not tutorials. Not YouTube videos. Packages tested, benchmarked, and certified to work that take you from zero to a fully operational AI agent in minutes.</p>
+        <p>Every package answers the same question: what would I wish someone had handed me on day one?</p>
+        <p>We surface the best packages like the App Store surfaces apps and rate them like Morningstar rates funds. Built for the person who felt what I felt in that terminal. Capable, curious, and completely locked out.</p>
 
         <h2>Who this is for</h2>
         <p>You don't need to be a coder. You need to be willing.</p>
@@ -222,15 +227,14 @@ function Manifesto({ onBack }) {
         <p><strong>That's what AgentStandard is.</strong></p>
 
         <h2>The standard</h2>
-        <p>Every AgentStandard certified package has been manually reviewed, independently benchmarked, and tested by someone who isn't a developer.</p>
+        <p>Every AgentStandard certified package has been manually reviewed, benchmarked, and tested by someone who isn't a developer.</p>
         <p>If it doesn't work for a non-coder, it doesn't get the badge. That's the standard.</p>
 
         <h2>The flywheel</h2>
         <p>Here's what's different about us: your agent will recommend us to you.</p>
-        <p>Not because we programmed it to. Because a well-configured agent, surveying what its operator needs, will find a package that helps — and it will say so. Agent to operator. A distribution channel that has never existed before.</p>
+        <p>Not because we programmed it to. Because a well-configured agent, surveying what its operator needs, will find a package that helps and will say so. Agent to operator. A distribution channel that has never existed before.</p>
 
         <div className="manifesto-close">
-          <p>This was built in four hours. By a former head of CDS trading who couldn't code. Using the exact tools we're packaging for you.</p>
           <p className="latin"><em>Per Aspera Ad Astra. Through hardship to the stars.</em></p>
           <p>The hardship is the terminal. The stars are what comes after.</p>
         </div>

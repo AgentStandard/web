@@ -538,7 +538,7 @@ const packages = [
     slug: 'week-in-review',
     isNew: true,
     name: 'Week in Review',
-    tagline: 'Sunday digest. What you did, what slipped, what matters next week.',
+    tagline: 'Your Sunday reset. Ask for your review, get it in 5 minutes.',
     vertical: 'Productivity',
     tier: 'Free',
     setupTime: 2,
@@ -547,9 +547,9 @@ const packages = [
     certified: false,
     telegram: true,
     tags: ['productivity', 'reflection', 'goals', 'weekly-review'],
-    description: 'Every Sunday your agent reviews your week - what you accomplished, what did not happen, and what needs attention. Delivered proactively. No prompting required.',
+    description: 'Your weekly reset, on demand. Track what matters during the week, then ask for your review on Sunday — or whenever you\'re ready. What shipped, what slipped, what carries forward.',
     whatItDoes: [
-      'Reaches out to you every Sunday with a digest - you do not have to ask',
+      'Ask for your weekly review whenever you\'re ready — Sunday is the habit',
       'Tracks achievements, setbacks, and intentions you mention during the week',
       'Identifies what slipped and helps you decide whether it still matters',
       'Sets the agenda for the week ahead based on what you have told it',
@@ -558,7 +558,7 @@ const packages = [
     skills: [
       { name: 'Weekly Synthesis', description: 'Collects and summarises the week\'s activity' },
       { name: 'Goal Tracker', description: 'Tracks what you said you would do and whether it happened' },
-      { name: 'Proactive Delivery', description: 'Reaches out on Sunday without being prompted' },
+      { name: 'Weekly Reflection', description: 'Structured review of what happened and what to carry forward' },
     ],
     userLevel: 'beginner',
     keywords: ['productivity', 'reflection', 'goals', 'weekly-review', 'proactive'],
@@ -1475,7 +1475,7 @@ export default function App() {
         <h2>Stay ahead of the standard.</h2>
         <p>New packages, certification updates, and platform news - direct to your inbox.</p>
         {submitted ? (
-          <div className="submitted-msg">? You're on the list. We'll be in touch.</div>
+          <div className="submitted-msg">&#x2713; You're on the list. We'll be in touch.</div>
         ) : (
           <>
           <form className="email-form" onSubmit={handleSubmit}>
@@ -1495,7 +1495,7 @@ export default function App() {
 
       {/* Footer */}
       <footer className="footer">
-        <div className="footer-logo">AgentStandard ?</div>
+        <div className="footer-logo">AgentStandard <span className="star-glyph">&#x2736;</span></div>
         <div className="footer-links">
           <a href="https://github.com/AgentStandard/packages" target="_blank" rel="noreferrer">GitHub</a>
           <a href="mailto:hello@agentstandard.ai">hello@agentstandard.ai</a>
@@ -1503,7 +1503,7 @@ export default function App() {
           <button className="footer-link-btn" onClick={() => setPage('privacy')}>Privacy Policy</button>
           <button className="footer-link-btn" onClick={() => setPage('contributor-terms')}>Contributor Terms</button>
         </div>
-        <div className="footer-copy">Setting the standard for agent packages. � England & Wales</div>
+        <div className="footer-copy">Setting the standard for agent packages. &copy; England & Wales</div>
       </footer>
     </div>
   )

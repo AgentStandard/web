@@ -992,13 +992,13 @@ function PackageCard({ pkg }) {
         <span className={`vertical-badge vertical-${pkg.vertical.toLowerCase()}`}>{pkg.vertical}</span>
         {pkg.certified && <span className="certified-badge"><span className="star-glyph">&#x2736;</span> Certified</span>}
         {pkg.isNew && <span className="new-pill">New</span>}
-        {pkg.telegram && <span className="telegram-pill">?? Telegram</span>}
+        {pkg.telegram && <span className="telegram-pill">Telegram</span>}
       </div>
       <h3>{pkg.name}</h3>
       <p className="tagline">{pkg.tagline}</p>
       <div className="card-stats">
-        <span>? {pkg.setupTime} min setup</span>
-        {pkg.rating && <span>? {pkg.rating}</span>}
+        <span>{pkg.setupTime} min setup</span>
+        {pkg.rating && <span>{pkg.rating}</span>}
         <span className={`tier-badge tier-${pkg.tier.toLowerCase()}`}>{pkg.tier}</span>
       </div>
       <div className="card-tags">
@@ -1014,13 +1014,13 @@ function PackageCard({ pkg }) {
           }
         }}
       >
-        {pkg.certified ? <>Install Package &#x2736; <span className="free-pill">Free</span></> : 'View Package &#x2736;'}
+        {pkg.certified ? <>Install Package &#x2736; <span className="free-pill">Free</span></> : <>View Package &#x2736;</>}
       </button>
       <div className="card-footer">
         <UpvoteButton slug={pkg.slug} />
         {pkg.discussionUrl && (
           <a href={pkg.discussionUrl} target="_blank" rel="noreferrer" className="discussion-link">
-            ?? Discussion
+            Discussion
           </a>
         )}
       </div>
@@ -1115,7 +1115,7 @@ export default function App() {
           <h2>Where do you want to start?</h2>
           <div className="paths-grid">
             <div className="path-card path-lite">
-              <div className="path-icon">💬</div>
+              <div className="path-icon">&#x2736;</div>
               <h3>I want to manage my life better.</h3>
               <p>Telegram. 60 seconds. No terminal, no download, no setup. Packages for the things that actually matter.</p>
               <ul className="path-list">
@@ -1128,7 +1128,7 @@ export default function App() {
               <p className="path-upgrade-hint">Want the full stack? OpenClaw is the next step.</p>
             </div>
             <div className="path-card path-builder">
-              <div className="path-icon">⚡</div>
+              <div className="path-icon">&#x26A1;</div>
               <h3>I want to build something with AI.</h3>
               <p>Full agent teams, real tools, and the infrastructure to actually ship — without knowing how to code.</p>
               <ul className="path-list">

@@ -1137,7 +1137,7 @@ body {
   background: transparent !important;
 }
 .path-list li::before {
-  content: '✦';
+  content: '\2736';
   position: absolute;
   left: 0;
   color: #c9a84c;

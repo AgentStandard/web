@@ -1205,6 +1205,7 @@ export default function App() {
   const [email, setEmail] = useState('')
   const [submitted, setSubmitted] = useState(false)
   const [activeVertical, setActiveVertical] = useState('All')
+  const [platformFilter, setPlatformFilter] = useState('all')
   const [page, setPage] = useState('home')
   const [selectedPkg, setSelectedPkg] = useState(null)
 
@@ -1226,15 +1227,20 @@ export default function App() {
   if (page === 'terms') return <TermsOfService onBack={() => setPage('home')} />
   if (page === 'privacy') return <PrivacyPolicy onBack={() => setPage('home')} />
   if (page === 'contributor-terms') return <ContributorTerms onBack={() => setPage('home')} />
-  if (page === 'package-first-conversation') return <PackageDetail onBack={() => setPage('home')} />
+  if (page === 'package-first-conversation') return <PackageDetail onBack={() => { setPage('home'); setSelectedPkg(null); }} />
   if (page && page.startsWith('community-') && selectedPkg) {
-    return <CommunityPackagePage pkg={selectedPkg} onBack={() => setPage('home')} />
+    return <CommunityPackagePage pkg={selectedPkg} onBack={() => { setPage('home'); setSelectedPkg(null); }} />
   }
 
   const filtered = (activeVertical === 'All'
     ? packages
     : packages.filter(p => p.vertical === activeVertical)
   ).filter(p => !p.hidden)
+   .filter(p => {
+     if (platformFilter === 'telegram') return p.telegram === true && p.vertical !== 'Builder'
+     if (platformFilter === 'builder') return p.vertical === 'Builder'
+     return true
+   })
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -1292,7 +1298,7 @@ export default function App() {
           <div className="section-eyebrow">Two paths. Same destination.</div>
           <h2>Where do you want to start?</h2>
           <div className="paths-grid">
-            <div className="path-card path-lite">
+            <div className="path-card path-lite" onClick={() => { setPlatformFilter('telegram'); setActiveVertical('All'); document.getElementById('packages-section')?.scrollIntoView({behavior:'smooth'}); }} style={{cursor:'pointer'}}>
               <div className="path-icon">&#x2736;</div>
               <h3>I want to manage my life better.</h3>
               <p>Telegram. 60 seconds. No terminal, no download, no setup. Packages for the things that actually matter.</p>
@@ -1302,10 +1308,11 @@ export default function App() {
                 <li>Packages for career, health, home, relationships</li>
                 <li>Start free. Add packages as you grow.</li>
               </ul>
-              <a href="https://t.me/AgentStandardAI_bot" target="_blank" rel="noreferrer" className="path-cta path-cta-lite">Start on Telegram →</a>
+              <button className="path-browse-btn" onClick={(e) => { e.stopPropagation(); setPlatformFilter('telegram'); setActiveVertical('All'); document.getElementById('packages-section')?.scrollIntoView({behavior:'smooth'}); }}>Browse Telegram packages ↓</button>
+              <a href="https://t.me/AgentStandardAI_bot" target="_blank" rel="noreferrer" className="path-cta path-cta-lite" onClick={e => e.stopPropagation()}>Start on Telegram →</a>
               <p className="path-upgrade-hint">Want the full stack? OpenClaw is the next step.</p>
             </div>
-            <div className="path-card path-builder">
+            <div className="path-card path-builder" onClick={() => { setPlatformFilter('builder'); setActiveVertical('All'); document.getElementById('packages-section')?.scrollIntoView({behavior:'smooth'}); }} style={{cursor:'pointer'}}>
               <div className="path-icon">&#x26A1;</div>
               <h3>I want to build something with AI.</h3>
               <p>Full agent teams, real tools, and the infrastructure to actually ship — without knowing how to code.</p>
@@ -1315,7 +1322,8 @@ export default function App() {
                 <li>Real tools: code execution, file access, web search</li>
                 <li><strong>This platform was built with it. In 24 hours.</strong></li>
               </ul>
-              <a href="https://openclaw.ai" target="_blank" rel="noreferrer" className="path-cta path-cta-builder">Get OpenClaw →</a>
+              <button className="path-browse-btn path-browse-btn-builder" onClick={(e) => { e.stopPropagation(); setPlatformFilter('builder'); setActiveVertical('All'); document.getElementById('packages-section')?.scrollIntoView({behavior:'smooth'}); }}>Browse Builder packages ↓</button>
+              <a href="https://openclaw.ai" target="_blank" rel="noreferrer" className="path-cta path-cta-builder" onClick={e => e.stopPropagation()}>Get OpenClaw →</a>
             </div>
           </div>
         </div>
@@ -1408,9 +1416,15 @@ export default function App() {
       </section>
 
       {/* Packages */}
-      <section className="packages-section">
+      <section className="packages-section" id="packages-section">
         <div className="section-header">
           <h2>Browse Packages</h2>
+          {platformFilter !== 'all' && (
+            <div className="platform-filter-banner">
+              Showing {platformFilter === 'telegram' ? 'Telegram' : 'Builder'} packages
+              <button className="clear-filter-btn" onClick={() => setPlatformFilter('all')}>Show all &#x2715;</button>
+            </div>
+          )}
           <div className="vertical-filters">
             {verticals.map(v => (
               <button

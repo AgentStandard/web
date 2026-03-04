@@ -1093,7 +1093,7 @@ export default function App() {
           </div>
           <div className="hero-text-col">
             <div className="hero-badge"><span className="hero-badge-star">&#x2736;</span> Ready in 60 seconds. No download.</div>
-            <h1>Your agent.<br />Knows your name.</h1>
+            <h1>Stop starting over.</h1>
             <p className="hero-sub">
               Not a chatbot you prompt. An agent you build a relationship with. Remembers what matters, follows your rules, reaches out when it's useful. Start in Telegram - talking in under a minute.
             </p>
@@ -1117,24 +1117,25 @@ export default function App() {
             <div className="path-card path-lite">
               <div className="path-icon">💬</div>
               <h3>I want to manage my life better.</h3>
-              <p>Telegram. 60 seconds. No downloads, no terminal, no setup. Personal packages for the things that actually matter — your health, relationships, career, home.</p>
+              <p>Telegram. 60 seconds. No terminal, no download, no setup. Packages for the things that actually matter.</p>
               <ul className="path-list">
-                <li>Works on your phone, right now</li>
-                <li>30 free messages to start</li>
-                <li>Your agent remembers you between sessions</li>
-                <li>Add packages as you go</li>
+                <li>Ready in 60 seconds — just open Telegram</li>
+                <li>Remembers every conversation. Builds over time.</li>
+                <li>Packages for career, health, home, relationships</li>
+                <li>Start free. Add packages as you grow.</li>
               </ul>
               <a href="https://t.me/AgentStandardAI_bot" target="_blank" rel="noreferrer" className="path-cta path-cta-lite">Start on Telegram →</a>
+              <p className="path-upgrade-hint">Want the full stack? OpenClaw is the next step.</p>
             </div>
             <div className="path-card path-builder">
               <div className="path-icon">⚡</div>
               <h3>I want to build something with AI.</h3>
-              <p>OpenClaw. Full agent teams, sub-agents, code execution, file access. The exact setup that built this platform in 24 hours — by a credit trader who couldn't code.</p>
+              <p>Full agent teams, real tools, and the infrastructure to actually ship — without knowing how to code.</p>
               <ul className="path-list">
-                <li>Agent teams that work in parallel</li>
-                <li>Sub-agents for research, drafting, analysis</li>
-                <li>Packages that run on real tools</li>
-                <li>Builder packages coming April 2026</li>
+                <li>Full agent team — research, writing, analysis, execution</li>
+                <li>Sub-agents that work while you sleep</li>
+                <li>Real tools: code execution, file access, web search</li>
+                <li><strong>This platform was built with it. In 24 hours.</strong></li>
               </ul>
               <a href="https://openclaw.ai" target="_blank" rel="noreferrer" className="path-cta path-cta-builder">Get OpenClaw →</a>
             </div>

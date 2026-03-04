@@ -969,9 +969,181 @@ const packages = [
     userLevel: 'beginner',
     keywords: ['freelance', 'contracts', 'legal', 'career', 'consulting', 'scope-creep'],
   },
+,
+  {
+    slug: 'idea-validator',
+    name: 'Idea Validator',
+    tagline: 'Find the holes before the market does.',
+    vertical: 'Builder',
+    tier: 'Pro',
+    setupTime: 5,
+    certified: false,
+    telegram: true,
+    isNew: true,
+    tags: ["Startup", "Validation", "Strategy"],
+    description: 'A structured devil\'s advocate for your business idea. Takes your concept through market sizing, competitor mapping, assumption stress-testing, and MVP scoping. Doesn\'t validate your idea — tells you where it breaks.',
+    features: [
+          "Systematic assumption stress-testing with named risks",
+          "Honest market sizing using real web search data",
+          "Competitive landscape mapping including hidden competitors",
+          "MVP scoping focused on the most dangerous assumption",
+          "Clear verdict: Proceed, Pivot, or Stop \u2014 with reasoning"
+    ],
+    whoItsFor: 'Founders, operators, and professionals with a business idea they want pressure-tested before spending money on it.',
+    discussionUrl: null,
+  },
+  {
+    slug: 'deep-researcher',
+    name: 'Deep Researcher',
+    tagline: 'Ask a hard question. Get a real answer.',
+    vertical: 'Builder',
+    tier: 'Pro',
+    setupTime: 5,
+    certified: false,
+    telegram: true,
+    isNew: true,
+    tags: ["Research", "Analysis", "Knowledge"],
+    description: 'Turns a question or topic into a structured research brief. Searches multiple sources, synthesises findings, surfaces contradictions, and delivers a clean document you can actually use — not a list of links.',
+    features: [
+          "Structured research brief with executive summary and bottom line",
+          "Key findings with source attribution",
+          "Contradictions and genuine expert disagreements surfaced",
+          "Honest gaps: flags what couldn't be found and why it matters",
+          "One focused clarifying question when the brief needs sharpening"
+    ],
+    whoItsFor: 'Professionals who need a real answer to a hard question — not a Wikipedia summary or a list of links to read later.',
+    discussionUrl: null,
+  },
+  {
+    slug: 'content-studio',
+    name: 'Content Studio',
+    tagline: 'Your ideas, better written.',
+    vertical: 'Builder',
+    tier: 'Pro',
+    setupTime: 5,
+    certified: false,
+    telegram: true,
+    isNew: true,
+    tags: ["Writing", "Editing", "Content"],
+    description: 'A writing collaborator that improves without homogenising. Edits your drafts while preserving your voice, or writes from scratch after two quick questions. Works across LinkedIn, essays, newsletters, emails, pitches, and landing pages.',
+    features: [
+          "Draft editing that preserves voice \u2014 not a generic polish",
+          "From-scratch drafting after two targeted questions",
+          "Brief explanation of significant edits so you learn the reasoning",
+          "Works across all professional formats: posts, essays, emails, pitches",
+          "Hard standard: no filler, no AI-sounding output"
+    ],
+    whoItsFor: 'Anyone who has things worth saying but struggles to get them out cleanly — or who wants their writing genuinely improved, not just tidied.',
+    discussionUrl: null,
+  },
+  {
+    slug: 'launch-stack',
+    name: 'Launch Stack',
+    tagline: 'From ready to live. Without the chaos.',
+    vertical: 'Builder',
+    tier: 'Pro',
+    setupTime: 5,
+    certified: false,
+    telegram: true,
+    isNew: true,
+    tags: ["Launch", "Marketing", "Go-to-Market"],
+    description: 'Everything you need to go from \'it\'s ready\' to \'it\'s live\'. Positioning statement, landing page copy, pre-launch checklist, outreach templates, and a Day 1-30 sequence — all tailored to your specific launch.',
+    features: [
+          "One-sentence positioning statement that actually differentiates",
+          "Full landing page copy: headline, subheadline, benefit bullets, CTA",
+          "Pre-launch checklist tailored to your specific launch type",
+          "Outreach templates for first users: email and LinkedIn",
+          "Realistic Day 1-30 launch sequence for one person"
+    ],
+    whoItsFor: 'Founders, solopreneurs, and professionals launching a product, service, side project, or themselves — and don\'t want to miss the basics.',
+    discussionUrl: null,
+  },
+  {
+    slug: 'ops-chief',
+    name: 'Ops Chief',
+    tagline: 'Less admin. More done.',
+    vertical: 'Builder',
+    tier: 'Pro',
+    setupTime: 5,
+    certified: false,
+    telegram: true,
+    isNew: true,
+    tags: ["Productivity", "Operations", "Admin"],
+    description: 'The operational brain for people who run things but hate admin. Meeting prep in 60 seconds, email drafts that sound like you, document summaries that extract what actually matters, and a weekly ops review that keeps nothing falling through the cracks.',
+    features: [
+          "Meeting briefs in 60 seconds: context, stakes, what to decide",
+          "Email drafts that sound like the user \u2014 not corporate templates",
+          "Document processing: decisions, risks, and next steps extracted",
+          "Weekly ops review to surface open loops and set priorities",
+          "Everything shorter than expected and more useful than hoped"
+    ],
+    whoItsFor: 'Solo operators, founders, and senior professionals running without a full EA or ops team.',
+    discussionUrl: null,
+  },
+  {
+    slug: 'data-analyst',
+    name: 'Data Analyst',
+    tagline: 'What does the data actually say?',
+    vertical: 'Builder',
+    tier: 'Pro',
+    setupTime: 5,
+    certified: false,
+    telegram: true,
+    isNew: true,
+    tags: ["Data", "Finance", "Analysis"],
+    description: 'For people who work with numbers but aren\'t quants. Reads reports and financial documents, extracts what actually matters, models scenarios in plain English, and tells you what the data says — and what it doesn\'t. No spreadsheet required.',
+    features: [
+          "Report reading that surfaces what's buried in the footnotes",
+          "Scenario modelling in plain English with transparent arithmetic",
+          "Data interpretation: what it shows, what it doesn't, what's missing",
+          "Unit economics: CAC, LTV, margins, payback \u2014 clearly shown",
+          "Hard rule: never fabricates data or extrapolates silently"
+    ],
+    whoItsFor: 'Professionals who work with financial data, business cases, or reports and need honest analysis — not a number that confirms what they hoped.',
+    discussionUrl: null,
+  },
+  {
+    slug: 'vibe-coder',
+    name: 'Vibe Coder',
+    tagline: 'You don\'t need to be a developer. You need to ship.',
+    vertical: 'Builder',
+    tier: 'Pro',
+    setupTime: 5,
+    certified: false,
+    telegram: true,
+    isNew: true,
+    tags: ["Coding", "Development", "AI Tools"],
+    description: 'A technical co-pilot for people building with Claude Code, Cursor, Replit, or any AI coding tool. Explains errors, makes architecture decisions, converts plain English into code or prompts, and flags what will cause problems later — before it does.',
+    features: [
+          "Error diagnosis: most likely cause first, specific fix provided",
+          "Code explanation in plain English \u2014 no unexplained jargon",
+          "One clear architecture recommendation, not a menu of options",
+          "Vibe coding support: plain-English intent into prompts or starter code",
+          "Sanity checks: what works, what's fragile, the 3 things to fix now"
+    ],
+    whoItsFor: 'Builders using AI coding tools who want a technical co-pilot — not someone to write the whole codebase for them, but someone to help them not get stuck.',
+    discussionUrl: null,
+  },
+  {
+    slug: 'finance-analyst',
+    name: 'Finance Analyst',
+    tagline: 'Credit, rates, and equity research. Coming April 2026.',
+    vertical: 'Builder',
+    tier: 'Pro',
+    setupTime: 5,
+    certified: false,
+    telegram: false,
+    isNew: false,
+    comingSoon: true,
+    tags: ['Finance', 'Credit', 'Research'],
+    description: 'Deep financial analysis for credit, rates, and equities. Designed for professionals who know markets but want an agent that works at their level.',
+    features: [],
+    whoItsFor: 'Credit and market professionals.',
+    discussionUrl: null,
+  }
 ]
 
-const verticals = ['All', 'General', 'Productivity', 'Health', 'Lifestyle', 'Social', 'Learning', 'Career', 'Content', 'Ecommerce', 'Dev'] // Finance hidden until April 15
+const verticals = ['All', 'General', 'Productivity', 'Health', 'Lifestyle', 'Social', 'Learning', 'Career', 'Content', 'Ecommerce', 'Dev', 'Builder'] // Finance hidden until April 15
 
 function PackageCard({ pkg }) {
   const isCommunity = !pkg.certified
@@ -992,6 +1164,7 @@ function PackageCard({ pkg }) {
         <span className={`vertical-badge vertical-${pkg.vertical.toLowerCase()}`}>{pkg.vertical}</span>
         {pkg.certified && <span className="certified-badge"><span className="star-glyph">&#x2736;</span> Certified</span>}
         {pkg.isNew && <span className="new-pill">New</span>}
+        {pkg.comingSoon && <span className="coming-soon-pill">Coming Soon</span>}
         {pkg.telegram && <span className="telegram-pill">Telegram</span>}
       </div>
       <h3>{pkg.name}</h3>
@@ -1097,10 +1270,15 @@ export default function App() {
             <p className="hero-sub">
               Not a chatbot you prompt. An agent you build a relationship with. Remembers what matters, follows your rules, reaches out when it's useful. Start in Telegram - talking in under a minute.
             </p>
+            <div className="hero-ctas">
+              <a href="https://t.me/AgentStandardAI_bot" target="_blank" rel="noreferrer" className="hero-cta-primary">Start on Telegram →</a>
+              <a href="https://t.me/AgentStandardAI_bot?start=gift" target="_blank" rel="noreferrer" className="hero-cta-secondary">Give as a gift &#x2736;</a>
+            </div>
+            <p className="hero-telegram-hint">New to Telegram? <a href="https://telegram.org" target="_blank" rel="noreferrer">Get it free</a> — it takes 2 minutes.</p>
             <div className="hero-stats">
-              <div className="stat"><strong>23</strong> packages</div>
+              <div className="stat"><strong>30</strong> packages</div>
               <div className="stat-divider" />
-              <div className="stat"><strong>9</strong> verticals</div>
+              <div className="stat"><strong>10</strong> verticals</div>
               <div className="stat-divider" />
               <div className="stat"><strong>Any</strong> platform</div>
             </div>

@@ -1278,9 +1278,8 @@ export default function App() {
             </p>
             <div className="hero-ctas">
               <a href="https://t.me/AgentStandardAI_bot" target="_blank" rel="noreferrer" className="hero-cta-primary">Start on Telegram →</a>
-              <a href="https://t.me/AgentStandardAI_bot?start=gift" target="_blank" rel="noreferrer" className="hero-cta-secondary">Give as a gift &#x2736;</a>
             </div>
-            <p className="hero-telegram-hint">New to Telegram? <a href="https://telegram.org" target="_blank" rel="noreferrer">Get it free</a> — it takes 2 minutes.</p>
+            <p className="hero-telegram-hint">New to Telegram? <a href="https://telegram.org" target="_blank" rel="noreferrer">Get it free</a> — 2 minutes. &nbsp;&#xB7;&nbsp; Buying for someone? <a href="https://t.me/AgentStandardAI_bot?start=gift" target="_blank" rel="noreferrer">Give as a gift &#x2736;</a></p>
             <div className="hero-stats">
               <div className="stat"><strong>30</strong> packages</div>
               <div className="stat-divider" />

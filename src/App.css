@@ -502,16 +502,16 @@ body {
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.03em;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
   color: var(--black);
 }
 
 .hero-sub {
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: var(--grey);
-  max-width: 500px;
-  margin: 0 0 32px;
-  line-height: 1.7;
+  max-width: 480px;
+  margin: 0 0 36px;
+  line-height: 1.75;
 }
 
 .hero-stats {
@@ -1238,16 +1238,17 @@ body {
 }
 .hero-cta-primary {
   display: inline-block;
-  background: #229ED9;
+  background: #1a1a1a;
   color: #fff !important;
-  padding: 14px 28px;
+  padding: 15px 32px;
   border-radius: 10px;
   font-weight: 700;
   font-size: 1rem;
   text-decoration: none;
-  transition: opacity 0.15s;
+  letter-spacing: 0.01em;
+  transition: background 0.15s;
 }
-.hero-cta-primary:hover { opacity: 0.85; }
+.hero-cta-primary:hover { background: #333; }
 .hero-cta-secondary {
   display: inline-block;
   background: transparent;
@@ -1262,12 +1263,21 @@ body {
 }
 .hero-cta-secondary:hover { opacity: 0.75; }
 .hero-telegram-hint {
-  font-size: 0.78rem;
-  color: #888;
-  margin: 0 0 20px;
+  font-size: 0.8rem;
+  color: #999;
+  margin: 10px 0 24px;
+  line-height: 1.6;
 }
 .hero-telegram-hint a {
-  color: #aaa;
+  color: #999;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.hero-telegram-hint a:last-child {
+  color: var(--gold);
+  text-decoration: none;
+}
+.hero-telegram-hint a:last-child:hover {
   text-decoration: underline;
 }
 

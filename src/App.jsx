@@ -1181,7 +1181,7 @@ export default function App() {
           <div className="q-cards">
             <div className="q-card">
               <div className="q-card-header">
-                <span className="q-icon">??</span>
+                <span className="q-icon">01</span>
                 <strong>Operator Profile</strong>
                 <span className="q-tag">Who you are</span>
               </div>
@@ -1195,7 +1195,7 @@ export default function App() {
             </div>
             <div className="q-card">
               <div className="q-card-header">
-                <span className="q-icon">??</span>
+                <span className="q-icon">02</span>
                 <strong>Agent Profile</strong>
                 <span className="q-tag">How it shows up</span>
               </div>

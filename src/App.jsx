@@ -1151,6 +1151,7 @@ function PackageCard({ pkg }) {
   const handleCardClick = (e) => {
     // Don't trigger if clicking upvote button or discussion link
     if (e.target.closest('.upvote-btn') || e.target.closest('.discussion-link')) return
+    if (pkg.comingSoon) return
     if (pkg.slug === 'first-conversation') {
       window.dispatchEvent(new CustomEvent('navigate', { detail: 'package-first-conversation' }))
     } else if (isCommunity) {
@@ -1159,7 +1160,7 @@ function PackageCard({ pkg }) {
   }
 
   return (
-    <div className={`package-card package-card-clickable${pkg.tier === 'Pro' ? ' package-card-pro' : ''}`} onClick={handleCardClick}>
+    <div className={`package-card package-card-clickable${pkg.tier === 'Pro' ? ' package-card-pro' : ''}${pkg.comingSoon ? ' package-card-coming-soon' : ''}`} onClick={handleCardClick}>
       <div className="card-header">
         <span className={`vertical-badge vertical-${pkg.vertical.toLowerCase()}`}>{pkg.vertical}</span>
         {pkg.certified && <span className="certified-badge"><span className="star-glyph">&#x2736;</span> Certified</span>}
@@ -1183,18 +1184,23 @@ function PackageCard({ pkg }) {
       <div className="card-tags">
         {pkg.tags.map(t => <span key={t} className="tag">{t}</span>)}
       </div>
-      <button
-        className="install-btn"
-        onClick={() => {
-          if (pkg.slug === 'first-conversation') {
-            window.dispatchEvent(new CustomEvent('navigate', { detail: 'package-first-conversation' }))
-          } else if (isCommunity) {
-            window.dispatchEvent(new CustomEvent('navigate', { detail: `community-${pkg.slug}` }))
-          }
-        }}
-      >
-        {pkg.certified ? <>Install Package &#x2736; <span className="free-pill">Free</span></> : <>View Package &#x2736;</>}
-      </button>
+      {!pkg.comingSoon && (
+        <button
+          className="install-btn"
+          onClick={() => {
+            if (pkg.slug === 'first-conversation') {
+              window.dispatchEvent(new CustomEvent('navigate', { detail: 'package-first-conversation' }))
+            } else if (isCommunity) {
+              window.dispatchEvent(new CustomEvent('navigate', { detail: `community-${pkg.slug}` }))
+            }
+          }}
+        >
+          {pkg.certified ? <>Install Package &#x2736; <span className="free-pill">Free</span></> : <>View Package &#x2736;</>}
+        </button>
+      )}
+      {pkg.comingSoon && (
+        <div className="coming-soon-cta">April 2026 &#x2736;</div>
+      )}
       <div className="card-footer">
         <UpvoteButton slug={pkg.slug} />
         {pkg.discussionUrl && (

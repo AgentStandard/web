@@ -1492,3 +1492,38 @@ body {
   line-height: 1.7;
   max-width: 560px;
 }
+
+/* Coming soon card state */
+.package-card-coming-soon {
+  opacity: 0.7;
+  cursor: default !important;
+}
+.package-card-coming-soon:hover {
+  transform: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.coming-soon-cta {
+  margin-top: 4px;
+  padding: 10px 16px;
+  background: transparent;
+  border: 1px dashed rgba(201,168,76,0.3);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gold);
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+/* Mobile: 80/20 section */
+@media (max-width: 480px) {
+  .eighty-twenty-inner { padding: 0 20px; }
+  .eighty-twenty-section { padding: 60px 0; }
+  .eighty-card { padding: 24px 20px; }
+}
+
+/* Mobile: gift page */
+@media (max-width: 480px) {
+  .gift-heading { font-size: 1.6rem; }
+  .gift-cta { padding: 14px 32px; font-size: 0.95rem; }
+}

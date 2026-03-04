@@ -1,0 +1,271 @@
+{
+  "schema": "https://agentstandard.ai/schema/v1.json",
+  "generated": "2026-03-04",
+  "version": "1.1.0",
+  "count": 29,
+  "packages": [
+    {
+      "slug": "first-conversation",
+      "name": "First Conversation Setup",
+      "tagline": "From PowerShell to dialogue in 20 minutes.",
+      "vertical": "General",
+      "tier": "Starter",
+      "certified": true,
+      "telegram": true
+    },
+    {
+      "slug": "content-creator",
+      "name": "Content Creator Stack",
+      "tagline": "Write, research, schedule, and publish - from one conversation.",
+      "vertical": "Content",
+      "tier": "Pro",
+      "certified": false
+    },
+    {
+      "slug": "dev-productivity",
+      "name": "Dev Productivity Stack",
+      "tagline": "Code review, documentation, and PR workflows - on autopilot.",
+      "vertical": "Dev",
+      "tier": "Pro",
+      "certified": false
+    },
+    {
+      "slug": "ecommerce-ops",
+      "name": "Ecommerce Strategy Stack",
+      "tagline": "Competitor research, product copy, and growth strategy for online sellers.",
+      "vertical": "Ecommerce",
+      "tier": "Pro",
+      "certified": false
+    },
+    {
+      "slug": "gp-prep",
+      "name": "GP Prep",
+      "tagline": "Walk into any appointment knowing exactly what to say.",
+      "vertical": "Health",
+      "tier": "Free",
+      "certified": false,
+      "telegram": true
+    },
+    {
+      "slug": "wine-log",
+      "name": "Wine Log",
+      "vertical": "Lifestyle",
+      "tier": "Free",
+      "certified": false,
+      "telegram": true
+    },
+    {
+      "slug": "relationship-graph",
+      "name": "Relationship Graph",
+      "tagline": "Your people, remembered properly.",
+      "vertical": "Social",
+      "tier": "Free",
+      "certified": false,
+      "telegram": true
+    },
+    {
+      "slug": "week-in-review",
+      "name": "Week in Review",
+      "tagline": "Your Sunday reset. Ask for your review, get it in 5 minutes.",
+      "vertical": "Productivity",
+      "tier": "Free",
+      "certified": false,
+      "telegram": true
+    },
+    {
+      "slug": "memory-architect",
+      "name": "Memory Architect",
+      "tagline": "An agent that remembers who you are.",
+      "vertical": "Productivity",
+      "tier": "Free",
+      "certified": false,
+      "telegram": true
+    },
+    {
+      "slug": "skill-tracker",
+      "name": "Skill Tracker",
+      "vertical": "Learning",
+      "tier": "Free",
+      "certified": false,
+      "telegram": true
+    },
+    {
+      "slug": "book-brain",
+      "name": "Book Brain",
+      "tagline": "Read it and remember it. For real this time.",
+      "vertical": "Learning",
+      "tier": "Free",
+      "certified": false,
+      "telegram": true
+    },
+    {
+      "slug": "network-pulse",
+      "name": "Network Pulse",
+      "tagline": "Know who to reach out to before the moment passes.",
+      "vertical": "Social",
+      "tier": "Free",
+      "certified": false,
+      "telegram": true
+    },
+    {
+      "slug": "gift-curator",
+      "name": "Gift Curator",
+      "tagline": "Thoughtful gifts. Every time.",
+      "vertical": "Social",
+      "tier": "Free",
+      "certified": false,
+      "telegram": true
+    },
+    {
+      "slug": "taste-map",
+      "name": "Taste Map",
+      "tagline": "Your taste in everything. Mapped and growing.",
+      "vertical": "Lifestyle",
+      "tier": "Free",
+      "certified": false,
+      "telegram": true
+    },
+    {
+      "slug": "read-it-later",
+      "name": "Read It Later",
+      "tagline": "Save it. Read it. Let it stick.",
+      "vertical": "Learning",
+      "tier": "Free",
+      "certified": false,
+      "telegram": true
+    },
+    {
+      "slug": "home-stack",
+      "name": "Home Stack",
+      "tagline": "Your home, tracked and remembered.",
+      "vertical": "Lifestyle",
+      "tier": "Free",
+      "certified": false,
+      "telegram": true
+    },
+    {
+      "slug": "supplement-stack",
+      "name": "Supplement Stack",
+      "vertical": "Health",
+      "tier": "Free",
+      "certified": false,
+      "telegram": true
+    },
+    {
+      "slug": "salary-scout",
+      "name": "Salary Scout",
+      "vertical": "Career",
+      "tier": "Free",
+      "certified": false,
+      "telegram": true
+    },
+    {
+      "slug": "bid-auditor",
+      "name": "Bid Auditor",
+      "tagline": "Find where the money went.",
+      "vertical": "Real Estate",
+      "tier": "Free",
+      "certified": false,
+      "telegram": true
+    },
+    {
+      "slug": "pantry-chef",
+      "name": "Pantry Chef",
+      "vertical": "Food",
+      "tier": "Free",
+      "certified": false,
+      "telegram": true
+    },
+    {
+      "slug": "job-hunt-agent",
+      "name": "Job Hunt Agent",
+      "tagline": "Your job search, organised and moving.",
+      "vertical": "Career",
+      "tier": "Free",
+      "certified": false,
+      "telegram": true
+    },
+    {
+      "slug": "freelancer-guard",
+      "name": "Freelancer Guard",
+      "tagline": "Read it before you sign it.",
+      "vertical": "Career",
+      "tier": "Free",
+      "certified": false,
+      "telegram": true
+    },
+    {
+      "slug": "idea-validator",
+      "name": "Idea Validator",
+      "tagline": "Find the holes before the market does.",
+      "vertical": "Builder",
+      "tier": "Pro",
+      "certified": false,
+      "telegram": true
+    },
+    {
+      "slug": "deep-researcher",
+      "name": "Deep Researcher",
+      "tagline": "Ask a hard question. Get a real answer.",
+      "vertical": "Builder",
+      "tier": "Pro",
+      "certified": false,
+      "telegram": true
+    },
+    {
+      "slug": "content-studio",
+      "name": "Content Studio",
+      "tagline": "Your ideas, better written.",
+      "vertical": "Builder",
+      "tier": "Pro",
+      "certified": false,
+      "telegram": true
+    },
+    {
+      "slug": "launch-stack",
+      "name": "Launch Stack",
+      "tagline": "From ready to live. Without the chaos.",
+      "vertical": "Builder",
+      "tier": "Pro",
+      "certified": false,
+      "telegram": true
+    },
+    {
+      "slug": "ops-chief",
+      "name": "Ops Chief",
+      "tagline": "Less admin. More done.",
+      "vertical": "Builder",
+      "tier": "Pro",
+      "certified": false,
+      "telegram": true
+    },
+    {
+      "slug": "data-analyst",
+      "name": "Data Analyst",
+      "tagline": "What does the data actually say?",
+      "vertical": "Builder",
+      "tier": "Pro",
+      "certified": false,
+      "telegram": true
+    },
+    {
+      "slug": "vibe-coder",
+      "name": "Vibe Coder",
+      "tagline": "You don\\",
+      "vertical": "Builder",
+      "tier": "Pro",
+      "certified": false,
+      "telegram": true
+    },
+    {
+      "slug": "finance-analyst",
+      "name": "Finance Analyst",
+      "tagline": "Credit, rates, and equity research. Coming April 2026.",
+      "vertical": "Builder",
+      "tier": "Pro",
+      "certified": false,
+      "telegram": false,
+      "comingSoon": true
+    }
+  ]
+}

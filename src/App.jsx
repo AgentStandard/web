@@ -1159,7 +1159,7 @@ function PackageCard({ pkg }) {
   }
 
   return (
-    <div className="package-card package-card-clickable" onClick={handleCardClick}>
+    <div className={`package-card package-card-clickable${pkg.tier === 'Pro' ? ' package-card-pro' : ''}`} onClick={handleCardClick}>
       <div className="card-header">
         <span className={`vertical-badge vertical-${pkg.vertical.toLowerCase()}`}>{pkg.vertical}</span>
         {pkg.certified && <span className="certified-badge"><span className="star-glyph">&#x2736;</span> Certified</span>}
@@ -1172,7 +1172,13 @@ function PackageCard({ pkg }) {
       <div className="card-stats">
         <span>{pkg.setupTime} min setup</span>
         {pkg.rating && <span>{pkg.rating}</span>}
-        <span className={`tier-badge tier-${pkg.tier.toLowerCase()}`}>{pkg.tier}</span>
+        {pkg.tier === 'Pro' ? (
+          <span className="tier-badge tier-pro">Pro</span>
+        ) : pkg.tier === 'Starter' ? (
+          <span className="tier-badge tier-starter">Starter</span>
+        ) : (
+          <span className="tier-badge tier-free">Free</span>
+        )}
       </div>
       <div className="card-tags">
         {pkg.tags.map(t => <span key={t} className="tag">{t}</span>)}
@@ -1201,12 +1207,47 @@ function PackageCard({ pkg }) {
   )
 }
 
+
+// ─── Gift Landing Page ────────────────────────────────────────────────────────
+function GiftPage() {
+  const params = new URLSearchParams(window.location.search)
+  const code = params.get('code') || params.get('gift') || ''
+
+  const telegramLink = code
+    ? `https://t.me/AgentStandardAI_bot?start=gift_${code}`
+    : 'https://t.me/AgentStandardAI_bot'
+
+  return (
+    <div className="gift-page">
+      <div className="gift-page-inner">
+        <div className="gift-star">&#x2736;</div>
+        <h1 className="gift-heading">Someone set up an agent for you.</h1>
+        <p className="gift-sub">
+          It already knows your name. It remembers every conversation and gets sharper the longer you use it. Tap below to say hello.
+        </p>
+        <a href={telegramLink} className="gift-cta">Meet your agent &#x2192;</a>
+        <p className="gift-hint">
+          Opens in Telegram. Free to download at{' '}
+          <a href="https://telegram.org" target="_blank" rel="noreferrer">telegram.org</a>
+          {' '}if you don&apos;t have it.
+        </p>
+        <div className="gift-footer-note">
+          <span>Powered by </span>
+          <a href="/" onClick={e => { e.preventDefault(); window.history.pushState({}, '', '/'); window.dispatchEvent(new Event('popstate')); }}>AgentStandard</a>
+          <span> &#x2736;</span>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export default function App() {
   const [email, setEmail] = useState('')
   const [submitted, setSubmitted] = useState(false)
   const [activeVertical, setActiveVertical] = useState('All')
   const [platformFilter, setPlatformFilter] = useState('all')
-  const [page, setPage] = useState('home')
+  const isGiftPage = window.location.pathname === '/gift' || window.location.pathname.startsWith('/gift/')
+  const [page, setPage] = useState(isGiftPage ? 'gift' : 'home')
   const [selectedPkg, setSelectedPkg] = useState(null)
 
   useEffect(() => {
@@ -1223,6 +1264,7 @@ export default function App() {
     return () => window.removeEventListener('navigate', handler)
   }, [])
 
+  if (page === 'gift') return <GiftPage />
   if (page === 'manifesto') return <Manifesto onBack={() => setPage('home')} />
   if (page === 'terms') return <TermsOfService onBack={() => setPage('home')} />
   if (page === 'privacy') return <PrivacyPolicy onBack={() => setPage('home')} />
@@ -1415,6 +1457,29 @@ export default function App() {
       </section>
 
       {/* Packages */}
+
+      {/* 80/20 Principle */}
+      <section className="eighty-twenty-section">
+        <div className="eighty-twenty-inner">
+          <div className="section-eyebrow">The thing everyone gets wrong</div>
+          <h2>The model is 20%.</h2>
+          <p className="eighty-twenty-lead">ChatGPT and base Claude give you the model. That&#x2019;s 20% of what a useful agent actually is.</p>
+          <div className="eighty-twenty-grid">
+            <div className="eighty-card eighty-card-dim">
+              <div className="eighty-label">20%</div>
+              <div className="eighty-title">The model</div>
+              <div className="eighty-desc">What Anthropic gives everyone. It&#x2019;s the engine. Everyone has the same engine.</div>
+            </div>
+            <div className="eighty-card eighty-card-bright">
+              <div className="eighty-label">80%</div>
+              <div className="eighty-title">The other 80%</div>
+              <div className="eighty-desc">Memory. Identity. Taste. Skills. Relationships. Rules. The things that make it yours. That&#x2019;s what AgentStandard gives you.</div>
+            </div>
+          </div>
+          <p className="eighty-twenty-close">You can&#x2019;t replicate this by signing up for ChatGPT. You build it, conversation by conversation. The packages are how you start.</p>
+        </div>
+      </section>
+
       <section className="packages-section" id="packages-section">
         <div className="section-header">
           <h2>Browse Packages</h2>

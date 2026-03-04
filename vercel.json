@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/api/packages.json", "destination": "/api/packages.json" },
+    { "source": "/gift", "destination": "/index.html" },
+    { "source": "/gift/(.*)", "destination": "/index.html" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}

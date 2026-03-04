@@ -9,7 +9,7 @@ function TermsOfService({ onBack }) {
     <div className="legal-page">
       <nav className="nav">
         <div className="logo" onClick={onBack} style={{cursor:"pointer"}}>AgentStandard <span className="logo-dot">&#x2736;</span></div>
-        <button className="nav-link" onClick={onBack} style={{background:'none',border:'none',cursor:'pointer'}}>? Back</button>
+        <button className="nav-link" onClick={onBack} style={{background:'none',border:'none',cursor:'pointer'}}>&larr; Back</button>
       </nav>
       <div className="legal-content">
         <h1>Terms of Service</h1>
@@ -109,7 +109,7 @@ function PrivacyPolicy({ onBack }) {
     <div className="legal-page">
       <nav className="nav">
         <div className="logo" onClick={onBack} style={{cursor:"pointer"}}>AgentStandard <span className="logo-dot">&#x2736;</span></div>
-        <button className="nav-link" onClick={onBack} style={{background:'none',border:'none',cursor:'pointer'}}>? Back</button>
+        <button className="nav-link" onClick={onBack} style={{background:'none',border:'none',cursor:'pointer'}}>&larr; Back</button>
       </nav>
       <div className="legal-content">
         <h1>Privacy Policy</h1>
@@ -196,7 +196,7 @@ function ContributorTerms({ onBack }) {
     <div className="legal-page">
       <nav className="nav">
         <div className="logo" onClick={onBack} style={{cursor:"pointer"}}>AgentStandard <span className="logo-dot">&#x2736;</span></div>
-        <button className="nav-link" onClick={onBack} style={{background:'none',border:'none',cursor:'pointer'}}>? Back</button>
+        <button className="nav-link" onClick={onBack} style={{background:'none',border:'none',cursor:'pointer'}}>&larr; Back</button>
       </nav>
       <div className="legal-content">
         <h1>Contributor Terms</h1>
@@ -235,7 +235,7 @@ function Manifesto({ onBack }) {
     <div className="manifesto-page">
       <nav className="nav">
         <div className="logo" onClick={onBack} style={{cursor:"pointer"}}>AgentStandard <span className="logo-dot">&#x2736;</span></div>
-        <button className="nav-link" onClick={onBack} style={{background:'none',border:'none',cursor:'pointer'}}>? Back</button>
+        <button className="nav-link" onClick={onBack} style={{background:'none',border:'none',cursor:'pointer'}}>&larr; Back</button>
       </nav>
       <div className="manifesto-content">
         <div className="manifesto-badge">Our Manifesto</div>

@@ -1059,19 +1059,26 @@ body {
 
 /* Two Paths Section */
 .two-paths-section {
-  padding: 80px 24px;
-  background: #0a0a0a;
-  border-top: 1px solid #1a1a1a;
+  padding: 80px 24px !important;
+  background: #111 !important;
+  border-top: 1px solid #222 !important;
 }
 .two-paths-inner {
   max-width: 960px;
   margin: 0 auto;
   text-align: center;
 }
+.two-paths-inner .section-eyebrow {
+  color: #c9a84c;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
 .two-paths-inner h2 {
   font-size: 2rem;
   font-weight: 700;
-  color: #f5f0e8;
+  color: #ffffff !important;
   margin-bottom: 48px;
 }
 .paths-grid {
@@ -1084,50 +1091,50 @@ body {
   .paths-grid { grid-template-columns: 1fr; }
 }
 .path-card {
-  border-radius: 20px;
-  padding: 36px 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.path-lite {
-  background: #141414;
-  border: 1px solid #2a2a2a;
+  border-radius: 20px !important;
+  padding: 36px 32px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+  background: #1a1a1a !important;
+  border: 1px solid #2e2e2e !important;
 }
 .path-builder {
-  background: #111008;
-  border: 1px solid #2e2a14;
+  background: #181508 !important;
+  border: 1px solid #35300f !important;
 }
 .path-icon {
   font-size: 1.8rem;
 }
 .path-card h3 {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: #f5f0e8;
-  margin: 0;
-  line-height: 1.4;
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  margin: 0 !important;
+  line-height: 1.4 !important;
 }
-.path-card p {
-  color: #888;
-  font-size: 0.92rem;
-  line-height: 1.65;
-  margin: 0;
+.path-card > p {
+  color: #999 !important;
+  font-size: 0.92rem !important;
+  line-height: 1.65 !important;
+  margin: 0 !important;
+  background: transparent !important;
 }
 .path-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
 }
 .path-list li {
-  color: #c0bdb5;
-  font-size: 0.9rem;
-  padding-left: 18px;
-  position: relative;
-  line-height: 1.5;
+  color: #d0cdc5 !important;
+  font-size: 0.9rem !important;
+  padding-left: 18px !important;
+  position: relative !important;
+  line-height: 1.5 !important;
+  background: transparent !important;
 }
 .path-list li::before {
   content: '✦';
@@ -1138,31 +1145,32 @@ body {
   top: 4px;
 }
 .path-list li strong {
-  color: #f5f0e8;
+  color: #f5f0e8 !important;
 }
 .path-cta {
-  display: inline-block;
-  padding: 12px 24px;
-  border-radius: 10px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  text-decoration: none;
-  margin-top: 4px;
-  align-self: flex-start;
-  transition: opacity 0.15s;
+  display: inline-block !important;
+  padding: 12px 24px !important;
+  border-radius: 10px !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  margin-top: 4px !important;
+  align-self: flex-start !important;
+  transition: opacity 0.15s !important;
 }
-.path-cta:hover { opacity: 0.85; }
+.path-cta:hover { opacity: 0.85 !important; }
 .path-cta-lite {
-  background: #229ED9;
-  color: #fff;
+  background: #229ED9 !important;
+  color: #fff !important;
 }
 .path-cta-builder {
-  background: #c9a84c;
-  color: #0a0a0a;
+  background: #c9a84c !important;
+  color: #0a0a0a !important;
 }
 .path-upgrade-hint {
   font-size: 0.78rem !important;
   color: #555 !important;
   margin-top: 4px !important;
-  font-style: italic;
+  font-style: italic !important;
+  background: transparent !important;
 }

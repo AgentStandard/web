@@ -1153,6 +1153,23 @@ export default function App() {
             <p>A properly configured agent is different. It knows who you are. It remembers what you've built together. It gets sharper the longer you work with it.</p>
             <p>That's the difference between a tool and a partner.</p>
           </div>
+          <div className="progression-row">
+            <div className="progression-step">
+              <div className="progression-label">Terra</div>
+              <div className="progression-sub">Ground level. Your agent executes what you ask.</div>
+            </div>
+            <div className="progression-arrow">&#x2192;</div>
+            <div className="progression-step">
+              <div className="progression-label">Via</div>
+              <div className="progression-sub">The path. Your agent advises before you ask.</div>
+            </div>
+            <div className="progression-arrow">&#x2192;</div>
+            <div className="progression-step progression-step-astra">
+              <div className="progression-label">Astra &#x2736;</div>
+              <div className="progression-sub">The stars. Your agent builds with you.</div>
+            </div>
+          </div>
+          <p className="progression-note">Every agent starts at Terra. Where it goes depends on you. <em>Per Aspera Ad Astra.</em></p>
           <div className="grows-compare">
             <div className="compare-col compare-before">
               <div className="compare-label">Without AgentStandard</div>

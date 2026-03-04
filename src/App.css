@@ -1059,9 +1059,8 @@ body {
 
 /* Two Paths Section */
 .two-paths-section {
-  padding: 80px 24px !important;
-  background: #111 !important;
-  border-top: 1px solid #222 !important;
+  padding: 80px 24px;
+  border-top: 1px solid #ece8e0;
 }
 .two-paths-inner {
   max-width: 960px;
@@ -1078,7 +1077,7 @@ body {
 .two-paths-inner h2 {
   font-size: 2rem;
   font-weight: 700;
-  color: #ffffff !important;
+  color: #1a1a1a !important;
   margin-bottom: 48px;
 }
 .paths-grid {
@@ -1096,12 +1095,13 @@ body {
   display: flex !important;
   flex-direction: column !important;
   gap: 16px !important;
-  background: #1a1a1a !important;
-  border: 1px solid #2e2e2e !important;
+  background: #fffefb !important;
+  border: 1px solid #e0dbd0 !important;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06) !important;
 }
 .path-builder {
-  background: #181508 !important;
-  border: 1px solid #35300f !important;
+  background: #fffdf5 !important;
+  border: 1px solid #ddd5b0 !important;
 }
 .path-icon {
   font-size: 1.8rem;
@@ -1109,12 +1109,12 @@ body {
 .path-card h3 {
   font-size: 1.15rem !important;
   font-weight: 700 !important;
-  color: #ffffff !important;
+  color: #1a1a1a !important;
   margin: 0 !important;
   line-height: 1.4 !important;
 }
 .path-card > p {
-  color: #999 !important;
+  color: #666 !important;
   font-size: 0.92rem !important;
   line-height: 1.65 !important;
   margin: 0 !important;
@@ -1129,7 +1129,7 @@ body {
   gap: 10px !important;
 }
 .path-list li {
-  color: #d0cdc5 !important;
+  color: #444 !important;
   font-size: 0.9rem !important;
   padding-left: 18px !important;
   position: relative !important;
@@ -1145,7 +1145,7 @@ body {
   top: 4px;
 }
 .path-list li strong {
-  color: #f5f0e8 !important;
+  color: #1a1a1a !important;
 }
 .path-cta {
   display: inline-block !important;
@@ -1169,7 +1169,7 @@ body {
 }
 .path-upgrade-hint {
   font-size: 0.78rem !important;
-  color: #555 !important;
+  color: #999 !important;
   margin-top: 4px !important;
   font-style: italic !important;
   background: transparent !important;

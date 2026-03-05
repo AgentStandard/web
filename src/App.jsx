@@ -446,6 +446,39 @@ const packages = [
     userLevel: 'intermediate',
     keywords: ['shopify', 'ecommerce', 'inventory', 'customer service', 'operations', 'fulfilment'],
   },
+  {
+    slug: 'ecommerce-pro',
+    isNew: true,
+    name: 'Ecommerce OS',
+    tagline: 'Not a research tool. A full e-commerce operating system.',
+    vertical: 'Ecommerce',
+    tier: 'Premium',
+    setupTime: 20,
+    rating: null,
+    installs: 0,
+    certified: true,
+    tags: ['ecommerce', 'DTC', 'shopify', 'intelligence', 'premium'],
+    discussionUrl: 'https://github.com/AgentStandard/packages/discussions/28',
+    discussionNumber: 28,
+    description: 'A full operating system for serious online sellers. Competitive intelligence, margin modeling, launch playbooks, automated market monitoring, conversion diagnostics, and a content engine that writes your entire store — all in one agent.',
+    whatItDoes: [
+      'Maps your competitive landscape with pricing gaps, positioning angles, and competitor review mining',
+      'Models your margins in full — platform fees, shipping, returns allowance, and net per unit',
+      'Writes your complete content stack: PDPs, email sequences, ad copy, UGC scripts, and A/B variants',
+      'Diagnoses your funnel and store for conversion leaks, trust signal gaps, and quick wins',
+      'Runs automated weekly competitor price monitoring and market trend reports in the background',
+    ],
+    whoItsFor: 'DTC founders and serious Shopify/Amazon/Etsy operators running a real store — who want an operator-grade AI, not a writing assistant.',
+    skills: [
+      { name: 'Competitive Intelligence', description: 'Live competitor pricing, review mining, market trend scanning' },
+      { name: 'Margin Modeling', description: 'Full unit economics: COGS, fees, shipping, returns, net margin' },
+      { name: 'Content Engine', description: 'PDPs, email sequences, ad copy, UGC briefs, A/B variants' },
+      { name: 'Store Diagnostics', description: 'Conversion audit, funnel diagnosis, AOV optimisation' },
+      { name: 'Automated Monitoring', description: '3 background crons: weekly price watch, trend report, monthly digest' },
+    ],
+    userLevel: 'intermediate',
+    keywords: ['ecommerce', 'DTC', 'shopify', 'amazon', 'competitive intelligence', 'margin', 'conversion', 'launch', 'pricing', 'copywriting'],
+  },
   // -- New packages ----------------------------------------------------------
   {
     slug: 'gp-prep',
@@ -1283,7 +1316,9 @@ function PackageCard({ pkg }) {
       <div className="card-stats">
         <span>{pkg.setupTime} min setup</span>
         {pkg.rating && <span>{pkg.rating}</span>}
-        {pkg.tier === 'Pro' ? (
+        {pkg.tier === 'Premium' ? (
+          <span className="tier-badge tier-max">Premium</span>
+        ) : pkg.tier === 'Pro' ? (
           <span className="tier-badge tier-pro">Pro</span>
         ) : pkg.tier === 'Starter' ? (
           <span className="tier-badge tier-starter">Starter</span>

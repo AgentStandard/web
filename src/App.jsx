@@ -5,6 +5,7 @@ import CommunityPackagePage from './CommunityPackagePage'
 import BlogPage from './BlogPage'
 import ClaudeProjectsPage from './ClaudeProjectsPage'
 import UpvoteButton from './UpvoteButton'
+import WaitlistForm from './WaitlistForm'
 
 function TermsOfService({ onBack }) {
   return (
@@ -1561,6 +1562,11 @@ export default function App() {
           </a>
           <p className="transparency-hint">Free. Live in Telegram. No setup.</p>
         </div>
+      </section>
+
+      {/* Waitlist capture */}
+      <section className="waitlist-capture-section">
+        <WaitlistForm />
       </section>
 
       <section className="packages-section" id="packages-section">

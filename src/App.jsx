@@ -4,6 +4,7 @@ import PackageDetail from './PackageDetail'
 import CommunityPackagePage from './CommunityPackagePage'
 import BlogPage from './BlogPage'
 import ClaudeProjectsPage from './ClaudeProjectsPage'
+import ComparePage from './ComparePage'
 import UpvoteButton from './UpvoteButton'
 import WaitlistForm from './WaitlistForm'
 
@@ -1317,6 +1318,7 @@ export default function App() {
 
   if (page === 'blog') return <BlogPage onBack={() => setPage('home')} />
   if (page === 'claude-projects') return <ClaudeProjectsPage onBack={() => setPage('home')} />
+  if (page === 'compare-claude-projects') return <ComparePage onBack={() => setPage('home')} />
   if (page === 'gift') return <GiftPage />
   if (page === 'manifesto') return <Manifesto onBack={() => setPage('home')} />
   if (page === 'terms') return <TermsOfService onBack={() => setPage('home')} />

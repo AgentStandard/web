@@ -1281,6 +1281,15 @@ body {
   text-decoration: underline;
 }
 
+.hero-competitive-tagline {
+  margin-top: 16px;
+  font-size: 0.78rem;
+  color: #888;
+  font-style: italic;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+}
+
 /* Coming soon pill */
 .coming-soon-pill {
   background: #f5f0e0;

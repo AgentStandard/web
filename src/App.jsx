@@ -971,6 +971,7 @@ const packages = [
     userLevel: 'beginner',
     keywords: ['freelance', 'contracts', 'legal', 'career', 'consulting', 'scope-creep'],
   },
+,
   {
     slug: 'idea-validator',
     name: 'Idea Validator',
@@ -1141,10 +1142,52 @@ const packages = [
     features: [],
     whoItsFor: 'Credit and market professionals.',
     discussionUrl: null,
+  },
+  {
+    slug: 'agent-transparency',
+    name: 'Agent Transparency Dashboard',
+    tagline: 'Know exactly what your agent knows about you.',
+    vertical: 'Trust',
+    tier: 'Free',
+    setupTime: 5,
+    rating: null,
+    installs: 0,
+    certified: false,
+    telegram: true,
+    isNew: true,
+    tags: ['transparency', 'privacy', 'trust', 'audit', 'memory', 'agent-ops'],
+    description: 'A live audit of your agent\'s mental model. See exactly what your agent knows about you, how confident it is, what it\'s learned recently, and what it would surface if you asked. Full transparency into the brain running your life.',
+    whatItDoes: [
+      'Run a full mental model audit — everything your agent knows, categorised and confidence-tagged',
+      'See what your agent has learned in the last 7 days: new facts, updated beliefs, changed patterns',
+      'Surface knowledge gaps — what the agent probably should know but doesn\'t',
+      'Preview exactly what the agent would retrieve if asked about any topic',
+      'Delete specific stored information — your data, your control',
+    ],
+    whoItsFor: 'Anyone who wants genuine transparency into what their agent knows — and what it\'s assuming.',
+    skills: [
+      { name: 'Mental Model Audit', description: 'Full structured audit of everything the agent knows, organised by category with confidence levels and source attribution' },
+      { name: 'Recent Learnings Feed', description: 'Shows what the agent has learned or updated in the past 7 days' },
+      { name: 'Knowledge Gap Detection', description: 'Surfaces what the agent doesn\'t know but probably should' },
+      { name: 'Surface Preview', description: 'Shows exactly what the agent would retrieve if asked about a given topic' },
+      { name: 'Selective Forgetting', description: 'Request deletion of specific stored information. Your data, your control.' },
+      { name: 'Confidence Ranking', description: 'Ranks all stored facts by confidence — flags inferences clearly' },
+    ],
+    commands: [
+      { trigger: '/audit', description: 'Full mental model audit — everything the agent knows, categorised and confidence-tagged' },
+      { trigger: '/recent', description: 'What has the agent learned in the last 7 days?' },
+      { trigger: '/gaps', description: 'What doesn\'t the agent know that it probably should?' },
+      { trigger: '/surface [topic]', description: 'What would the agent surface if asked about [topic]?' },
+      { trigger: '/forget [item]', description: 'Delete a specific piece of stored information' },
+      { trigger: '/confidence', description: 'All stored facts ranked by confidence level' },
+    ],
+    userLevel: 'intermediate',
+    keywords: ['transparency', 'privacy', 'trust', 'memory', 'audit', 'agent-ops', 'data-control'],
+    discussionUrl: null,
   }
 ]
 
-const verticals = ['All', 'General', 'Productivity', 'Health', 'Lifestyle', 'Social', 'Learning', 'Career', 'Content', 'Ecommerce', 'Dev', 'Builder'] // Finance hidden until April 15
+const verticals = ['All', 'General', 'Productivity', 'Health', 'Lifestyle', 'Social', 'Learning', 'Career', 'Content', 'Ecommerce', 'Dev', 'Builder', 'Trust'] // Finance hidden until April 15
 
 function PackageCard({ pkg }) {
   const isCommunity = !pkg.certified
@@ -1326,15 +1369,11 @@ export default function App() {
             <div className="hero-badge"><span className="hero-badge-star">&#x2736;</span> Ready in 60 seconds. No download.</div>
             <h1>Your AI knows everything.<br />Except you.</h1>
             <p className="hero-sub">
-              Agent packages that arrive knowing your work, your style, and what actually matters.
+              Agent packages that arrive knowing your work, your style, and what actually matters. Start in Telegram — talking in under a minute.
             </p>
             <div className="hero-ctas">
-              <button className="hero-cta-primary" style={{border:'none',cursor:'pointer'}} onClick={() => document.getElementById('packages-section')?.scrollIntoView({behavior:'smooth'})}>Browse Packages</button>
-              <button className="hero-cta-secondary" style={{cursor:'pointer'}} onClick={() => document.getElementById('how-it-works')?.scrollIntoView({behavior:'smooth'})}>See What&apos;s Inside</button>
+              <a href="https://t.me/AgentStandardAI_bot" target="_blank" rel="noreferrer" className="hero-cta-primary">Start on Telegram →</a>
             </div>
-            <p style={{margin:'4px 0 12px'}}>
-              <button style={{background:'none',border:'none',cursor:'pointer',color:'#667788',fontSize:'0.9rem',padding:'4px 0',textDecoration:'underline',textUnderlineOffset:'3px'}} onClick={() => document.getElementById('how-it-works')?.scrollIntoView({behavior:'smooth'})}>Learn how it works &#x2193;</button>
-            </p>
             <p className="hero-telegram-hint">New to Telegram? <a href="https://telegram.org" target="_blank" rel="noreferrer">Get it free</a> — 2 minutes. &nbsp;&#xB7;&nbsp; Buying for someone? <a href="https://t.me/AgentStandardAI_bot?start=gift" target="_blank" rel="noreferrer">Give as a gift &#x2736;</a></p>
             <div className="hero-stats">
               <div className="stat"><strong>30</strong> packages</div>
@@ -1343,6 +1382,7 @@ export default function App() {
               <div className="stat-divider" />
               <div className="stat"><strong>Any</strong> platform</div>
             </div>
+            <p className="hero-competitive-tagline">BetterClaw changes who can deploy agents. AgentStandard changes what those agents are worth.</p>
           </div>
         </div>
       </header>
@@ -1521,7 +1561,7 @@ export default function App() {
       </section>
 
       {/* How it works */}
-      <section className="how-it-works" id="how-it-works">
+      <section className="how-it-works">
         <h2>How it works</h2>
         <div className="steps">
           <div className="step">

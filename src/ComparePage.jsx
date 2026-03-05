@@ -8,13 +8,13 @@ export default function ComparePage({ onBack }) {
       <div className="legal-content" style={{maxWidth:'900px'}}>
 
         <h1 style={{fontSize:'2.2rem',lineHeight:1.3,marginBottom:'12px'}}>AgentStandard vs Claude Projects</h1>
-        <p style={{fontSize:'1.1rem',color:'#8899aa',marginBottom:'40px',lineHeight:1.7}}>These aren't competitors. One gives you the canvas. One gives you something worth putting on it.</p>
+        <p style={{fontSize:'1.1rem',color:'#8899aa',marginBottom:'40px',lineHeight:1.7}}>These are not competitors. One gives you the canvas. One gives you something worth putting on it.</p>
 
         <div style={{background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'12px',padding:'24px',marginBottom:'40px'}}>
-          <p style={{lineHeight:1.8,color:'#ccd0d6'}}>We're going to be direct with you, because you'll figure it out anyway.</p>
-          <p style={{lineHeight:1.8,color:'#ccd0d6',marginTop:'12px'}}>Claude Projects isn't a product we're trying to replace. Anthropic built something genuinely useful — persistent context, file access, custom instructions, team sharing. If you haven't set it up yet, you probably should.</p>
-          <p style={{lineHeight:1.8,color:'#ccd0d6',marginTop:'12px'}}>AgentStandard packages are what a subset of those users reach for when they've hit the limits of what they can configure on their own. Not everyone hits that ceiling. If you haven't, you might not need us yet.</p>
-          <p style={{lineHeight:1.8,color:'#ccd0d6',marginTop:'12px'}}>But if you're here, you're probably the kind of person who has.</p>
+          <p style={{lineHeight:1.8,color:'#ccd0d6'}}>We are going to be direct with you, because you will figure it out anyway.</p>
+          <p style={{lineHeight:1.8,color:'#ccd0d6',marginTop:'12px'}}>Claude Projects is not a product we are trying to replace. Anthropic built something genuinely useful — persistent context, file access, custom instructions, team sharing. If you have not set it up yet, you probably should.</p>
+          <p style={{lineHeight:1.8,color:'#ccd0d6',marginTop:'12px'}}>AgentStandard packages are what a subset of those users reach for when they've hit the limits of what they can configure on their own. Not everyone hits that ceiling. If you have not, you might not need us yet.</p>
+          <p style={{lineHeight:1.8,color:'#ccd0d6',marginTop:'12px'}}>But if you are here, you are probably the kind of person who has.</p>
         </div>
 
         <h2 style={{fontSize:'1.4rem',marginBottom:'20px'}}>The Comparison</h2>
@@ -53,7 +53,7 @@ export default function ComparePage({ onBack }) {
         </div>
 
         <h2 style={{fontSize:'1.4rem',marginBottom:'20px'}}>Where Claude Projects Wins</h2>
-        <p style={{color:'#8899aa',marginBottom:'20px'}}>Let's be specific.</p>
+        <p style={{color:'#8899aa',marginBottom:'20px'}}>Let us be specific.</p>
         {[
           {
             title: 'You know exactly what you want.',
@@ -61,10 +61,10 @@ export default function ComparePage({ onBack }) {
           },
           {
             title: 'Your use case is general.',
-            desc: 'Not everything needs a specialist. If you're using Claude for general research, writing assistance, or tasks that don't require deep domain context — Projects is perfectly sufficient. Don't over-engineer it.'
+            desc: 'Not everything needs a specialist. If you are using Claude for general research, writing assistance, or tasks that do not require deep domain context — Projects is perfectly sufficient. Do not over-engineer it.'
           },
           {
-            title: 'You're still figuring out what you need.',
+            title: 'You are still figuring out what you need.',
             desc: 'Claude Projects is a great learning environment. Try things. See what context actually matters. Once you know what works, you might find a package that already built the answer — or you might decide your own setup is fine.'
           },
           {
@@ -73,11 +73,11 @@ export default function ComparePage({ onBack }) {
           },
           {
             title: 'Team control and customisation.',
-            desc: 'For teams that need fine-grained control over what their agents know and how they behave — and have the capacity to maintain that — a well-managed Claude Project gives you flexibility packages don't.'
+            desc: 'For teams that need fine-grained control over what their agents know and how they behave — and have the capacity to maintain that — a well-managed Claude Project gives you flexibility packages do not.'
           }
         ].map((item, i) => (
           <div key={i} style={{borderLeft:'2px solid rgba(255,255,255,0.1)',paddingLeft:'20px',marginBottom:'24px'}}>
-            <p style={{fontWeight:700,color:'#ccd',marginBottom:'8px}}>{item.title}</p>
+            <p style={{fontWeight:700,color:'#ccd',marginBottom:'8px'}}>{item.title}</p>
             <p style={{color:'#8899aa',lineHeight:1.7}}>{item.desc}</p>
           </div>
         ))}
@@ -85,12 +85,12 @@ export default function ComparePage({ onBack }) {
         <h2 style={{fontSize:'1.4rem',marginBottom:'20px',marginTop:'40px'}}>Where AgentStandard Wins</h2>
         {[
           {
-            title: 'You've hit the ceiling of what you know to write.',
-            desc: 'The hardest part of Claude Projects isn't the setup — it's knowing what to put in it. Most people's custom instructions are too generic to change behaviour in meaningful ways. Packages are built by people who've already solved that problem for your specific situation.'
+            title: 'You have hit the ceiling of what you know to write.',
+            desc: 'The hardest part of Claude Projects is not the setup — it is knowing what to put in it. Most peoples custom instructions are too generic to change behaviour in meaningful ways. Packages are built by people who have already solved that problem for your specific situation.'
           },
           {
             title: 'You need consistency without overhead.',
-            desc: 'Getting one person to set up a great Claude Project is hard. Getting a team to all set it up to the same standard is nearly impossible. Packages install the same way every time. The output standard doesn't depend on whoever happened to configure it.'
+            desc: 'Getting one person to set up a great Claude Project is hard. Getting a team to all set it up to the same standard is nearly impossible. Packages install the same way every time. The output standard does not depend on whoever happened to configure it.'
           },
           {
             title: 'Your domain requires operational depth.',
@@ -102,19 +102,19 @@ export default function ComparePage({ onBack }) {
           },
           {
             title: 'Your time is worth more than the package costs.',
-            desc: 'An afternoon spent writing good Claude Project instructions is real time. A one-click install that arrives ready to work is a different value proposition. The math depends on your hourly rate and how often you'd revisit the instructions.'
+            desc: 'An afternoon spent writing good Claude Project instructions is real time. A one-click install that arrives ready to work is a different value proposition. The math depends on your hourly rate and how often you would revisit the instructions.'
           }
         ].map((item, i) => (
           <div key={i} style={{borderLeft:'2px solid rgba(255,255,255,0.1)',paddingLeft:'20px',marginBottom:'24px'}}>
-            <p style={{fontWeight:700,color:'#ccd',marginBottom:'8px}}>{item.title}</p>
+            <p style={{fontWeight:700,color:'#ccd',marginBottom:'8px'}}>{item.title}</p>
             <p style={{color:'#8899aa',lineHeight:1.7}}>{item.desc}</p>
           </div>
         ))}
 
         <h2 style={{fontSize:'1.4rem',marginBottom:'20px',marginTop:'40px'}}>They Work Better Together</h2>
-        <p style={{color:'#8899aa',marginBottom:'20px'}}>Here's the use case a lot of our users land on:</p>
+        <p style={{color:'#8899aa',marginBottom:'20px'}}>Here is the use case a lot of our users land on:</p>
         <ol style={{lineHeight:2,paddingLeft:'20px',color:'#aabbcc',marginBottom:'32px',listStyle:'decimal'}}>
-          <li><strong>Keep your Claude Project</strong> — it's where you store your files, your team access, your high-level context</li>
+          <li><strong>Keep your Claude Project</strong> — it is where you store your files, your team access, your high-level context</li>
           <li><strong>Install a package</strong> — it provides the deep operational knowledge and consistent behaviour your instructions alone couldn't achieve</li>
           <li><strong>Add your own customisation on top</strong> — the package handles the foundation, you handle the edges</li>
         </ol>
@@ -124,11 +124,11 @@ export default function ComparePage({ onBack }) {
         <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'16px',marginBottom:'40px'}}>
           <div style={{background:'rgba(100,150,255,0.05)',border:'1px solid rgba(100,150,200,0.15)',borderRadius:'10px',padding:'16px'}}>
             <p style={{fontWeight:700,color:'#aac',marginBottom:'8px'}}>Start with Claude Projects if...</p>
-            <p style={{color:'#8899aa',lineHeight:1.7,fontSize:'0.95rem'}}>You're new to persistent context, or your needs are general enough that basic customisation covers it.</p>
+            <p style={{color:'#8899aa',lineHeight:1.7,fontSize:'0.95rem'}}>You are new to persistent context, or your needs are general enough that basic customisation covers it.</p>
           </div>
           <div style={{background:'rgba(100,200,150,0.05)',border:'1px solid rgba(100,200,150,0.15)',borderRadius:'10px',padding:'16px'}}>
             <p style={{fontWeight:700,color:'#aac',marginBottom:'8px'}}>Add AgentStandard if...</p>
-            <p style={{color:'#8899aa',lineHeight:1.7,fontSize:'0.95rem'}}>You've used Claude Projects and know something's still missing — you just haven't been able to name it.</p>
+            <p style={{color:'#8899aa',lineHeight:1.7,fontSize:'0.95rem'}}>You have used Claude Projects and know something's still missing — you just have not been able to name it.</p>
           </div>
         </div>
 

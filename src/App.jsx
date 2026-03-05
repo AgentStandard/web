@@ -456,7 +456,7 @@ const packages = [
     setupTime: 20,
     rating: null,
     installs: 0,
-    certified: true,
+    certified: false,
     tags: ['ecommerce', 'DTC', 'shopify', 'intelligence', 'premium'],
     discussionUrl: 'https://github.com/AgentStandard/packages/discussions/28',
     discussionNumber: 28,
@@ -1303,7 +1303,7 @@ function PackageCard({ pkg }) {
   }
 
   return (
-    <div className={`package-card package-card-clickable${pkg.tier === 'Pro' ? ' package-card-pro' : ''}${pkg.comingSoon ? ' package-card-coming-soon' : ''}`} onClick={handleCardClick}>
+    <div className={`package-card package-card-clickable${pkg.tier === 'Pro' || pkg.tier === 'Premium' ? ' package-card-pro' : ''}${pkg.comingSoon ? ' package-card-coming-soon' : ''}`} onClick={handleCardClick}>
       <div className="card-header">
         <span className={`vertical-badge vertical-${pkg.vertical.toLowerCase()}`}>{pkg.vertical}</span>
         {pkg.certified && <span className="certified-badge"><span className="star-glyph">&#x2736;</span> Certified</span>}

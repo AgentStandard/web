@@ -2,6 +2,8 @@
 import './App.css'
 import PackageDetail from './PackageDetail'
 import CommunityPackagePage from './CommunityPackagePage'
+import BlogPage from './BlogPage'
+import ClaudeProjectsPage from './ClaudeProjectsPage'
 import UpvoteButton from './UpvoteButton'
 
 function TermsOfService({ onBack }) {
@@ -445,40 +447,6 @@ const packages = [
     ],
     userLevel: 'intermediate',
     keywords: ['shopify', 'ecommerce', 'inventory', 'customer service', 'operations', 'fulfilment'],
-  },
-  {
-    slug: 'ecommerce-pro',
-    isNew: true,
-    name: 'Ecommerce OS',
-    tagline: 'Not a research tool. A full e-commerce operating system.',
-    vertical: 'Ecommerce',
-    tier: 'Premium',
-    setupTime: 20,
-    rating: null,
-    installs: 0,
-    certified: false,
-    tags: ['ecommerce', 'DTC', 'shopify', 'intelligence', 'premium'],
-    discussionUrl: 'https://github.com/AgentStandard/packages/discussions/28',
-    discussionNumber: 28,
-    description: 'Most AI tools for e-commerce help you write copy or look things up. This is not that. Ecommerce OS is a senior operator that lives inside your workflow — one that thinks in margins, tracks your competitors week to week, writes your entire content stack, and tells you where your funnel is leaking before you have to ask. Seventeen commands. Three automated crons. One agent that knows your store.',
-    whatItDoes: [
-      'Runs deep competitor analysis — pricing gaps, positioning angles, and review mining to turn their 1-star complaints into your advantage',
-      'Models your full unit economics on any product: COGS, platform fees, shipping, returns allowance, and net margin per unit',
-      'Writes your entire content stack: PDP copy, email sequences, Meta/TikTok/Google ad creative, UGC briefs, and A/B variants with hypotheses',
-      'Diagnoses conversion leaks and store friction with a structured audit — ranked by impact, not just what looks broken',
-      'Runs three background crons automatically: weekly competitor price watch, Friday trend brief, and monthly performance digest',
-    ],
-    whoItsFor: 'DTC founders and serious Shopify, Amazon, and Etsy operators who want an agent that thinks like a head of growth — not a writing assistant.',
-    skills: [
-      { name: 'Competitive Intelligence', description: '/compete, /price, /trend, /review-mine, /review-them — live market scanning and competitor review mining' },
-      { name: 'Margin Modeling', description: '/margin, /aov, /forecast — full unit economics with net margin, fee breakdowns, and AOV optimisation' },
-      { name: 'Content Engine', description: '/pdp, /email, /ad, /ugc, /ab — complete content stack from product pages to UGC scripts and A/B copy variants' },
-      { name: 'Store Diagnostics', description: '/audit, /funnel — conversion audit and funnel diagnosis with benchmarked findings and prioritised fix list' },
-      { name: 'Launch Playbook', description: '/launch — full 4-week go-to-market plan with day-by-day actions for launch week' },
-      { name: 'Automated Monitoring', description: 'Three background crons: Monday competitor price watch, Friday trend report, monthly performance digest' },
-    ],
-    userLevel: 'intermediate',
-    keywords: ['ecommerce', 'DTC', 'shopify', 'amazon', 'etsy', 'competitive intelligence', 'margin modeling', 'conversion', 'launch', 'pricing', 'copywriting', 'funnel', 'AOV'],
   },
   // -- New packages ----------------------------------------------------------
   {
@@ -1159,116 +1127,6 @@ const packages = [
     discussionUrl: null,
   },
   {
-    slug: 'sleep-coach',
-    name: 'Sleep Coach',
-    tagline: 'Better sleep starts with knowing your patterns.',
-    vertical: 'Health',
-    tier: 'Free',
-    setupTime: 3,
-    certified: false,
-    telegram: true,
-    isNew: true,
-    tags: ['Sleep', 'Health', 'Habits'],
-    description: 'Tracks your sleep, finds the patterns, and gives you specific advice based on what\'s actually happening — not generic sleep hygiene lists.',
-    features: [
-      'Sleep log: hours, quality, bed and wake times',
-      'Pattern recognition across days and weeks',
-      'Specific advice based on your data, not generic tips',
-      'Flags anything worth taking to a GP',
-      'Celebrates genuine improvement honestly',
-    ],
-    whoItsFor: 'Anyone who knows their sleep isn\'t right but can\'t work out why.',
-    discussionUrl: null,
-  },
-  {
-    slug: 'fitness-log',
-    name: 'Fitness Log',
-    tagline: 'Your workouts, tracked. Your progress, real.',
-    vertical: 'Health',
-    tier: 'Free',
-    setupTime: 3,
-    certified: false,
-    telegram: true,
-    isNew: true,
-    tags: ['Fitness', 'Health', 'Training'],
-    description: 'Logs every session, tracks real progress, and notices trends you\'d miss — without the noise of a full coaching app.',
-    features: [
-      'Workout log: exercises, sets, reps, time, distance',
-      'Progress tracking across weeks and months',
-      'Trend spotting: gains, plateaus, and missed sessions',
-      'Recovery check-ins: sleep, soreness, energy',
-      'Honest assessment — no hype, no catastrophising',
-    ],
-    whoItsFor: 'People who train consistently and want a simple log that actually builds a picture over time.',
-    discussionUrl: null,
-  },
-  {
-    slug: 'habit-builder',
-    name: 'Habit Builder',
-    tagline: 'The habits you want, built by someone who notices.',
-    vertical: 'Productivity',
-    tier: 'Free',
-    setupTime: 3,
-    certified: false,
-    telegram: true,
-    isNew: true,
-    tags: ['Habits', 'Productivity', 'Accountability'],
-    description: 'Builds the habits you actually want — not the ones you think you should want. Tracks commitment, follows up honestly, and helps you understand what\'s breaking down when it does.',
-    features: [
-      'Honest check-ins on what you committed to',
-      'Root cause analysis when habits break down',
-      'Habit stacking and implementation support',
-      'Streak tracking without making streaks the point',
-      'Long-view coaching: consistency over perfection',
-    ],
-    whoItsFor: 'Anyone who\'s tried and failed to build a habit and wants to understand why before trying again.',
-    discussionUrl: null,
-  },
-  {
-    slug: 'daily-journal',
-    name: 'Daily Journal',
-    tagline: 'Five minutes. One honest entry. Over time, it compounds.',
-    vertical: 'Productivity',
-    tier: 'Free',
-    setupTime: 2,
-    certified: false,
-    telegram: true,
-    isNew: true,
-    tags: ['Journal', 'Reflection', 'Mindfulness'],
-    description: 'A journalling companion that prompts without over-structuring. Follows what you bring, tracks themes over time, and helps you find your own voice on the page.',
-    features: [
-      'Smart prompts based on what you bring to the session',
-      'Theme tracking across weeks and months',
-      'Pattern surfacing: recurring worries, aspirations, people',
-      'Memory across sessions — trace your thinking over time',
-      'No judgment, no polish required',
-    ],
-    whoItsFor: 'Anyone who wants to reflect more but keeps starting and stopping journal practices.',
-    discussionUrl: null,
-  },
-  {
-    slug: 'travel-planner',
-    name: 'Travel Planner',
-    tagline: 'Every trip, planned and remembered.',
-    vertical: 'Lifestyle',
-    tier: 'Free',
-    setupTime: 3,
-    certified: false,
-    telegram: true,
-    isNew: true,
-    tags: ['Travel', 'Lifestyle', 'Planning'],
-    description: 'Plans trips based on your actual travel style, remembers every journey, and uses what you loved (and didn\'t) to make the next one better.',
-    features: [
-      'Trip planning tailored to your style and constraints',
-      'Full trip memory: restaurants, neighbourhoods, what to skip',
-      'Recommendations based on your taste, not generic lists',
-      'Packing, logistics, and realistic timing built in',
-      'Post-trip capture: what to remember, what to do differently',
-    ],
-    whoItsFor: 'Anyone who travels and wants an agent that knows them as a traveller.',
-    discussionUrl: null,
-  },
-  {
     slug: 'finance-analyst',
     name: 'Finance Analyst',
     tagline: 'Credit, rates, and equity research. Coming April 2026.',
@@ -1287,7 +1145,7 @@ const packages = [
   }
 ]
 
-const verticals = ['All', 'Productivity', 'Health', 'Lifestyle', 'Social', 'Learning', 'Career', 'Food', 'Real Estate', 'Builder'] // Finance hidden until April 15
+const verticals = ['All', 'General', 'Productivity', 'Health', 'Lifestyle', 'Social', 'Learning', 'Career', 'Content', 'Ecommerce', 'Dev', 'Builder'] // Finance hidden until April 15
 
 function PackageCard({ pkg }) {
   const isCommunity = !pkg.certified
@@ -1304,7 +1162,7 @@ function PackageCard({ pkg }) {
   }
 
   return (
-    <div className={`package-card package-card-clickable${pkg.tier === 'Pro' || pkg.tier === 'Premium' ? ' package-card-pro' : ''}${pkg.comingSoon ? ' package-card-coming-soon' : ''}`} onClick={handleCardClick}>
+    <div className={`package-card package-card-clickable${pkg.tier === 'Pro' ? ' package-card-pro' : ''}${pkg.comingSoon ? ' package-card-coming-soon' : ''}`} onClick={handleCardClick}>
       <div className="card-header">
         <span className={`vertical-badge vertical-${pkg.vertical.toLowerCase()}`}>{pkg.vertical}</span>
         {pkg.certified && <span className="certified-badge"><span className="star-glyph">&#x2736;</span> Certified</span>}
@@ -1317,9 +1175,7 @@ function PackageCard({ pkg }) {
       <div className="card-stats">
         <span>{pkg.setupTime} min setup</span>
         {pkg.rating && <span>{pkg.rating}</span>}
-        {pkg.tier === 'Premium' ? (
-          <span className="tier-badge tier-max">Premium</span>
-        ) : pkg.tier === 'Pro' ? (
+        {pkg.tier === 'Pro' ? (
           <span className="tier-badge tier-pro">Pro</span>
         ) : pkg.tier === 'Starter' ? (
           <span className="tier-badge tier-starter">Starter</span>
@@ -1416,6 +1272,8 @@ export default function App() {
     return () => window.removeEventListener('navigate', handler)
   }, [])
 
+  if (page === 'blog') return <BlogPage onBack={() => setPage('home')} />
+  if (page === 'claude-projects') return <ClaudeProjectsPage onBack={() => setPage('home')} />
   if (page === 'gift') return <GiftPage />
   if (page === 'manifesto') return <Manifesto onBack={() => setPage('home')} />
   if (page === 'terms') return <TermsOfService onBack={() => setPage('home')} />
@@ -1456,6 +1314,7 @@ export default function App() {
           <div className="logo" onClick={() => setPage('home')} style={{cursor:"pointer"}}>AgentStandard <span className="logo-dot">&#x2736;</span></div>
           <div style={{display:'flex',gap:'20px',alignItems:'center'}}>
             <button className="nav-link" onClick={() => setPage('manifesto')} style={{background:'none',border:'none',cursor:'pointer'}}>Manifesto</button>
+            <button className="nav-link" onClick={() => setPage('blog')} style={{background:'none',border:'none',cursor:'pointer'}}>Blog</button>
             <a href="https://github.com/AgentStandard/packages" target="_blank" rel="noreferrer" className="nav-link">Submit a Package</a>
           </div>
         </nav>

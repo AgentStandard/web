@@ -1273,13 +1273,13 @@ function GiftPage() {
     <div className="gift-page">
       <div className="gift-page-inner">
         <div className="gift-star">&#x2736;</div>
-        <h1 className="gift-heading">Someone set up an agent for you.</h1>
+        <h1 className="gift-heading">You received a personalised AI agent.</h1>
         <p className="gift-sub">
-          It already knows your name. It remembers every conversation and gets sharper the longer you use it. Tap below to say hello.
+          It already knows your name. It remembers every conversation and gets sharper the longer you use it. Tap below to start talking.
         </p>
         <a href={telegramLink} className="gift-cta">Meet your agent &#x2192;</a>
         <p className="gift-hint">
-          Opens in Telegram. Free to download at{' '}
+          Delivered instantly to your phone via Telegram. Free to download at{' '}
           <a href="https://telegram.org" target="_blank" rel="noreferrer">telegram.org</a>
           {' '}if you don&apos;t have it.
         </p>
@@ -1377,15 +1377,15 @@ export default function App() {
             <div className="hero-ctas">
               <a href="https://t.me/AgentStandardAI_bot" target="_blank" rel="noreferrer" className="hero-cta-primary">Start on Telegram →</a>
             </div>
-            <p className="hero-telegram-hint">New to Telegram? <a href="https://telegram.org" target="_blank" rel="noreferrer">Get it free</a> — 2 minutes. &nbsp;&#xB7;&nbsp; Buying for someone? <a href="https://t.me/AgentStandardAI_bot?start=gift" target="_blank" rel="noreferrer">Give as a gift &#x2736;</a></p>
+            <p className="hero-telegram-hint">New to Telegram? <a href="https://telegram.org" target="_blank" rel="noreferrer">Get it free</a> — 2 minutes. &nbsp;&#xB7;&nbsp; Buying for someone? <a href="https://t.me/AgentStandardAI_bot?start=gift" target="_blank" rel="noreferrer">Gift them a personalised AI agent &#x2736;</a></p>
             <div className="hero-stats">
-              <div className="stat"><strong>30</strong> packages</div>
+              <div className="stat"><strong>31</strong> packages</div>
               <div className="stat-divider" />
-              <div className="stat"><strong>10</strong> verticals</div>
+              <div className="stat"><strong>12</strong> verticals</div>
               <div className="stat-divider" />
               <div className="stat"><strong>Any</strong> platform</div>
             </div>
-            <p className="hero-competitive-tagline">BetterClaw changes who can deploy agents. AgentStandard changes what those agents are worth.</p>
+
           </div>
         </div>
       </header>

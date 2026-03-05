@@ -971,7 +971,6 @@ const packages = [
     userLevel: 'beginner',
     keywords: ['freelance', 'contracts', 'legal', 'career', 'consulting', 'scope-creep'],
   },
-,
   {
     slug: 'idea-validator',
     name: 'Idea Validator',
@@ -1325,13 +1324,17 @@ export default function App() {
           </div>
           <div className="hero-text-col">
             <div className="hero-badge"><span className="hero-badge-star">&#x2736;</span> Ready in 60 seconds. No download.</div>
-            <h1>Stop starting over.</h1>
+            <h1>Your AI knows everything.<br />Except you.</h1>
             <p className="hero-sub">
-              Not a chatbot you prompt. An agent you build a relationship with. Remembers what matters, follows your rules, reaches out when it's useful. Start in Telegram - talking in under a minute.
+              Agent packages that arrive knowing your work, your style, and what actually matters.
             </p>
             <div className="hero-ctas">
-              <a href="https://t.me/AgentStandardAI_bot" target="_blank" rel="noreferrer" className="hero-cta-primary">Start on Telegram →</a>
+              <button className="hero-cta-primary" style={{border:'none',cursor:'pointer'}} onClick={() => document.getElementById('packages-section')?.scrollIntoView({behavior:'smooth'})}>Browse Packages</button>
+              <button className="hero-cta-secondary" style={{cursor:'pointer'}} onClick={() => document.getElementById('how-it-works')?.scrollIntoView({behavior:'smooth'})}>See What&apos;s Inside</button>
             </div>
+            <p style={{margin:'4px 0 12px'}}>
+              <button style={{background:'none',border:'none',cursor:'pointer',color:'#667788',fontSize:'0.9rem',padding:'4px 0',textDecoration:'underline',textUnderlineOffset:'3px'}} onClick={() => document.getElementById('how-it-works')?.scrollIntoView({behavior:'smooth'})}>Learn how it works &#x2193;</button>
+            </p>
             <p className="hero-telegram-hint">New to Telegram? <a href="https://telegram.org" target="_blank" rel="noreferrer">Get it free</a> — 2 minutes. &nbsp;&#xB7;&nbsp; Buying for someone? <a href="https://t.me/AgentStandardAI_bot?start=gift" target="_blank" rel="noreferrer">Give as a gift &#x2736;</a></p>
             <div className="hero-stats">
               <div className="stat"><strong>30</strong> packages</div>
@@ -1518,7 +1521,7 @@ export default function App() {
       </section>
 
       {/* How it works */}
-      <section className="how-it-works">
+      <section className="how-it-works" id="how-it-works">
         <h2>How it works</h2>
         <div className="steps">
           <div className="step">

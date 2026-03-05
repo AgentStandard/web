@@ -294,6 +294,48 @@ function Manifesto({ onBack }) {
 
 const packages = [
   {
+    slug: 'agent-transparency',
+    name: 'Agent Transparency Dashboard',
+    tagline: 'Know exactly what your agent knows about you.',
+    vertical: 'Trust',
+    tier: 'Free',
+    setupTime: 5,
+    rating: null,
+    installs: 0,
+    certified: false,
+    telegram: true,
+    isNew: true,
+    tags: ['transparency', 'privacy', 'trust', 'audit', 'memory', 'agent-ops'],
+    description: 'A live audit of your agent\'s mental model. See exactly what your agent knows about you, how confident it is, what it\'s learned recently, and what it would surface if you asked. Full transparency into the brain running your life.',
+    whatItDoes: [
+      'Run a full mental model audit — everything your agent knows, categorised and confidence-tagged',
+      'See what your agent has learned in the last 7 days: new facts, updated beliefs, changed patterns',
+      'Surface knowledge gaps — what the agent probably should know but doesn\'t',
+      'Preview exactly what the agent would retrieve if asked about any topic',
+      'Delete specific stored information — your data, your control',
+    ],
+    whoItsFor: 'Anyone who wants genuine transparency into what their agent knows — and what it\'s assuming.',
+    skills: [
+      { name: 'Mental Model Audit', description: 'Full structured audit of everything the agent knows, organised by category with confidence levels and source attribution' },
+      { name: 'Recent Learnings Feed', description: 'Shows what the agent has learned or updated in the past 7 days' },
+      { name: 'Knowledge Gap Detection', description: 'Surfaces what the agent doesn\'t know but probably should' },
+      { name: 'Surface Preview', description: 'Shows exactly what the agent would retrieve if asked about a given topic' },
+      { name: 'Selective Forgetting', description: 'Request deletion of specific stored information. Your data, your control.' },
+      { name: 'Confidence Ranking', description: 'Ranks all stored facts by confidence — flags inferences clearly' },
+    ],
+    commands: [
+      { trigger: '/audit', description: 'Full mental model audit — everything the agent knows, categorised and confidence-tagged' },
+      { trigger: '/recent', description: 'What has the agent learned in the last 7 days?' },
+      { trigger: '/gaps', description: 'What doesn\'t the agent know that it probably should?' },
+      { trigger: '/surface [topic]', description: 'What would the agent surface if asked about [topic]?' },
+      { trigger: '/forget [item]', description: 'Delete a specific piece of stored information' },
+      { trigger: '/confidence', description: 'All stored facts ranked by confidence level' },
+    ],
+    userLevel: 'intermediate',
+    keywords: ['transparency', 'privacy', 'trust', 'memory', 'audit', 'agent-ops', 'data-control'],
+    discussionUrl: null,
+  },
+  {
     slug: 'first-conversation',
     name: 'First Conversation Setup',
     tagline: 'From PowerShell to dialogue in 20 minutes.',
@@ -1143,48 +1185,6 @@ const packages = [
     whoItsFor: 'Credit and market professionals.',
     discussionUrl: null,
   },
-  {
-    slug: 'agent-transparency',
-    name: 'Agent Transparency Dashboard',
-    tagline: 'Know exactly what your agent knows about you.',
-    vertical: 'Trust',
-    tier: 'Free',
-    setupTime: 5,
-    rating: null,
-    installs: 0,
-    certified: false,
-    telegram: true,
-    isNew: true,
-    tags: ['transparency', 'privacy', 'trust', 'audit', 'memory', 'agent-ops'],
-    description: 'A live audit of your agent\'s mental model. See exactly what your agent knows about you, how confident it is, what it\'s learned recently, and what it would surface if you asked. Full transparency into the brain running your life.',
-    whatItDoes: [
-      'Run a full mental model audit — everything your agent knows, categorised and confidence-tagged',
-      'See what your agent has learned in the last 7 days: new facts, updated beliefs, changed patterns',
-      'Surface knowledge gaps — what the agent probably should know but doesn\'t',
-      'Preview exactly what the agent would retrieve if asked about any topic',
-      'Delete specific stored information — your data, your control',
-    ],
-    whoItsFor: 'Anyone who wants genuine transparency into what their agent knows — and what it\'s assuming.',
-    skills: [
-      { name: 'Mental Model Audit', description: 'Full structured audit of everything the agent knows, organised by category with confidence levels and source attribution' },
-      { name: 'Recent Learnings Feed', description: 'Shows what the agent has learned or updated in the past 7 days' },
-      { name: 'Knowledge Gap Detection', description: 'Surfaces what the agent doesn\'t know but probably should' },
-      { name: 'Surface Preview', description: 'Shows exactly what the agent would retrieve if asked about a given topic' },
-      { name: 'Selective Forgetting', description: 'Request deletion of specific stored information. Your data, your control.' },
-      { name: 'Confidence Ranking', description: 'Ranks all stored facts by confidence — flags inferences clearly' },
-    ],
-    commands: [
-      { trigger: '/audit', description: 'Full mental model audit — everything the agent knows, categorised and confidence-tagged' },
-      { trigger: '/recent', description: 'What has the agent learned in the last 7 days?' },
-      { trigger: '/gaps', description: 'What doesn\'t the agent know that it probably should?' },
-      { trigger: '/surface [topic]', description: 'What would the agent surface if asked about [topic]?' },
-      { trigger: '/forget [item]', description: 'Delete a specific piece of stored information' },
-      { trigger: '/confidence', description: 'All stored facts ranked by confidence level' },
-    ],
-    userLevel: 'intermediate',
-    keywords: ['transparency', 'privacy', 'trust', 'memory', 'audit', 'agent-ops', 'data-control'],
-    discussionUrl: null,
-  }
 ]
 
 const verticals = ['All', 'General', 'Productivity', 'Health', 'Lifestyle', 'Social', 'Learning', 'Career', 'Content', 'Ecommerce', 'Dev', 'Builder', 'Trust'] // Finance hidden until April 15
@@ -1531,6 +1531,35 @@ export default function App() {
             </div>
           </div>
           <p className="eighty-twenty-close">You can&#x2019;t replicate this by signing up for ChatGPT. You build it, conversation by conversation. The packages are how you start.</p>
+        </div>
+      </section>
+
+      {/* Agent Transparency Feature Callout */}
+      <section className="transparency-callout" id="agent-transparency">
+        <div className="transparency-inner">
+          <div className="transparency-eyebrow">&#x2736; Featured Package &mdash; Agent Transparency</div>
+          <h2 className="transparency-heading">Know What Your AI Knows</h2>
+          <p className="transparency-lead">
+            Most AI assistants are black boxes. You don&apos;t know what they&apos;ve stored, what they&apos;re assuming,
+            or what they&apos;ve got wrong. AgentStandard is the only platform that gives you full visibility
+            into your agent&apos;s mental model &mdash; and control over it.
+          </p>
+          <div className="transparency-commands">
+            <div className="tc-row"><span className="tc-cmd">/audit</span><span className="tc-desc">What does your agent know about you right now?</span></div>
+            <div className="tc-row"><span className="tc-cmd">/recent</span><span className="tc-desc">What has it learned in the last 30 days?</span></div>
+            <div className="tc-row"><span className="tc-cmd">/gaps</span><span className="tc-desc">What should it know that it doesn&apos;t?</span></div>
+            <div className="tc-row"><span className="tc-cmd">/forget</span><span className="tc-desc">Remove what it has wrong.</span></div>
+            <div className="tc-row"><span className="tc-cmd">/confidence</span><span className="tc-desc">How certain is it about what it believes?</span></div>
+          </div>
+          <a
+            href="https://t.me/AgentStandardAI_bot?start=agent-transparency"
+            target="_blank"
+            rel="noreferrer"
+            className="transparency-cta"
+          >
+            Try Agent Transparency &#x2192;
+          </a>
+          <p className="transparency-hint">Free. Live in Telegram. No setup.</p>
         </div>
       </section>
 

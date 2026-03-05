@@ -1536,3 +1536,110 @@ body {
   .gift-heading { font-size: 1.6rem; }
   .gift-cta { padding: 14px 32px; font-size: 0.95rem; }
 }
+
+/* ── Agent Transparency Callout ───────────────────────────────────────────── */
+.transparency-callout {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #0a0e1a 0%, #0f1729 50%, #0a0e1a 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.transparency-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 32px;
+  text-align: center;
+}
+
+.transparency-eyebrow {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #7b92c8;
+  margin-bottom: 20px;
+}
+
+.transparency-heading {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.transparency-lead {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.7;
+  margin-bottom: 40px;
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.transparency-commands {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 40px;
+  text-align: left;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tc-row {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+}
+
+.tc-cmd {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #a8c4f0;
+  white-space: nowrap;
+  min-width: 110px;
+}
+
+.tc-desc {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.4;
+}
+
+.transparency-cta {
+  display: inline-block;
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 14px 36px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.15s ease;
+  margin-bottom: 14px;
+}
+
+.transparency-cta:hover {
+  background: #1d4ed8;
+}
+
+.transparency-hint {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.35);
+  margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  .transparency-heading { font-size: 1.8rem; }
+  .transparency-callout { padding: 60px 0; }
+  .tc-cmd { min-width: 90px; }
+}

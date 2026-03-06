@@ -657,3 +657,63 @@
   margin-bottom: 0.75rem;
   line-height: 1.5;
 }
+
+/* ─── Share section ─────────────────────────────────────────────────────────── */
+.community-share-section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border, #2a2a2a);
+}
+.community-share-sub {
+  color: var(--text-muted, #888);
+  font-size: 0.9rem;
+  margin: 0.25rem 0 1.25rem;
+}
+.community-share-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.community-share-btn {
+  display: inline-block;
+  padding: 0.7rem 1.25rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: inherit;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  border: 1.5px solid;
+  line-height: 1.4;
+}
+.community-share-tweet {
+  border-color: #1d9bf0;
+  color: #1d9bf0;
+  background: rgba(29,155,240,0.05);
+}
+.community-share-tweet:hover {
+  background: rgba(29,155,240,0.12);
+}
+.community-share-copy {
+  border-color: var(--border, #2a2a2a);
+  color: var(--text-muted, #888);
+  background: transparent;
+}
+.community-share-copy:hover {
+  border-color: var(--gold, #c9a84c);
+  color: var(--gold, #c9a84c);
+}
+.community-share-copy.copied {
+  border-color: #4caf50;
+  color: #4caf50;
+}
+.community-share-gift {
+  border-color: var(--gold, #c9a84c);
+  color: var(--gold, #c9a84c);
+  background: rgba(201,168,76,0.06);
+}
+.community-share-gift:hover {
+  background: rgba(201,168,76,0.15);
+}

@@ -1750,3 +1750,405 @@ body {
 .waitlist-error p {
   margin: 0;
 }
+
+/* ─── Nav enhancements ─────────────────────────────────────────────────────── */
+.packages-nav-link {
+  font-weight: 700 !important;
+  color: var(--gold) !important;
+}
+
+/* ─── Hero: secondary CTA + live badge ────────────────────────────────────── */
+.hero-cta-secondary {
+  background: none;
+  border: 1.5px solid rgba(255,255,255,0.35);
+  color: rgba(255,255,255,0.9);
+  padding: 0.75rem 1.75rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  font-family: inherit;
+  letter-spacing: 0.01em;
+}
+.hero-cta-secondary:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(201,168,76,0.08);
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.hero-packages-live-badge {
+  display: inline-block;
+  background: rgba(201,168,76,0.15);
+  border: 1px solid rgba(201,168,76,0.4);
+  color: var(--gold);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  margin-top: 0.25rem;
+}
+
+/* ─── Homepage packages section sub-text ──────────────────────────────────── */
+.packages-section-sub {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-top: 0.35rem;
+  margin-bottom: 0;
+}
+
+.see-all-packages-btn {
+  background: none;
+  border: 1.5px solid var(--border);
+  color: var(--text-muted);
+  padding: 0.8rem 2.25rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  transition: border-color 0.2s, color 0.2s;
+}
+.see-all-packages-btn:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* ─── PackagesPage Hero ────────────────────────────────────────────────────── */
+.packages-page-hero {
+  background: var(--hero-bg, #0a0a0a);
+  padding: 5rem 2rem 4rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+.packages-hero-inner {
+  max-width: 680px;
+  margin: 0 auto;
+}
+.packages-hero-headline {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 1rem 0 1.25rem;
+  color: var(--text, #f0f0f0);
+}
+.packages-hero-sub {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 560px;
+  margin: 0 auto 2rem;
+}
+.packages-hero-stats {
+  display: flex;
+  gap: 0;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.ph-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 2rem;
+}
+.ph-stat-num {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--gold);
+  line-height: 1;
+}
+.ph-stat-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+.ph-stat-divider {
+  width: 1px;
+  height: 2.5rem;
+  background: var(--border);
+}
+
+/* ─── PackagesPage Filters Section ────────────────────────────────────────── */
+.packages-filters-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 1rem;
+}
+.packages-search-wrap {
+  margin-bottom: 1.75rem;
+}
+.packages-search-input {
+  width: 100%;
+  padding: 0.875rem 1.25rem;
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: var(--card-bg, #111);
+  color: var(--text, #f0f0f0);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+.packages-search-input:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(201,168,76,0.12);
+}
+.packages-search-input::placeholder {
+  color: var(--text-muted);
+}
+
+.vertical-filters-counts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+.filter-btn-with-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.filter-count-badge {
+  background: rgba(201,168,76,0.15);
+  color: var(--gold);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 999px;
+  line-height: 1.4;
+}
+.filter-btn-with-count.active .filter-count-badge {
+  background: rgba(255,255,255,0.2);
+  color: inherit;
+}
+
+/* ─── Featured / Editor's Picks ───────────────────────────────────────────── */
+.packages-featured-section {
+  padding: 2rem 2rem 0;
+}
+.packages-featured-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.featured-section-header {
+  margin-bottom: 1.5rem;
+}
+.featured-eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+.featured-section-sub {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin: 0;
+}
+.packages-grid-featured {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2.5rem;
+  margin-bottom: 0;
+}
+.package-card-featured {
+  border-color: var(--gold) !important;
+  box-shadow: 0 0 0 1px var(--gold), 0 4px 24px rgba(201,168,76,0.08) !important;
+  position: relative;
+}
+.featured-editors-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+/* ─── Install method badges ────────────────────────────────────────────────── */
+.install-methods {
+  display: flex;
+  gap: 6px;
+  margin: 0.5rem 0 0.75rem;
+}
+.method-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid;
+}
+.method-telegram {
+  border-color: #229ED9;
+  color: #229ED9;
+  background: rgba(34,158,217,0.08);
+}
+.method-openclaw {
+  border-color: rgba(201,168,76,0.5);
+  color: var(--gold);
+  background: rgba(201,168,76,0.06);
+}
+
+/* ─── Packages section inner layout ───────────────────────────────────────── */
+.packages-section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.all-packages-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-top: 2rem;
+}
+.all-packages-heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+.all-packages-count {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ─── OpenClaw power-user callout ──────────────────────────────────────────── */
+.openclaw-callout-section {
+  padding: 4rem 2rem;
+  background: #0d0d0d;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin-top: 3rem;
+}
+.openclaw-callout-inner {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+.openclaw-callout-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid rgba(201,168,76,0.4);
+  background: rgba(201,168,76,0.08);
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  margin-bottom: 1.25rem;
+}
+.openclaw-callout-heading {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.02em;
+  color: var(--text, #f0f0f0);
+}
+.openclaw-callout-sub {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin: 0 0 1.5rem;
+  line-height: 1.6;
+}
+.openclaw-install-block {
+  background: #111;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.25rem;
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+}
+.openclaw-install-cmd {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+  color: var(--gold);
+  word-break: break-all;
+}
+.openclaw-callout-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.openclaw-callout-link {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.openclaw-callout-link:hover {
+  color: var(--gold);
+}
+.openclaw-callout-divider {
+  color: var(--border);
+}
+
+/* ─── Submit / Can't find CTA ──────────────────────────────────────────────── */
+.packages-submit-section {
+  padding: 3.5rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+.packages-submit-inner {
+  max-width: 520px;
+  margin: 0 auto;
+}
+.packages-submit-eyebrow {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+.packages-submit-heading {
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin: 0 0 0.75rem;
+  color: var(--text, #f0f0f0);
+}
+.packages-submit-sub {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin: 0 0 1.5rem;
+  line-height: 1.6;
+}
+.packages-submit-btn {
+  display: inline-block;
+  background: none;
+  border: 1.5px solid var(--gold);
+  color: var(--gold);
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+.packages-submit-btn:hover {
+  background: var(--gold);
+  color: #000;
+}

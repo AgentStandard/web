@@ -1302,6 +1302,7 @@ export default function App() {
   const isGiftPage = window.location.pathname === '/gift' || window.location.pathname.startsWith('/gift/')
   const [page, setPage] = useState(isGiftPage ? 'gift' : 'home')
   const [selectedPkg, setSelectedPkg] = useState(null)
+  const totalPackages = packages.filter(p => !p.hidden).length
 
   useEffect(() => {
     const handler = (e) => {
@@ -1360,10 +1361,10 @@ export default function App() {
         <nav className="nav">
           <div className="logo" onClick={() => setPage('home')} style={{cursor:"pointer"}}>AgentStandard <span className="logo-dot">&#x2736;</span></div>
           <div style={{display:'flex',gap:'20px',alignItems:'center'}}>
-            <button className="nav-link" onClick={() => setPage('packages')} style={{background:'none',border:'none',cursor:'pointer'}}>Packages</button>
-            <button className="nav-link" onClick={() => setPage('manifesto')} style={{background:'none',border:'none',cursor:'pointer'}}>Manifesto</button>
+            <button className="nav-link packages-nav-link" onClick={() => setPage('packages')} style={{background:'none',border:'none',cursor:'pointer'}}>Packages</button>
             <button className="nav-link" onClick={() => setPage('blog')} style={{background:'none',border:'none',cursor:'pointer'}}>Blog</button>
-            <a href="https://github.com/AgentStandard/packages" target="_blank" rel="noreferrer" className="nav-link">Submit a Package</a>
+            <button className="nav-link" onClick={() => setPage('manifesto')} style={{background:'none',border:'none',cursor:'pointer'}}>Manifesto</button>
+            <a href="https://github.com/AgentStandard/packages" target="_blank" rel="noreferrer" className="nav-link">Submit a Package &#x2736;</a>
           </div>
         </nav>
 
@@ -1375,11 +1376,13 @@ export default function App() {
             <div className="hero-badge"><span className="hero-badge-star">&#x2736;</span> Ready in 60 seconds. No download.</div>
             <h1>Your AI knows everything.<br />Except you.</h1>
             <p className="hero-sub">
-              Agent packages that arrive knowing your work, your style, and what actually matters. Start in Telegram — talking in under a minute.
+              {totalPackages} curated agent packages. Drop one in and your AI knows your work, your style, your goals &mdash; from the first message.
             </p>
             <div className="hero-ctas">
-              <a href="https://t.me/AgentStandardAI_bot" target="_blank" rel="noreferrer" className="hero-cta-primary">Start on Telegram →</a>
+              <a href="https://t.me/AgentStandardAI_bot" target="_blank" rel="noreferrer" className="hero-cta-primary">Start on Telegram &#x2192;</a>
+              <button className="hero-cta-secondary" onClick={() => setPage('packages')}>Browse the full library &#x2192;</button>
             </div>
+            <div className="hero-packages-live-badge">&#x2736; {totalPackages} packages live</div>
             <p className="hero-telegram-hint">New to Telegram? <a href="https://telegram.org" target="_blank" rel="noreferrer">Get it free</a> — 2 minutes. &nbsp;&#xB7;&nbsp; Buying for someone? <a href="https://t.me/AgentStandardAI_bot?start=gift" target="_blank" rel="noreferrer">Gift them a personalised AI agent &#x2736;</a></p>
             <div className="hero-stats">
               <div className="stat"><strong>31</strong> packages</div>
@@ -1577,37 +1580,19 @@ export default function App() {
       <section className="packages-section" id="packages-section">
         <div className="section-header">
           <h2>Browse Packages</h2>
-          {platformFilter !== 'all' && (
-            <div className="platform-filter-banner">
-              Showing {platformFilter === 'telegram' ? 'Telegram' : 'Builder'} packages
-              <button className="clear-filter-btn" onClick={() => setPlatformFilter('all')}>Show all &#x2715;</button>
-            </div>
-          )}
-          <div className="vertical-filters">
-            {verticals.map(v => (
-              <button
-                key={v}
-                className={`filter-btn ${activeVertical === v ? 'active' : ''}`}
-                onClick={() => setActiveVertical(v)}
-              >
-                {v}
-              </button>
-            ))}
-          </div>
+          <p className="packages-section-sub">A sample of what&apos;s available. The full library has search, filtering, and editor&apos;s picks.</p>
         </div>
         <div className="packages-grid">
-          {filtered.slice(0, 6).map(pkg => <PackageCard key={pkg.slug} pkg={pkg} />)}
+          {packages.filter(p => !p.hidden && !p.comingSoon).slice(0, 8).map(pkg => <PackageCard key={pkg.slug} pkg={pkg} />)}
         </div>
-        {filtered.length > 6 && (
-          <div style={{textAlign:'center', marginTop:'2rem'}}>
-            <button
-              onClick={() => setPage('packages')}
-              style={{background:'none', border:'1px solid var(--border)', color:'var(--text-muted)', padding:'0.75rem 2rem', borderRadius:'8px', cursor:'pointer', fontSize:'1rem'}}
-            >
-              See all {packages.filter(p => !p.hidden).length} packages &#x2192;
-            </button>
-          </div>
-        )}
+        <div style={{textAlign:'center', marginTop:'2.5rem'}}>
+          <button
+            onClick={() => setPage('packages')}
+            className="see-all-packages-btn"
+          >
+            See all {totalPackages} packages &#x2192;
+          </button>
+        </div>
       </section>
 
       {/* How it works */}

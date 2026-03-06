@@ -94,10 +94,18 @@ function GitHubComments({ discussionNumber, discussionUrl }) {
 
 export default function CommunityPackagePage({ pkg, onBack }) {
   const [copied, setCopied] = useState(false)
+  const [copiedLink, setCopiedLink] = useState(false)
 
   const installCmd = `openclaw skills install https://raw.githubusercontent.com/AgentStandard/packages/master/packages/${pkg.slug}/SKILL.md`
   const clawhubCmd = `clawhub install ${pkg.slug}`
   const [copiedClawhub, setCopiedClawhub] = useState(false)
+
+  const handleCopyLink = () => {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      setCopiedLink(true)
+      setTimeout(() => setCopiedLink(false), 2000)
+    })
+  }
 
   const handleCopy = () => {
     navigator.clipboard.writeText(installCmd).then(() => {
@@ -278,6 +286,36 @@ export default function CommunityPackagePage({ pkg, onBack }) {
               </div>
             </section>
           )}
+
+          {/* Share section */}
+          <section className="community-share-section">
+            <div className="community-section-heading">Share this package</div>
+            <p className="community-share-sub">Found something useful? Pass it on.</p>
+            <div className="community-share-actions">
+              <a
+                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent('Just found ' + pkg.name + ' on @AgentStandardAI \u2014 ' + pkg.tagline + ' agentstandard.ai')}`}
+                target="_blank"
+                rel="noreferrer"
+                className="community-share-btn community-share-tweet"
+              >
+                Share on X / Twitter &#x2192;
+              </a>
+              <button
+                className={`community-share-btn community-share-copy${copiedLink ? ' copied' : ''}`}
+                onClick={handleCopyLink}
+              >
+                {copiedLink ? '&#x2713; Copied!' : 'Copy link'}
+              </button>
+              <a
+                href="https://t.me/AgentStandardAI_bot?start=gift"
+                target="_blank"
+                rel="noreferrer"
+                className="community-share-btn community-share-gift"
+              >
+                Gift this to a friend &#x2736; &#x2192;
+              </a>
+            </div>
+          </section>
         </div>
 
         {/* RIGHT */}

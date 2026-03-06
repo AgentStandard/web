@@ -7,6 +7,7 @@ import ClaudeProjectsPage from './ClaudeProjectsPage'
 import ComparePage from './ComparePage'
 import UpvoteButton from './UpvoteButton'
 import WaitlistForm from './WaitlistForm'
+import PackagesPage from './PackagesPage'
 
 function TermsOfService({ onBack }) {
   return (
@@ -1324,6 +1325,7 @@ export default function App() {
   if (page === 'terms') return <TermsOfService onBack={() => setPage('home')} />
   if (page === 'privacy') return <PrivacyPolicy onBack={() => setPage('home')} />
   if (page === 'contributor-terms') return <ContributorTerms onBack={() => setPage('home')} />
+  if (page === 'packages') return <PackagesPage packages={packages} onBack={() => setPage('home')} />
   if (page === 'package-first-conversation') return <PackageDetail onBack={() => { setPage('home'); setSelectedPkg(null); }} />
   if (page && page.startsWith('community-') && selectedPkg) {
     return <CommunityPackagePage pkg={selectedPkg} onBack={() => { setPage('home'); setSelectedPkg(null); }} />
@@ -1358,6 +1360,7 @@ export default function App() {
         <nav className="nav">
           <div className="logo" onClick={() => setPage('home')} style={{cursor:"pointer"}}>AgentStandard <span className="logo-dot">&#x2736;</span></div>
           <div style={{display:'flex',gap:'20px',alignItems:'center'}}>
+            <button className="nav-link" onClick={() => setPage('packages')} style={{background:'none',border:'none',cursor:'pointer'}}>Packages</button>
             <button className="nav-link" onClick={() => setPage('manifesto')} style={{background:'none',border:'none',cursor:'pointer'}}>Manifesto</button>
             <button className="nav-link" onClick={() => setPage('blog')} style={{background:'none',border:'none',cursor:'pointer'}}>Blog</button>
             <a href="https://github.com/AgentStandard/packages" target="_blank" rel="noreferrer" className="nav-link">Submit a Package</a>
@@ -1593,8 +1596,18 @@ export default function App() {
           </div>
         </div>
         <div className="packages-grid">
-          {filtered.map(pkg => <PackageCard key={pkg.slug} pkg={pkg} />)}
+          {filtered.slice(0, 6).map(pkg => <PackageCard key={pkg.slug} pkg={pkg} />)}
         </div>
+        {filtered.length > 6 && (
+          <div style={{textAlign:'center', marginTop:'2rem'}}>
+            <button
+              onClick={() => setPage('packages')}
+              style={{background:'none', border:'1px solid var(--border)', color:'var(--text-muted)', padding:'0.75rem 2rem', borderRadius:'8px', cursor:'pointer', fontSize:'1rem'}}
+            >
+              See all {packages.filter(p => !p.hidden).length} packages &#x2192;
+            </button>
+          </div>
+        )}
       </section>
 
       {/* How it works */}

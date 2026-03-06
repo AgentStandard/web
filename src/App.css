@@ -2152,3 +2152,146 @@ body {
   background: var(--gold);
   color: #000;
 }
+
+/* ─── Hero stat line & trust line ─────────────────────────────────────────── */
+.hero-stat-line {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin: 0.75rem 0 0;
+  letter-spacing: 0.02em;
+  opacity: 0.75;
+}
+.hero-trust-line {
+  font-size: 0.78rem;
+  color: var(--gold);
+  text-align: center;
+  margin: 0.4rem 0 0;
+  letter-spacing: 0.02em;
+  opacity: 0.85;
+  font-weight: 600;
+}
+
+/* ─── Footer reviewed line ─────────────────────────────────────────────────── */
+.footer-reviewed {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+  opacity: 0.7;
+  letter-spacing: 0.02em;
+}
+
+/* ─── Certification Page ───────────────────────────────────────────────────── */
+.cert-page {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+}
+.cert-page-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 3rem 2rem 5rem;
+}
+.cert-page-header {
+  text-align: center;
+  padding: 3rem 0 2.5rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 3rem;
+}
+.cert-page-star {
+  font-size: 2.5rem;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+.cert-page-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 900;
+  color: var(--text);
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.02em;
+}
+.cert-page-subhead {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.6;
+}
+.cert-page-section {
+  margin-bottom: 3rem;
+}
+.cert-page-section h2 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text);
+  margin: 0 0 1rem;
+  letter-spacing: -0.01em;
+}
+.cert-page-section p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0 0 1rem;
+}
+.cert-page-section-muted {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+}
+.cert-criteria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+.cert-criterion {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+.cert-criterion-num {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.cert-criterion h3 {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text);
+  margin: 0 0 0.5rem;
+}
+.cert-criterion p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+.cert-page-cta-block {
+  text-align: center;
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--border);
+  margin-top: 1rem;
+}
+.cert-page-cta {
+  display: inline-block;
+  background: var(--gold);
+  color: #000;
+  padding: 0.85rem 2.25rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.cert-page-cta:hover {
+  opacity: 0.88;
+}
+.cert-page-cta-hint {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.75rem;
+}

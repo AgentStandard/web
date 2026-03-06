@@ -8,6 +8,7 @@ import ComparePage from './ComparePage'
 import UpvoteButton from './UpvoteButton'
 import WaitlistForm from './WaitlistForm'
 import PackagesPage from './PackagesPage'
+import CertificationPage from './CertificationPage'
 
 function TermsOfService({ onBack }) {
   return (
@@ -1327,6 +1328,7 @@ export default function App() {
   if (page === 'privacy') return <PrivacyPolicy onBack={() => setPage('home')} />
   if (page === 'contributor-terms') return <ContributorTerms onBack={() => setPage('home')} />
   if (page === 'packages') return <PackagesPage packages={packages} onBack={() => setPage('home')} />
+  if (page === 'certification') return <CertificationPage onBack={() => setPage('home')} />
   if (page === 'package-first-conversation') return <PackageDetail onBack={() => { setPage('home'); setSelectedPkg(null); }} />
   if (page && page.startsWith('community-') && selectedPkg) {
     return <CommunityPackagePage pkg={selectedPkg} onBack={() => { setPage('home'); setSelectedPkg(null); }} />
@@ -1362,6 +1364,7 @@ export default function App() {
           <div className="logo" onClick={() => setPage('home')} style={{cursor:"pointer"}}>AgentStandard <span className="logo-dot">&#x2736;</span></div>
           <div style={{display:'flex',gap:'20px',alignItems:'center'}}>
             <button className="nav-link packages-nav-link" onClick={() => setPage('packages')} style={{background:'none',border:'none',cursor:'pointer'}}>Packages</button>
+            <button className="nav-link" onClick={() => setPage('certification')} style={{background:'none',border:'none',cursor:'pointer'}}>Certification &#x2736;</button>
             <button className="nav-link" onClick={() => setPage('blog')} style={{background:'none',border:'none',cursor:'pointer'}}>Blog</button>
             <button className="nav-link" onClick={() => setPage('manifesto')} style={{background:'none',border:'none',cursor:'pointer'}}>Manifesto</button>
             <a href="https://github.com/AgentStandard/packages" target="_blank" rel="noreferrer" className="nav-link">Submit a Package &#x2736;</a>
@@ -1382,6 +1385,8 @@ export default function App() {
               <a href="https://t.me/AgentStandardAI_bot" target="_blank" rel="noreferrer" className="hero-cta-primary">Start on Telegram &#x2192;</a>
               <button className="hero-cta-secondary" onClick={() => setPage('packages')}>Browse the full library &#x2192;</button>
             </div>
+            <div className="hero-stat-line">25 packages live &nbsp;&middot;&nbsp; 11 verticals &nbsp;&middot;&nbsp; 60 seconds to personalise</div>
+            <div className="hero-trust-line">&#x2736; Every package &#x2736; reviewed. No Wild West.</div>
             <div className="hero-packages-live-badge">&#x2736; {totalPackages} packages live</div>
             <p className="hero-telegram-hint">New to Telegram? <a href="https://telegram.org" target="_blank" rel="noreferrer">Get it free</a> — 2 minutes. &nbsp;&#xB7;&nbsp; Buying for someone? <a href="https://t.me/AgentStandardAI_bot?start=gift" target="_blank" rel="noreferrer">Gift them a personalised AI agent &#x2736;</a></p>
             <div className="hero-stats">
@@ -1670,6 +1675,7 @@ export default function App() {
           <button className="footer-link-btn" onClick={() => setPage('privacy')}>Privacy Policy</button>
           <button className="footer-link-btn" onClick={() => setPage('contributor-terms')}>Contributor Terms</button>
         </div>
+        <div className="footer-reviewed">All packages &#x2736; reviewed &nbsp;&middot;&nbsp; agentstandard.ai &nbsp;&middot;&nbsp; hello@agentstandard.ai</div>
         <div className="footer-copy">Setting the standard for agent packages. &copy; England & Wales</div>
       </footer>
     </div>

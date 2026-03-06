@@ -95,12 +95,21 @@ function GitHubComments({ discussionNumber, discussionUrl }) {
 export default function CommunityPackagePage({ pkg, onBack }) {
   const [copied, setCopied] = useState(false)
 
-  const installCmd = `clawhub install ${pkg.slug}`
+  const installCmd = `openclaw skills install https://raw.githubusercontent.com/AgentStandard/packages/master/packages/${pkg.slug}/SKILL.md`
+  const clawhubCmd = `clawhub install ${pkg.slug}`
+  const [copiedClawhub, setCopiedClawhub] = useState(false)
 
   const handleCopy = () => {
     navigator.clipboard.writeText(installCmd).then(() => {
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
+    })
+  }
+
+  const handleCopyClawhub = () => {
+    navigator.clipboard.writeText(clawhubCmd).then(() => {
+      setCopiedClawhub(true)
+      setTimeout(() => setCopiedClawhub(false), 2000)
     })
   }
 
@@ -210,40 +219,41 @@ export default function CommunityPackagePage({ pkg, onBack }) {
             {/* OpenClaw CTA */}
             <div className="community-cta-openclaw">
               <div className="community-cta-openclaw-header">
-                <span className="community-cta-icon">⚙️</span>
+                <span className="community-cta-icon">&#x2699;&#xFE0F;</span>
                 <div>
-                  <div className="community-cta-title">Use with OpenClaw</div>
-                  <div className="community-cta-sub">For users who already have OpenClaw running.</div>
+                  <div className="community-cta-title">Install with OpenClaw</div>
+                  <div className="community-cta-sub">Already running OpenClaw? One command — no Telegram required.</div>
                 </div>
               </div>
-              <div className="community-openclaw-steps">
-                <div className="community-openclaw-step"><span className="step-num">1</span> <a href={`https://github.com/AgentStandard/packages/tree/main/packages/${pkg.slug}`} target="_blank" rel="noreferrer">Open the package on GitHub</a></div>
-                <div className="community-openclaw-step"><span className="step-num">2</span> Copy the system prompt from <code>agentstandard.json</code></div>
-                <div className="community-openclaw-step"><span className="step-num">3</span> Paste into your agent's <code>SOUL.md</code> and restart</div>
-              </div>
-              <a
-                href={`https://github.com/AgentStandard/packages/tree/main/packages/${pkg.slug}`}
-                target="_blank"
-                rel="noreferrer"
-                className="community-cta-openclaw-btn"
-              >
-                View on GitHub →
-              </a>
-              {!pkg.certified && (
-                <p className="community-openclaw-note">New to OpenClaw? <span className="community-inline-link" onClick={() => window.dispatchEvent(new CustomEvent('navigate', { detail: 'package-first-conversation' }))}>Start here first →</span></p>
-              )}
-            </div>
-
-            {/* Legacy CLI install */}
-            <div className="community-cli-section">
-              <div className="community-cli-label">Or install via CLI</div>
-              <div className="community-install-block">
+              <div className="community-install-block community-install-block--openclaw">
                 <span className="community-install-cmd">{installCmd}</span>
                 <button
                   className={`community-copy-btn ${copied ? 'copied' : ''}`}
                   onClick={handleCopy}
                 >
                   {copied ? 'Copied!' : 'Copy'}
+                </button>
+              </div>
+              <div className="community-openclaw-links">
+                <a href={`https://github.com/AgentStandard/packages/tree/master/packages/${pkg.slug}`} target="_blank" rel="noreferrer" className="community-openclaw-link">View on GitHub →</a>
+                <span className="community-openclaw-divider">&#xB7;</span>
+                <a href={`https://raw.githubusercontent.com/AgentStandard/packages/master/packages/${pkg.slug}/SKILL.md`} target="_blank" rel="noreferrer" className="community-openclaw-link">Raw SKILL.md →</a>
+              </div>
+              {!pkg.certified && (
+                <p className="community-openclaw-note">New to OpenClaw? <span className="community-inline-link" onClick={() => window.dispatchEvent(new CustomEvent('navigate', { detail: 'package-first-conversation' }))}>Start here first →</span></p>
+              )}
+            </div>
+
+            {/* Clawhub CLI install */}
+            <div className="community-cli-section">
+              <div className="community-cli-label">Or via Clawhub</div>
+              <div className="community-install-block">
+                <span className="community-install-cmd">{clawhubCmd}</span>
+                <button
+                  className={`community-copy-btn ${copiedClawhub ? 'copied' : ''}`}
+                  onClick={handleCopyClawhub}
+                >
+                  {copiedClawhub ? 'Copied!' : 'Copy'}
                 </button>
               </div>
             </div>

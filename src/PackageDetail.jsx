@@ -286,17 +286,17 @@ export default function PackageDetail({ onBack }) {
             <span>🆓 Free to install</span>
           </div>
           <div className="one-click-install">
-            <div className="one-click-label">⚡ One-line install (Mac / Linux)</div>
+            <div className="one-click-label">&#x26A1; Install with OpenClaw</div>
             <div className="one-click-row">
-              <code>curl -fsSL https://agentstandard.ai/install.sh | bash</code>
-              <button className="cli-copy" onClick={() => handleCopy('curl -fsSL https://agentstandard.ai/install.sh | bash')}>{copied ? '✓' : 'Copy'}</button>
+              <code>openclaw skills install https://raw.githubusercontent.com/AgentStandard/packages/master/packages/first-conversation/SKILL.md</code>
+              <button className="cli-copy" onClick={() => handleCopy('openclaw skills install https://raw.githubusercontent.com/AgentStandard/packages/master/packages/first-conversation/SKILL.md')}>{copied ? '&#x2713;' : 'Copy'}</button>
             </div>
-            <div className="one-click-sub">Paste this in Terminal. It installs everything automatically.</div>
+            <div className="one-click-sub">Paste in your terminal. Works on Mac, Linux, and Windows.</div>
           </div>
           <div className="cli-callout">
-            <span className="cli-label">Or with npx:</span>
-            <code>npx agentstandard install first-conversation</code>
-            <button className="cli-copy" onClick={() => handleCopy('npx agentstandard install first-conversation')}>{copied ? '✓' : 'Copy'}</button>
+            <span className="cli-label">Or via Clawhub:</span>
+            <code>clawhub install first-conversation</code>
+            <button className="cli-copy" onClick={() => handleCopy('clawhub install first-conversation')}>{copied ? '&#x2713;' : 'Copy'}</button>
           </div>
           <div className="skills-included">
             <p className="skills-label">Includes:</p>
